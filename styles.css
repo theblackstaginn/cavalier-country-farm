@@ -21,9 +21,8 @@ body{
     background-attachment:fixed;
 }
 
-/* HERO */
-
-.hero{
+.hero,
+.sub-hero{
     position:relative;
     min-height:100vh;
     display:flex;
@@ -31,16 +30,25 @@ body{
     justify-content:center;
     padding:120px 20px 80px;
     overflow:hidden;
-    background:transparent;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.home-hero{
+    background-image:url('assets/farm-web-bg.png');
+}
+
+.animals-hero{
+    background-image:url('assets/animals-bg.jpg');
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.58);
+    z-index:1;
 }
-
-/* NAV */
 
 .top-nav{
     position:absolute;
@@ -79,26 +87,25 @@ body{
     color:#c8a16a;
 }
 
-/* TRANSPARENT PANELS */
-
 .hero-content,
 .section-card,
 .sub-hero-content,
-.animal-card{
+.animal-card,
+.feature-card,
+.cta-box{
     background:transparent !important;
     backdrop-filter:none !important;
     -webkit-backdrop-filter:none !important;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.10);
     border-radius:22px;
-    box-shadow:0 0 24px rgba(0,0,0,.40);
+    box-shadow:0 0 24px rgba(0,0,0,.42);
 }
 
-/* HERO CONTENT */
-
-.hero-content{
+.hero-content,
+.sub-hero-content{
     position:relative;
     z-index:5;
-    width:min(92%, 900px);
+    width:min(92%, 920px);
     text-align:center;
     padding:40px 32px;
 }
@@ -106,27 +113,28 @@ body{
 .hero-sign{
     width:min(100%, 720px);
     margin-bottom:30px;
-    filter:drop-shadow(0 0 14px rgba(255,210,120,.12));
+    filter:drop-shadow(0 0 18px rgba(255,210,120,.14));
 }
 
-.hero h1{
+.hero h1,
+.sub-hero-content h1{
     font-family:'Cormorant Garamond', serif;
     font-size:clamp(3rem, 7vw, 6rem);
     font-weight:600;
     letter-spacing:3px;
     margin-bottom:20px;
-    text-shadow:0 2px 12px rgba(0,0,0,.45);
+    color:#f4ead7;
+    text-shadow:0 2px 12px rgba(0,0,0,.75);
 }
 
-.hero p{
-    max-width:720px;
+.hero p,
+.sub-hero-content p{
+    max-width:760px;
     margin:0 auto 34px;
     line-height:1.8;
-    color:#dddddd;
-    font-size:1.08rem;
+    color:#e7dcc7;
+    font-size:1.1rem;
 }
-
-/* BUTTONS */
 
 .hero-buttons{
     display:flex;
@@ -153,16 +161,11 @@ body{
 .metal-btn:hover{
     transform:translateY(-2px);
     border-color:#b98a4f;
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.18),
-        0 10px 18px rgba(0,0,0,.55);
 }
 
 .secondary{
     background:linear-gradient(to bottom, #242424, #101010);
 }
-
-/* CONTENT */
 
 .welcome-section,
 .animals-section{
@@ -171,63 +174,85 @@ body{
 }
 
 .section-card{
-    width:min(92%, 1000px);
+    width:min(92%, 1100px);
     margin:auto;
     padding:48px;
 }
 
-.section-card h2{
+.eyebrow{
+    color:#c8a16a !important;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.85rem !important;
+    margin-bottom:18px !important;
+}
+
+.section-card h2,
+.feature-card h3,
+.cta-box h3,
+.animal-card h2{
     font-family:'Cormorant Garamond', serif;
-    font-size:2.8rem;
     font-weight:600;
+    color:#f4ead7;
+}
+
+.section-card h2{
+    font-size:clamp(2.3rem, 5vw, 4rem);
     margin-bottom:24px;
-    letter-spacing:1px;
 }
 
 .section-card p{
     line-height:1.9;
-    color:#d2d2d2;
+    color:#d9cfbd;
     margin-bottom:20px;
-    font-size:1.05rem;
+    font-size:1.06rem;
 }
 
-/* SUB HERO */
-
-.sub-hero{
-    position:relative;
-    min-height:60vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:120px 20px 60px;
-    background:transparent;
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:24px;
+    margin-top:34px;
 }
 
-.sub-hero-content{
-    position:relative;
-    z-index:5;
-    text-align:center;
-    width:min(92%, 900px);
-    padding:40px;
+.feature-card,
+.cta-box,
+.animal-card{
+    padding:30px;
 }
 
-.sub-hero-content h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:clamp(3rem, 7vw, 5rem);
-    font-weight:600;
-    margin-bottom:20px;
-    letter-spacing:2px;
+.feature-card h3,
+.cta-box h3{
+    font-size:2rem;
+    margin-bottom:16px;
 }
 
-.sub-hero-content p{
-    max-width:700px;
-    margin:auto;
+.feature-card p,
+.cta-box li,
+.animal-card p{
+    color:#d9cfbd;
     line-height:1.8;
-    color:#d6d6d6;
-    font-size:1.05rem;
 }
 
-/* ANIMALS PAGE */
+.split-card{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:38px;
+    align-items:center;
+}
+
+.crest-image{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 40px rgba(0,0,0,.55);
+}
+
+.small-link{
+    display:inline-block;
+    margin-top:16px;
+    color:#c8a16a;
+    text-decoration:none;
+}
 
 .animal-grid{
     width:min(1200px, 92%);
@@ -236,32 +261,6 @@ body{
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap:28px;
 }
-
-.animal-card{
-    padding:36px;
-    transition:.25s ease;
-}
-
-.animal-card:hover{
-    transform:translateY(-4px);
-    border-color:rgba(185,138,79,.45);
-}
-
-.animal-card h2{
-    font-family:'Cormorant Garamond', serif;
-    margin-bottom:18px;
-    font-size:2rem;
-    font-weight:600;
-    letter-spacing:1px;
-}
-
-.animal-card p{
-    color:#d2d2d2;
-    line-height:1.8;
-    font-size:1.02rem;
-}
-
-/* FOOTER */
 
 .site-footer{
     padding:40px 20px;
@@ -275,12 +274,20 @@ body{
     letter-spacing:1px;
 }
 
-/* MOBILE */
+@media(max-width:900px){
+    .split-card{
+        grid-template-columns:1fr;
+    }
+}
 
 @media(max-width:768px){
-
     body{
         background-image:url('assets/farm-mobile-bg.png');
+        background-attachment:scroll;
+    }
+
+    .hero,
+    .sub-hero{
         background-attachment:scroll;
     }
 
@@ -298,12 +305,9 @@ body{
     .hero-content,
     .sub-hero-content,
     .section-card,
-    .animal-card{
+    .animal-card,
+    .feature-card,
+    .cta-box{
         padding:30px 22px;
-    }
-
-    .hero h1,
-    .sub-hero-content h1{
-        letter-spacing:2px;
     }
 }
