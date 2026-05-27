@@ -109,7 +109,7 @@ body{
 
     border-radius:28px;
 
-    background:rgba(10,8,7,.12);
+    background:transparent;
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -256,7 +256,7 @@ main{
 
     padding:56px;
 
-    background:rgba(8,7,6,.28);
+    background:transparent;
 
     border:1px solid rgba(255,255,255,.09);
     border-radius:24px;
@@ -315,7 +315,7 @@ main{
 .faq-item{
     padding:32px 28px;
 
-    background:rgba(0,0,0,.20);
+    background:transparent;
 
     border:1px solid rgba(255,255,255,.08);
     border-radius:18px;
@@ -392,23 +392,11 @@ main{
     width:100%;
     padding:100px 0;
 
-    background:
-        linear-gradient(
-            rgba(10,8,7,.15),
-            rgba(10,8,7,.30)
-        );
+    background:transparent;
 }
 
 .cavalier-panel{
-    background:
-        linear-gradient(
-            rgba(12,10,9,.62),
-            rgba(12,10,9,.68)
-        ),
-        url('assets/farm-web-bg.png');
-
-    background-size:cover;
-    background-position:center;
+    background:transparent;
 }
 
 /* IMAGE CARDS */
@@ -437,12 +425,7 @@ main{
 .feature-card-body{
     padding:30px 28px 32px;
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(10,8,7,.18),
-            rgba(10,8,7,.34)
-        );
+    background:transparent;
 }
 
 /* LINKS */
