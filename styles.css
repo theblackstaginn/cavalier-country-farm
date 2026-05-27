@@ -22,17 +22,13 @@ body{
 .hero{
     position:relative;
     min-height:100vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     padding:140px 24px 80px;
-
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-
     overflow:hidden;
 }
 
@@ -58,15 +54,11 @@ body{
     position:absolute;
     top:0;
     left:0;
-
     width:100%;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:24px 6vw;
-
     z-index:20;
 }
 
@@ -101,66 +93,46 @@ body{
 .hero-frame{
     position:relative;
     z-index:5;
-
     width:min(1150px, 94%);
     margin:auto;
-
     padding:55px 50px 60px;
-
     border-radius:28px;
-
     background:transparent;
-
     border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.22),
-        inset 0 1px 0 rgba(255,255,255,.05);
-
+    box-shadow:0 20px 50px rgba(0,0,0,.22);
     backdrop-filter:none;
 }
 
 .hero-content{
     position:relative;
     z-index:5;
-
     width:min(100%, 1050px);
     margin:auto;
-
     text-align:center;
 }
 
 .hero-sign{
     width:min(900px, 100%);
     margin:0 auto 38px;
-
     display:block;
-
-    filter:
-        drop-shadow(0 10px 25px rgba(0,0,0,.45));
+    filter:drop-shadow(0 10px 25px rgba(0,0,0,.45));
 }
 
 .hero h1{
     font-family:'Cormorant Garamond', serif;
     font-size:clamp(3rem, 7vw, 6.2rem);
     font-weight:600;
-
     color:#f4e4c8;
-
     margin-bottom:22px;
-
     text-shadow:0 3px 10px rgba(0,0,0,.45);
 }
 
 .hero p{
     max-width:850px;
     margin:0 auto 38px;
-
     font-size:1.15rem;
     line-height:1.85;
-
     color:#f3ece2;
-
     text-shadow:0 2px 6px rgba(0,0,0,.38);
 }
 
@@ -176,68 +148,33 @@ body{
 .metal-btn{
     display:inline-block;
     padding:14px 30px;
-
     text-decoration:none;
     color:#f8ead4;
-
     letter-spacing:1.5px;
     font-size:.95rem;
-
     border-radius:12px;
     border:1px solid #8a542b;
-
-    background:
-        linear-gradient(
-            145deg,
-            #3b1f12 0%,
-            #9b5a2b 28%,
-            #c98745 48%,
-            #6b351c 72%,
-            #24110a 100%
-        );
-
+    background:linear-gradient(145deg,#3b1f12 0%,#9b5a2b 28%,#c98745 48%,#6b351c 72%,#24110a 100%);
     box-shadow:
         inset 0 1px 0 rgba(255,225,170,.35),
         inset 0 -2px 6px rgba(0,0,0,.45),
         0 6px 16px rgba(0,0,0,.55);
-
     transition:.25s ease;
 }
 
 .metal-btn:hover{
     transform:translateY(-2px);
-
     border-color:#d6a05f;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,235,190,.45),
-        inset 0 -2px 8px rgba(0,0,0,.5),
-        0 10px 22px rgba(0,0,0,.65),
-        0 0 16px rgba(185,112,50,.25);
 }
 
 .secondary{
-    background:
-        linear-gradient(
-            145deg,
-            #1a120d 0%,
-            #5b321c 30%,
-            #8c552d 50%,
-            #3a1e12 75%,
-            #100907 100%
-        );
+    background:linear-gradient(145deg,#1a120d 0%,#5b321c 30%,#8c552d 50%,#3a1e12 75%,#100907 100%);
 }
 
 /* MAIN BACKGROUND */
 
 main{
-    background:
-        linear-gradient(
-            rgba(10,8,7,.45),
-            rgba(10,8,7,.58)
-        ),
-        url('assets/farm-web-bg.png');
-
+    background:url('assets/farm-web-bg.png');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -253,16 +190,12 @@ main{
 .cavalier-panel{
     width:min(1120px, 92%);
     margin:auto;
-
     padding:56px;
-
     background:transparent;
-
     border:1px solid rgba(255,255,255,.09);
     border-radius:24px;
-
-    box-shadow:
-        0 18px 42px rgba(0,0,0,.35);
+    box-shadow:0 18px 42px rgba(0,0,0,.35);
+    backdrop-filter:none;
 }
 
 .eyebrow{
@@ -278,11 +211,8 @@ main{
     font-family:'Cormorant Garamond', serif;
     font-size:clamp(2.5rem, 5vw, 4.2rem);
     font-weight:600;
-
     color:#f4e4c8;
-
     margin-bottom:24px;
-
     text-shadow:0 3px 12px rgba(0,0,0,.45);
 }
 
@@ -290,11 +220,8 @@ main{
 .cavalier-panel p{
     font-size:1.05rem;
     line-height:1.95;
-
     color:#f5efe8;
-
     margin-bottom:20px;
-
     text-shadow:0 2px 6px rgba(0,0,0,.35);
 }
 
@@ -305,7 +232,6 @@ main{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     gap:26px;
-
     margin-top:52px;
 }
 
@@ -314,14 +240,11 @@ main{
 .cta-box,
 .faq-item{
     padding:32px 28px;
-
     background:transparent;
-
     border:1px solid rgba(255,255,255,.08);
     border-radius:18px;
-
-    box-shadow:
-        0 10px 24px rgba(0,0,0,.25);
+    box-shadow:0 10px 24px rgba(0,0,0,.25);
+    backdrop-filter:none;
 }
 
 .feature-card h3,
@@ -331,9 +254,7 @@ main{
     font-family:'Cormorant Garamond', serif;
     font-size:2rem;
     font-weight:600;
-
     margin-bottom:14px;
-
     color:#f2dfbf;
 }
 
@@ -358,32 +279,22 @@ main{
     align-items:center;
 }
 
-/* CAVALIER / FEATURE IMAGE */
+/* IMAGES */
 
 .crest-image{
     width:100%;
     max-height:560px;
-
     object-fit:cover;
     object-position:center;
-
     border-radius:22px;
-
     border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 14px 34px rgba(0,0,0,.45);
-
+    box-shadow:0 14px 34px rgba(0,0,0,.45);
     opacity:1;
-
     transition:.3s ease;
 }
 
 .crest-image:hover{
     transform:scale(1.01);
-
-    box-shadow:
-        0 18px 42px rgba(0,0,0,.55);
 }
 
 /* CAVALIER WRAPPER */
@@ -391,12 +302,13 @@ main{
 .cavalier-wrapper{
     width:100%;
     padding:100px 0;
-
     background:transparent;
+    backdrop-filter:none;
 }
 
 .cavalier-panel{
     background:transparent;
+    backdrop-filter:none;
 }
 
 /* IMAGE CARDS */
@@ -409,12 +321,9 @@ main{
 .image-card img{
     width:100%;
     height:280px;
-
     display:block;
-
     object-fit:cover;
     object-position:center;
-
     transition:.35s ease;
 }
 
@@ -424,8 +333,8 @@ main{
 
 .feature-card-body{
     padding:30px 28px 32px;
-
     background:transparent;
+    backdrop-filter:none;
 }
 
 /* LINKS */
@@ -433,7 +342,6 @@ main{
 .small-link{
     display:inline-block;
     margin-top:14px;
-
     color:#d7a269;
     text-decoration:none;
 }
@@ -455,11 +363,8 @@ main{
 .site-footer{
     text-align:center;
     padding:50px 20px;
-
     color:#d9c7ae;
-
     font-size:.95rem;
-
     background:#0b0908;
 }
 
@@ -473,44 +378,28 @@ main{
 
 @media(max-width:768px){
 
-    .hero,
-    main{
-        background-attachment:scroll;
+    body::before{
+        content:"";
+        position:fixed;
+        inset:0;
+        z-index:-1;
+        background:url('assets/farm-mobile-bg.png') center top / cover no-repeat;
+        transform:translateZ(0);
     }
 
-    .home-hero{
-        background-image:url('assets/farm-mobile-bg.png');
-        background-size:cover;
-        background-position:center top;
-        background-repeat:no-repeat;
+    body{
+        background:transparent;
+    }
+
+    .hero,
+    main{
+        background:transparent;
+        background-image:none;
+        background-attachment:scroll;
     }
 
     .animals-hero{
-        background-image:url('assets/animals-bg.jpg');
-        background-size:cover;
-        background-position:center top;
-        background-repeat:no-repeat;
-    }
-
-    .faq-hero{
-        background-image:url('assets/farm-mobile-bg.png');
-        background-size:cover;
-        background-position:center top;
-        background-repeat:no-repeat;
-    }
-
-    main{
-        background:
-            linear-gradient(
-                rgba(10,8,7,.42),
-                rgba(10,8,7,.58)
-            ),
-            url('assets/farm-mobile-bg.png');
-
-        background-size:cover;
-        background-position:center top;
-        background-repeat:no-repeat;
-        background-attachment:scroll;
+        background:url('assets/animals-bg.jpg') center top / cover no-repeat;
     }
 
     .top-nav{
@@ -539,6 +428,8 @@ main{
     .hero-frame{
         padding:38px 22px 42px;
         border-radius:22px;
+        background:transparent;
+        backdrop-filter:none;
     }
 
     .hero h1{
@@ -553,11 +444,15 @@ main{
     .section-card,
     .cavalier-panel{
         padding:38px 24px;
+        background:transparent;
+        backdrop-filter:none;
     }
 
     .welcome-section,
     .cavalier-wrapper{
         padding:70px 0;
+        background:transparent;
+        backdrop-filter:none;
     }
 
     .split-card{
