@@ -549,3 +549,23 @@ main{
     }
 
 }
+.home-hero{
+    background-image:url('assets/farm-mobile-bg.png');
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+main{
+    background:
+        linear-gradient(
+            rgba(10,8,7,.42),
+            rgba(10,8,7,.58)
+        ),
+        url('assets/farm-mobile-bg.png');
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
