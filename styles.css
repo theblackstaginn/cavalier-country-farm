@@ -368,6 +368,28 @@ main{
     background:#0b0908;
 }
 
+/* GLOBAL TEXT ALIGNMENT */
+
+.section-card,
+.cavalier-panel,
+.feature-card,
+.animal-card,
+.cta-box,
+.faq-item,
+.feature-card-body,
+.hero-content{
+    text-align:center;
+}
+
+.cta-box ul{
+    padding-left:0;
+    list-style-position:inside;
+}
+
+.small-link{
+    margin-left:auto;
+    margin-right:auto;
+}
 /* MOBILE */
 
 @media(max-width:900px){
