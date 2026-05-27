@@ -17,8 +17,6 @@ body{
     overflow-x:hidden;
 }
 
-/* HERO */
-
 .hero{
     position:relative;
     min-height:100vh;
@@ -47,8 +45,6 @@ body{
 .hero-overlay{
     display:none;
 }
-
-/* NAVIGATION */
 
 .top-nav{
     position:absolute;
@@ -87,8 +83,6 @@ body{
 .nav-links a:hover{
     color:#d7a269;
 }
-
-/* HERO CONTENT */
 
 .hero-frame{
     position:relative;
@@ -136,8 +130,6 @@ body{
     text-shadow:0 2px 6px rgba(0,0,0,.38);
 }
 
-/* COPPER BUTTONS */
-
 .hero-buttons{
     display:flex;
     justify-content:center;
@@ -171,7 +163,34 @@ body{
     background:linear-gradient(145deg,#1a120d 0%,#5b321c 30%,#8c552d 50%,#3a1e12 75%,#100907 100%);
 }
 
-/* MAIN BACKGROUND */
+.facebook-banner-section{
+    width:100%;
+    padding:42px 20px 8px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url('assets/farm-web-bg.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.facebook-banner-link{
+    display:inline-block;
+    transition:.3s ease;
+}
+
+.facebook-banner-link:hover{
+    transform:translateY(-3px) scale(1.015);
+}
+
+.facebook-banner{
+    width:min(700px, 92vw);
+    display:block;
+    filter:drop-shadow(0 10px 22px rgba(0,0,0,.35));
+}
 
 main{
     background:url('assets/farm-web-bg.png');
@@ -179,8 +198,6 @@ main{
     background-position:center;
     background-attachment:fixed;
 }
-
-/* SECTIONS */
 
 .welcome-section{
     padding:95px 20px;
@@ -196,6 +213,7 @@ main{
     border-radius:24px;
     box-shadow:0 18px 42px rgba(0,0,0,.35);
     backdrop-filter:none;
+    text-align:center;
 }
 
 .eyebrow{
@@ -204,6 +222,7 @@ main{
     letter-spacing:3px;
     font-size:.82rem;
     margin-bottom:18px;
+    text-align:center;
 }
 
 .section-card h2,
@@ -214,6 +233,7 @@ main{
     color:#f4e4c8;
     margin-bottom:24px;
     text-shadow:0 3px 12px rgba(0,0,0,.45);
+    text-align:center;
 }
 
 .section-card p,
@@ -223,9 +243,8 @@ main{
     color:#f5efe8;
     margin-bottom:20px;
     text-shadow:0 2px 6px rgba(0,0,0,.35);
+    text-align:center;
 }
-
-/* GRIDS */
 
 .feature-grid,
 .animal-grid{
@@ -245,6 +264,7 @@ main{
     border-radius:18px;
     box-shadow:0 10px 24px rgba(0,0,0,.25);
     backdrop-filter:none;
+    text-align:center;
 }
 
 .feature-card h3,
@@ -256,6 +276,7 @@ main{
     font-weight:600;
     margin-bottom:14px;
     color:#f2dfbf;
+    text-align:center;
 }
 
 .feature-card p,
@@ -264,13 +285,13 @@ main{
 .faq-item p{
     line-height:1.8;
     color:#f2ebe1;
+    text-align:center;
 }
 
 .cta-box ul{
-    padding-left:20px;
+    padding-left:0;
+    list-style-position:inside;
 }
-
-/* SPLIT */
 
 .split-card{
     display:grid;
@@ -278,8 +299,6 @@ main{
     gap:42px;
     align-items:center;
 }
-
-/* IMAGES */
 
 .crest-image{
     width:100%;
@@ -297,8 +316,6 @@ main{
     transform:scale(1.01);
 }
 
-/* CAVALIER WRAPPER */
-
 .cavalier-wrapper{
     width:100%;
     padding:100px 0;
@@ -310,8 +327,6 @@ main{
     background:transparent;
     backdrop-filter:none;
 }
-
-/* IMAGE CARDS */
 
 .image-card{
     padding:0;
@@ -335,13 +350,14 @@ main{
     padding:30px 28px 32px;
     background:transparent;
     backdrop-filter:none;
+    text-align:center;
 }
-
-/* LINKS */
 
 .small-link{
     display:inline-block;
     margin-top:14px;
+    margin-left:auto;
+    margin-right:auto;
     color:#d7a269;
     text-decoration:none;
 }
@@ -350,15 +366,11 @@ main{
     text-decoration:underline;
 }
 
-/* FAQ */
-
 .faq-list{
     display:grid;
     gap:24px;
     margin-top:34px;
 }
-
-/* FOOTER */
 
 .site-footer{
     text-align:center;
@@ -367,30 +379,6 @@ main{
     font-size:.95rem;
     background:#0b0908;
 }
-
-/* GLOBAL TEXT ALIGNMENT */
-
-.section-card,
-.cavalier-panel,
-.feature-card,
-.animal-card,
-.cta-box,
-.faq-item,
-.feature-card-body,
-.hero-content{
-    text-align:center;
-}
-
-.cta-box ul{
-    padding-left:0;
-    list-style-position:inside;
-}
-
-.small-link{
-    margin-left:auto;
-    margin-right:auto;
-}
-/* MOBILE */
 
 @media(max-width:900px){
     .split-card{
@@ -414,7 +402,8 @@ main{
     }
 
     .hero,
-    main{
+    main,
+    .facebook-banner-section{
         background:transparent;
         background-image:none;
         background-attachment:scroll;
@@ -461,6 +450,14 @@ main{
     .hero p{
         font-size:1rem;
         line-height:1.75;
+    }
+
+    .facebook-banner-section{
+        padding:34px 18px 0;
+    }
+
+    .facebook-banner{
+        width:min(560px, 94vw);
     }
 
     .section-card,
