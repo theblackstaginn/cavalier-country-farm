@@ -12,77 +12,53 @@ html{
 
 body{
     font-family:'Source Sans 3', sans-serif;
-
-    background:#0f0f0f;
     color:#f2f2f2;
-
     overflow-x:hidden;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:120px 20px 80px;
 
     background-image:url('assets/farm-web-bg.png');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
+}
 
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px 80px;
     overflow:hidden;
+    background:transparent;
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-
-    background:
-    linear-gradient(
-        to bottom,
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.65)
-    );
+    background:rgba(0,0,0,.55);
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAV */
 
 .top-nav{
     position:absolute;
-
     top:0;
     left:0;
-
     width:100%;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:26px 6vw;
-
     z-index:20;
 }
 
 .nav-logo{
     font-family:'Cormorant Garamond', serif;
-
     font-size:2rem;
     font-weight:600;
-
     letter-spacing:2px;
-
     color:#f2f2f2;
 }
 
@@ -93,13 +69,9 @@ body{
 
 .nav-links a{
     color:#f2f2f2;
-
     text-decoration:none;
-
     letter-spacing:1px;
-
     font-size:1rem;
-
     transition:.25s ease;
 }
 
@@ -107,340 +79,219 @@ body{
     color:#c8a16a;
 }
 
-/* =========================
-   TRANSPARENT PANELS
-========================= */
+/* TRANSPARENT PANELS */
 
 .hero-content,
 .section-card,
 .sub-hero-content,
 .animal-card{
-
-    background-color:transparent !important;
-    background-image:none !important;
-
+    background:transparent !important;
     backdrop-filter:none !important;
     -webkit-backdrop-filter:none !important;
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:22px;
-
-    box-shadow:
-    0 0 24px rgba(0,0,0,.40);
+    box-shadow:0 0 24px rgba(0,0,0,.40);
 }
 
-/* =========================
-   HERO CONTENT
-========================= */
+/* HERO CONTENT */
 
 .hero-content{
     position:relative;
     z-index:5;
-
     width:min(92%, 900px);
-
     text-align:center;
-
     padding:40px 32px;
 }
 
 .hero-sign{
     width:min(100%, 720px);
-
     margin-bottom:30px;
-
-    filter:
-    drop-shadow(0 0 14px rgba(255,210,120,.12));
+    filter:drop-shadow(0 0 14px rgba(255,210,120,.12));
 }
 
 .hero h1{
     font-family:'Cormorant Garamond', serif;
-
     font-size:clamp(3rem, 7vw, 6rem);
-
     font-weight:600;
-
     letter-spacing:3px;
-
     margin-bottom:20px;
-
-    text-shadow:
-        0 2px 12px rgba(0,0,0,.45);
+    text-shadow:0 2px 12px rgba(0,0,0,.45);
 }
 
 .hero p{
     max-width:720px;
-
     margin:0 auto 34px;
-
     line-height:1.8;
-
     color:#dddddd;
-
     font-size:1.08rem;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .hero-buttons{
     display:flex;
     justify-content:center;
     gap:18px;
-
     flex-wrap:wrap;
 }
 
 .metal-btn{
     display:inline-block;
-
     padding:14px 28px;
-
     text-decoration:none;
-
     color:#f2f2f2;
-
     letter-spacing:1px;
-
     border-radius:10px;
-
     border:1px solid #4a4a4a;
-
-    background:
-    linear-gradient(
-        to bottom,
-        #3d3d3d,
-        #171717
-    );
-
+    background:linear-gradient(to bottom, #3d3d3d, #171717);
     box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.12),
-    0 6px 14px rgba(0,0,0,.45);
-
+        inset 0 1px 0 rgba(255,255,255,.12),
+        0 6px 14px rgba(0,0,0,.45);
     transition:.25s ease;
 }
 
 .metal-btn:hover{
     transform:translateY(-2px);
-
     border-color:#b98a4f;
-
     box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.18),
-    0 10px 18px rgba(0,0,0,.55);
+        inset 0 1px 0 rgba(255,255,255,.18),
+        0 10px 18px rgba(0,0,0,.55);
 }
 
 .secondary{
-    background:
-    linear-gradient(
-        to bottom,
-        #242424,
-        #101010
-    );
+    background:linear-gradient(to bottom, #242424, #101010);
 }
 
-/* =========================
-   CONTENT SECTIONS
-========================= */
+/* CONTENT */
 
-.welcome-section{
+.welcome-section,
+.animals-section{
     padding:100px 20px;
-
-    background:
-    linear-gradient(
-        to bottom,
-        #101010,
-        #171717
-    );
+    background:transparent !important;
 }
 
 .section-card{
     width:min(92%, 1000px);
-
     margin:auto;
-
     padding:48px;
 }
 
 .section-card h2{
     font-family:'Cormorant Garamond', serif;
-
     font-size:2.8rem;
-
     font-weight:600;
-
     margin-bottom:24px;
-
     letter-spacing:1px;
 }
 
 .section-card p{
     line-height:1.9;
-
     color:#d2d2d2;
-
     margin-bottom:20px;
-
     font-size:1.05rem;
 }
 
-/* =========================
-   SUB HERO
-========================= */
+/* SUB HERO */
 
 .sub-hero{
     position:relative;
-
     min-height:60vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     padding:120px 20px 60px;
-
-    background-image:url('assets/farm-web-bg.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+    background:transparent;
 }
 
 .sub-hero-content{
     position:relative;
     z-index:5;
-
     text-align:center;
-
     width:min(92%, 900px);
-
     padding:40px;
 }
 
 .sub-hero-content h1{
     font-family:'Cormorant Garamond', serif;
-
     font-size:clamp(3rem, 7vw, 5rem);
-
     font-weight:600;
-
     margin-bottom:20px;
-
     letter-spacing:2px;
 }
 
 .sub-hero-content p{
     max-width:700px;
-
     margin:auto;
-
     line-height:1.8;
-
     color:#d6d6d6;
-
     font-size:1.05rem;
 }
 
-/* =========================
-   ANIMALS PAGE
-========================= */
-
-.animals-section{
-    padding:100px 20px;
-
-    background:#121212;
-}
+/* ANIMALS PAGE */
 
 .animal-grid{
     width:min(1200px, 92%);
-
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap:28px;
 }
 
 .animal-card{
     padding:36px;
-
     transition:.25s ease;
 }
 
 .animal-card:hover{
     transform:translateY(-4px);
-
     border-color:rgba(185,138,79,.45);
 }
 
 .animal-card h2{
     font-family:'Cormorant Garamond', serif;
-
     margin-bottom:18px;
-
     font-size:2rem;
-
     font-weight:600;
-
     letter-spacing:1px;
 }
 
 .animal-card p{
     color:#d2d2d2;
-
     line-height:1.8;
-
     font-size:1.02rem;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .site-footer{
     padding:40px 20px;
-
     text-align:center;
-
-    background:#0b0b0b;
-
+    background:transparent;
     border-top:1px solid rgba(255,255,255,.08);
 }
 
 .site-footer p{
     color:#8a8a8a;
-
     letter-spacing:1px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .hero,
-    .sub-hero{
+    body{
         background-image:url('assets/farm-mobile-bg.png');
-
         background-attachment:scroll;
     }
 
     .top-nav{
         flex-direction:column;
-
         gap:18px;
     }
 
     .nav-links{
         gap:16px;
-
         flex-wrap:wrap;
-
         justify-content:center;
     }
 
@@ -455,5 +306,4 @@ body{
     .sub-hero-content h1{
         letter-spacing:2px;
     }
-
 }
