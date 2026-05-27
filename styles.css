@@ -345,21 +345,32 @@ main{
     align-items:center;
 }
 
-/* CREST */
+/* CAVALIER / FEATURE IMAGE */
 
 .crest-image{
     width:100%;
-    max-height:500px;
+    max-height:560px;
 
     object-fit:cover;
-    object-position:center 42%;
+    object-position:center;
 
-    border-radius:18px;
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
 
     box-shadow:
-        0 10px 36px rgba(0,0,0,.55);
+        0 14px 34px rgba(0,0,0,.45);
 
-    opacity:.92;
+    opacity:.98;
+
+    transition:.3s ease;
+}
+
+.crest-image:hover{
+    transform:scale(1.01);
+
+    box-shadow:
+        0 18px 42px rgba(0,0,0,.55);
 }
 
 /* CAVALIER WRAPPER */
@@ -480,8 +491,18 @@ main{
         padding:70px 0;
     }
 
+    .split-card{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .split-card img{
+        order:-1;
+        margin-bottom:24px;
+    }
+
     .crest-image{
-        max-height:340px;
+        max-height:380px;
     }
 
 }
