@@ -163,45 +163,58 @@ body{
     background:linear-gradient(145deg,#1a120d 0%,#5b321c 30%,#8c552d 50%,#3a1e12 75%,#100907 100%);
 }
 
+/* FACEBOOK */
+
 .facebook-banner-section{
     width:100%;
-    padding:18px 20px 0;
+    padding:6px 20px 0;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:rgba(8,7,6,.18);
+
+    background:transparent;
 }
 
 .facebook-banner-section .eyebrow{
-    margin-bottom:8px;
-    opacity:.75;
+    margin-bottom:4px;
+
+    opacity:.65;
+
     letter-spacing:2px;
-    font-size:.68rem;
+    font-size:.62rem;
 }
 
 .facebook-banner-link{
     display:inline-block;
-    transition:.3s ease;
+
+    transition:.25s ease;
 }
 
 .facebook-banner-link:hover{
-    transform:translateY(-3px) scale(1.015);
+    transform:translateY(-1px);
 }
 
 .facebook-banner{
-    width:min(440px, 68vw);
+    width:min(240px, 44vw);
+
     display:block;
-    opacity:.88;
-    filter:drop-shadow(0 5px 12px rgba(0,0,0,.28));
-    transition:.3s ease;
+
+    opacity:.92;
+
+    filter:
+        drop-shadow(0 3px 8px rgba(0,0,0,.22));
+
+    transition:.25s ease;
 }
 
 .facebook-banner:hover{
     opacity:1;
-    transform:translateY(-2px);
 }
+
+/* MAIN */
 
 main{
     background:url('assets/farm-web-bg.png');
@@ -391,6 +404,8 @@ main{
     background:#0b0908;
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
     .split-card{
         grid-template-columns:1fr;
@@ -418,10 +433,6 @@ main{
         background:transparent;
         background-image:none;
         background-attachment:scroll;
-    }
-
-    .facebook-banner-section{
-        background:rgba(8,7,6,.18);
     }
 
     .animals-hero{
@@ -467,17 +478,8 @@ main{
         line-height:1.75;
     }
 
-    .facebook-banner-section{
-        padding:18px 18px 0;
-    }
-
-    .facebook-banner-section .eyebrow{
-        font-size:.64rem;
-        margin-bottom:6px;
-    }
-
     .facebook-banner{
-        width:min(360px, 68vw);
+        width:min(210px, 42vw);
     }
 
     .section-card,
