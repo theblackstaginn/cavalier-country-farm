@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 *{
     margin:0;
@@ -11,129 +11,148 @@ html{
 }
 
 body{
-    font-family:'Source Sans 3', sans-serif;
-    color:#f2f2f2;
+    font-family:'Inter',sans-serif;
+    color:#f3eee7;
+    background:#0f0c0a;
     overflow-x:hidden;
-
-    background-image:url('assets/farm-web-bg.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
 }
 
-.hero,
-.sub-hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:120px 20px 80px;
-    overflow:hidden;
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
+/* BACKGROUNDS */
 
-.home-hero{
-    background-image:url('assets/farm-web-bg.png');
-}
-
-.animals-hero{
-    background-image:url('assets/animals-bg.jpg');
-}
-
-.hero-overlay{
-    position:absolute;
+body::before{
+    content:"";
+    position:fixed;
     inset:0;
-    background:rgba(0,0,0,.58);
-    z-index:1;
+
+    background:
+        linear-gradient(
+            rgba(10,8,7,.55),
+            rgba(10,8,7,.72)
+        ),
+        url('assets/farm-web-bg.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-2;
 }
 
-.top-nav{
-    position:absolute;
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.45)
+        );
+
+    z-index:-1;
+}
+
+@media(max-width:768px){
+
+    body::before{
+        background:
+            linear-gradient(
+                rgba(10,8,7,.58),
+                rgba(10,8,7,.78)
+            ),
+            url('assets/farm-mobile-bg.png');
+
+        background-size:cover;
+        background-position:center;
+    }
+
+}
+
+/* NAVIGATION */
+
+header{
+    position:fixed;
     top:0;
-    left:0;
     width:100%;
+    z-index:1000;
+
+    background:rgba(5,5,5,.45);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav{
+    max-width:1300px;
+    margin:auto;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:26px 6vw;
-    z-index:20;
+
+    padding:18px 24px;
 }
 
-.nav-logo{
-    font-family:'Cormorant Garamond', serif;
+.logo{
+    font-family:'Cormorant Garamond',serif;
     font-size:2rem;
     font-weight:600;
-    letter-spacing:2px;
-    color:#f2f2f2;
+    color:#f4e7d0;
+    letter-spacing:1px;
 }
 
 .nav-links{
     display:flex;
-    gap:24px;
+    gap:18px;
 }
 
 .nav-links a{
-    color:#f2f2f2;
     text-decoration:none;
+    color:#f2ede7;
+    font-size:.95rem;
     letter-spacing:1px;
-    font-size:1rem;
+
     transition:.25s ease;
 }
 
 .nav-links a:hover{
-    color:#c8a16a;
+    color:#d7a269;
 }
 
-.hero-content,
-.section-card,
-.sub-hero-content,
-.animal-card,
-.feature-card,
-.cta-box{
-    background:transparent !important;
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:22px;
-    box-shadow:0 0 24px rgba(0,0,0,.42);
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:140px 24px 80px;
 }
 
-.hero-content,
-.sub-hero-content{
-    position:relative;
-    z-index:5;
-    width:min(92%, 920px);
+.hero-content{
+    max-width:1100px;
+    width:100%;
     text-align:center;
-    padding:40px 32px;
 }
 
 .hero-sign{
-    width:min(100%, 720px);
-    margin-bottom:30px;
-    filter:drop-shadow(0 0 18px rgba(255,210,120,.14));
+    width:min(900px,100%);
+    margin:auto auto 40px;
+
+    filter:
+        drop-shadow(0 10px 25px rgba(0,0,0,.65));
 }
 
-.hero h1,
-.sub-hero-content h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:clamp(3rem, 7vw, 6rem);
-    font-weight:600;
-    letter-spacing:3px;
-    margin-bottom:20px;
-    color:#f4ead7;
-    text-shadow:0 2px 12px rgba(0,0,0,.75);
-}
-
-.hero p,
-.sub-hero-content p{
-    max-width:760px;
-    margin:0 auto 34px;
+.hero-tagline{
+    font-size:1.2rem;
     line-height:1.8;
-    color:#e7dcc7;
-    font-size:1.1rem;
+    max-width:850px;
+    margin:0 auto 40px;
+
+    color:#f3ece2;
 }
 
 .hero-buttons{
@@ -143,171 +162,226 @@ body{
     flex-wrap:wrap;
 }
 
+/* COPPER BUTTONS */
+
 .metal-btn{
     display:inline-block;
-    padding:14px 28px;
+    padding:14px 30px;
+
     text-decoration:none;
-    color:#f2f2f2;
-    letter-spacing:1px;
-    border-radius:10px;
-    border:1px solid #4a4a4a;
-    background:linear-gradient(to bottom, #3d3d3d, #171717);
+    color:#f8ead4;
+
+    letter-spacing:1.5px;
+    font-size:.95rem;
+
+    border-radius:12px;
+    border:1px solid #8a542b;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3b1f12 0%,
+            #9b5a2b 28%,
+            #c98745 48%,
+            #6b351c 72%,
+            #24110a 100%
+        );
+
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.12),
-        0 6px 14px rgba(0,0,0,.45);
+        inset 0 1px 0 rgba(255,225,170,.35),
+        inset 0 -2px 6px rgba(0,0,0,.45),
+        0 6px 16px rgba(0,0,0,.55);
+
     transition:.25s ease;
 }
 
 .metal-btn:hover{
     transform:translateY(-2px);
-    border-color:#b98a4f;
+
+    border-color:#d6a05f;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,235,190,.45),
+        inset 0 -2px 8px rgba(0,0,0,.5),
+        0 10px 22px rgba(0,0,0,.65),
+        0 0 16px rgba(185,112,50,.25);
 }
 
 .secondary{
-    background:linear-gradient(to bottom, #242424, #101010);
+    background:
+        linear-gradient(
+            145deg,
+            #1a120d 0%,
+            #5b321c 30%,
+            #8c552d 50%,
+            #3a1e12 75%,
+            #100907 100%
+        );
 }
 
-.welcome-section,
-.animals-section{
-    padding:100px 20px;
+/* PANELS */
+
+.section-panel{
+    width:min(1200px,92%);
+    margin:0 auto 80px;
+
+    padding:60px;
+
     background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
 }
 
-.section-card{
-    width:min(92%, 1100px);
-    margin:auto;
-    padding:48px;
-}
+/* TYPOGRAPHY */
 
-.eyebrow{
-    color:#c8a16a !important;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:.85rem !important;
-    margin-bottom:18px !important;
-}
-
-.section-card h2,
-.feature-card h3,
-.cta-box h3,
-.animal-card h2{
-    font-family:'Cormorant Garamond', serif;
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.2rem;
     font-weight:600;
-    color:#f4ead7;
+
+    margin-bottom:28px;
+
+    color:#f4e4c8;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.55);
 }
 
-.section-card h2{
-    font-size:clamp(2.3rem, 5vw, 4rem);
-    margin-bottom:24px;
+.section-text{
+    font-size:1.05rem;
+    line-height:1.95;
+
+    color:#f5efe8;
+
+    max-width:900px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.55);
 }
 
-.section-card p{
-    line-height:1.9;
-    color:#d9cfbd;
-    margin-bottom:20px;
-    font-size:1.06rem;
-}
+/* FEATURE GRID */
 
 .feature-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-    gap:24px;
-    margin-top:34px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:26px;
+
+    margin-top:45px;
 }
 
-.feature-card,
-.cta-box,
-.animal-card{
-    padding:30px;
+.feature-card{
+    padding:34px 28px;
+
+    background:rgba(0,0,0,.28);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    backdrop-filter:blur(4px);
+
+    transition:.25s ease;
 }
 
-.feature-card h3,
-.cta-box h3{
+.feature-card:hover{
+    transform:translateY(-4px);
+
+    border-color:rgba(214,160,95,.35);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.35);
+}
+
+.feature-card h3{
+    font-family:'Cormorant Garamond',serif;
     font-size:2rem;
-    margin-bottom:16px;
+
+    margin-bottom:14px;
+
+    color:#f2dfbf;
 }
 
-.feature-card p,
-.cta-box li,
-.animal-card p{
-    color:#d9cfbd;
+.feature-card p{
     line-height:1.8;
+    color:#f2ebe1;
 }
 
-.split-card{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:38px;
-    align-items:center;
-}
+/* CREST */
 
 .crest-image{
     width:100%;
+
+    max-height:520px;
+
+    object-fit:cover;
+    object-position:center 42%;
+
     border-radius:18px;
-    box-shadow:0 10px 40px rgba(0,0,0,.55);
+
+    margin-top:34px;
+
+    box-shadow:
+        0 10px 36px rgba(0,0,0,.55);
+
+    opacity:.92;
 }
 
-.small-link{
-    display:inline-block;
-    margin-top:16px;
-    color:#c8a16a;
-    text-decoration:none;
-}
+/* FOOTER */
 
-.animal-grid{
-    width:min(1200px, 92%);
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap:28px;
-}
-
-.site-footer{
-    padding:40px 20px;
+footer{
     text-align:center;
-    background:transparent;
-    border-top:1px solid rgba(255,255,255,.08);
+    padding:50px 20px;
+
+    color:#d9c7ae;
+
+    font-size:.95rem;
 }
 
-.site-footer p{
-    color:#8a8a8a;
-    letter-spacing:1px;
-}
-
-@media(max-width:900px){
-    .split-card{
-        grid-template-columns:1fr;
-    }
-}
+/* MOBILE */
 
 @media(max-width:768px){
-    body{
-        background-image:url('assets/farm-mobile-bg.png');
-        background-attachment:scroll;
-    }
 
-    .hero,
-    .sub-hero{
-        background-attachment:scroll;
-    }
-
-    .top-nav{
-        flex-direction:column;
-        gap:18px;
+    .logo{
+        font-size:1.5rem;
     }
 
     .nav-links{
-        gap:16px;
-        flex-wrap:wrap;
-        justify-content:center;
+        gap:12px;
     }
 
-    .hero-content,
-    .sub-hero-content,
-    .section-card,
-    .animal-card,
-    .feature-card,
-    .cta-box{
-        padding:30px 22px;
+    .nav-links a{
+        font-size:.82rem;
     }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-tagline{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .section-panel{
+        padding:40px 24px;
+    }
+
+    .section-title{
+        font-size:2.5rem;
+    }
+
+    .section-text{
+        font-size:1rem;
+        line-height:1.85;
+    }
+
+    .feature-card h3{
+        font-size:1.7rem;
+    }
+
+    .crest-image{
+        max-height:340px;
+    }
+
 }
