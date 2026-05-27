@@ -165,16 +165,19 @@ body{
 
 .facebook-banner-section{
     width:100%;
-    padding:42px 20px 8px;
+    padding:26px 20px 0;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:url('assets/farm-web-bg.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+}
+
+.facebook-banner-section .eyebrow{
+    margin-bottom:12px;
+    opacity:.75;
+    letter-spacing:2px;
+    font-size:.72rem;
 }
 
 .facebook-banner-link{
@@ -187,9 +190,16 @@ body{
 }
 
 .facebook-banner{
-    width:min(700px, 92vw);
+    width:min(520px, 78vw);
     display:block;
-    filter:drop-shadow(0 10px 22px rgba(0,0,0,.35));
+    opacity:.92;
+    filter:drop-shadow(0 6px 16px rgba(0,0,0,.28));
+    transition:.3s ease;
+}
+
+.facebook-banner:hover{
+    opacity:1;
+    transform:translateY(-2px);
 }
 
 main{
@@ -453,11 +463,11 @@ main{
     }
 
     .facebook-banner-section{
-        padding:34px 18px 0;
+        padding:24px 18px 0;
     }
 
     .facebook-banner{
-        width:min(560px, 94vw);
+        width:min(420px, 74vw);
     }
 
     .section-card,
