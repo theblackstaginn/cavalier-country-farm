@@ -411,6 +411,31 @@ main{
     background-position:center;
 }
 
+.image-card{
+    padding:0;
+    overflow:hidden;
+}
+
+.image-card img{
+    width:100%;
+    height:240px;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+
+    transition:.35s ease;
+}
+
+.image-card:hover img{
+    transform:scale(1.035);
+}
+
+.feature-card-body{
+    padding:30px 28px 32px;
+}
+
 /* LINKS */
 
 .small-link{
