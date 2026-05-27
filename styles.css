@@ -515,3 +515,82 @@ main{
     }
 
 }
+/* ANIMALS PAGE */
+
+.animals-page{
+    background:url('assets/farm-web-bg.png') center center / cover fixed no-repeat;
+}
+
+.animals-page main{
+    background:transparent;
+}
+
+.animals-header{
+    position:relative;
+    min-height:105px;
+}
+
+.crest-hero-section{
+    padding:40px 20px 90px;
+}
+
+.crest-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:34px;
+}
+
+.main-crest{
+    width:min(620px, 100%);
+    display:block;
+    filter:drop-shadow(0 18px 35px rgba(0,0,0,.55));
+}
+
+.crest-copy{
+    max-width:820px;
+    margin:auto;
+    text-align:center;
+}
+
+.crest-copy h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(3rem, 7vw, 5.5rem);
+    font-weight:600;
+    color:#f4e4c8;
+    margin-bottom:22px;
+    text-shadow:0 3px 12px rgba(0,0,0,.45);
+}
+
+.crest-copy p{
+    font-size:1.05rem;
+    line-height:1.95;
+    color:#f5efe8;
+    margin-bottom:20px;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+}
+
+@media(max-width:768px){
+
+    .animals-header{
+        min-height:125px;
+    }
+
+    .crest-hero-section{
+        padding:20px 20px 70px;
+    }
+
+    .main-crest{
+        width:min(430px, 100%);
+    }
+
+    .crest-copy h1{
+        font-size:clamp(2.6rem, 13vw, 4.2rem);
+    }
+
+    .crest-copy p{
+        font-size:1rem;
+        line-height:1.75;
+    }
+
+}
