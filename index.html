@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cavalier Country Farm</title>
-    <link rel="stylesheet" href="styles.css?v=18">
+    <link rel="stylesheet" href="styles.css?v=19">
 </head>
 
 <body>
@@ -82,10 +82,21 @@
     </section>
 
     <section class="welcome-section">
-        <div class="bio-poster-wrap">
+        <div class="bio-poster-wrap" id="bioPosterTrigger">
             <img src="assets/farm-bio.webp" alt="Bob and Karen story at Cavalier Country Farm" class="bio-poster">
+            <p class="bio-mobile-hint">Tap to read the full story</p>
         </div>
     </section>
+
+    <div class="bio-modal" id="bioModal" aria-hidden="true">
+        <button class="bio-modal-close" id="bioModalClose" aria-label="Close story">&times;</button>
+
+        <img
+            src="assets/mobile-bio-modal.webp"
+            alt="Bob and Karen story at Cavalier Country Farm"
+            class="bio-modal-image"
+        >
+    </div>
 
     <section class="welcome-section">
         <div class="section-card">
@@ -248,6 +259,48 @@
 <footer class="site-footer">
     <p>© Cavalier Country Farm</p>
 </footer>
+
+<script>
+    const bioPosterTrigger = document.getElementById('bioPosterTrigger');
+    const bioModal = document.getElementById('bioModal');
+    const bioModalClose = document.getElementById('bioModalClose');
+
+    function isMobileBioView(){
+        return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    if(bioPosterTrigger && bioModal && bioModalClose){
+        bioPosterTrigger.addEventListener('click', () => {
+            if(!isMobileBioView()) return;
+
+            bioModal.classList.add('active');
+            bioModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('bio-modal-open');
+        });
+
+        bioModalClose.addEventListener('click', () => {
+            bioModal.classList.remove('active');
+            bioModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('bio-modal-open');
+        });
+
+        bioModal.addEventListener('click', (e) => {
+            if(e.target === bioModal){
+                bioModal.classList.remove('active');
+                bioModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('bio-modal-open');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape'){
+                bioModal.classList.remove('active');
+                bioModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('bio-modal-open');
+            }
+        });
+    }
+</script>
 
 <script src="script.js"></script>
 
