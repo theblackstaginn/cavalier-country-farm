@@ -4,7 +4,6 @@ const slides = document.querySelectorAll('.carousel-slide');
 let index = 0;
 
 function moveCarousel() {
-
     if (!track || slides.length === 0) return;
 
     index++;
@@ -13,8 +12,7 @@ function moveCarousel() {
         index = 0;
     }
 
-    track.style.transform =
-        `translateX(-${index * 100}%)`;
+    track.style.transform = `translateX(-${index * 100}%)`;
 }
 
 setInterval(moveCarousel, 5000);
