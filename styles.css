@@ -168,28 +168,23 @@ body{
 .facebook-banner-section{
     width:100%;
     padding:6px 20px 0;
-
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-
     background:transparent;
 }
 
 .facebook-banner-section .eyebrow{
     margin-bottom:4px;
-
     opacity:.65;
-
     letter-spacing:2px;
     font-size:.62rem;
 }
 
 .facebook-banner-link{
     display:inline-block;
-
     transition:.25s ease;
 }
 
@@ -199,14 +194,9 @@ body{
 
 .facebook-banner{
     width:min(240px, 44vw);
-
     display:block;
-
     opacity:.92;
-
-    filter:
-        drop-shadow(0 3px 8px rgba(0,0,0,.22));
-
+    filter:drop-shadow(0 3px 8px rgba(0,0,0,.22));
     transition:.25s ease;
 }
 
@@ -404,6 +394,51 @@ main{
     background:#0b0908;
 }
 
+/* ANIMALS PAGE */
+
+.animals-page{
+    background:url('assets/farm-web-bg.png') center center / cover fixed no-repeat;
+}
+
+.animals-page main{
+    background:transparent;
+}
+
+.animals-header{
+    position:relative;
+    min-height:110px;
+}
+
+/* CREST HERO */
+
+.crest-hero-section{
+    padding:60px 20px 40px;
+}
+
+.crest-hero-inner{
+    width:min(1100px, 92%);
+    margin:auto;
+    text-align:center;
+}
+
+.main-crest{
+    width:min(720px, 100%);
+    display:block;
+    margin:auto;
+    padding:24px;
+    background:linear-gradient(
+        180deg,
+        rgba(18,14,11,.42) 0%,
+        rgba(10,8,6,.58) 100%
+    );
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,255,255,.04);
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.55));
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -429,7 +464,8 @@ main{
 
     .hero,
     main,
-    .facebook-banner-section{
+    .facebook-banner-section,
+    .animals-page main{
         background:transparent;
         background-image:none;
         background-attachment:scroll;
@@ -514,45 +550,6 @@ main{
         height:230px;
     }
 
-}
-/* ANIMALS PAGE */
-
-.animals-page{
-    background:url('assets/farm-web-bg.png') center center / cover fixed no-repeat;
-}
-
-.animals-page main{
-    background:transparent;
-}
-
-.animals-header{
-    position:relative;
-    min-height:110px;
-}
-
-/* CREST HERO */
-
-.crest-hero-section{
-    padding:60px 20px 40px;
-}
-
-.crest-hero-inner{
-    width:min(1100px, 92%);
-    margin:auto;
-    text-align:center;
-}
-
-.main-crest{
-    width:min(720px, 100%);
-    display:block;
-    margin:auto;
-    filter:drop-shadow(0 20px 40px rgba(0,0,0,.55));
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
     .animals-header{
         min-height:125px;
     }
@@ -563,8 +560,8 @@ main{
 
     .main-crest{
         width:min(460px, 100%);
+        padding:16px;
+        border-radius:22px;
     }
-
-}
 
 }
