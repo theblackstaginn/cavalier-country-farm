@@ -415,6 +415,29 @@ main{
     background:#0b0908;
 }
 
+/* BIO POSTER */
+
+.bio-poster-wrap{
+    width:min(1200px, 94%);
+    margin:auto;
+    text-align:center;
+}
+
+.bio-poster{
+    width:100%;
+    display:block;
+    border-radius:22px;
+    box-shadow:0 18px 42px rgba(0,0,0,.38);
+}
+
+.bio-mobile-hint{
+    display:none;
+}
+
+.bio-modal{
+    display:none;
+}
+
 /* ANIMALS PAGE */
 
 .animals-page{
@@ -481,6 +504,10 @@ main{
 
     body{
         background:transparent;
+    }
+
+    body.bio-modal-open{
+        overflow:hidden;
     }
 
     .hero,
@@ -589,16 +616,64 @@ main{
         border-radius:22px;
     }
 
-}
-.bio-poster-wrap{
-    width:min(1200px, 94%);
-    margin:auto;
-    text-align:center;
-}
+    .bio-poster-wrap{
+        cursor:pointer;
+    }
 
-.bio-poster{
-    width:100%;
-    display:block;
-    border-radius:22px;
-    box-shadow:0 18px 42px rgba(0,0,0,.38);
+    .bio-mobile-hint{
+        display:block;
+        margin-top:12px;
+        color:#d7a269;
+        font-size:.78rem;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        opacity:.9;
+        text-align:center;
+    }
+
+    .bio-modal{
+        position:fixed;
+        inset:0;
+        z-index:99999;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+        background:rgba(0,0,0,.88);
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .25s ease;
+    }
+
+    .bio-modal.active{
+        opacity:1;
+        pointer-events:auto;
+    }
+
+    .bio-modal-image{
+        width:auto;
+        max-width:94vw;
+        max-height:92vh;
+        display:block;
+        object-fit:contain;
+        border-radius:12px;
+        box-shadow:0 20px 55px rgba(0,0,0,.65);
+    }
+
+    .bio-modal-close{
+        position:absolute;
+        top:14px;
+        right:18px;
+        z-index:2;
+        width:44px;
+        height:44px;
+        border:none;
+        border-radius:50%;
+        background:rgba(10,8,6,.72);
+        color:#fff;
+        font-size:2.4rem;
+        line-height:1;
+        cursor:pointer;
+    }
+
 }
