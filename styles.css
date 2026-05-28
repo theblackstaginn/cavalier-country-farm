@@ -651,28 +651,27 @@ main{
 .applications-modal-content{
     position:relative;
 
-    width:min(760px, 92%);
+    width:min(760px, 92vw);
 
-    padding:58px 42px 42px;
+    max-height:92vh;
+    overflow-y:auto;
+
+    padding:42px 34px 34px;
 
     border-radius:28px;
 
     background:
-        linear-gradient(
-            rgba(12,10,8,.72),
-            rgba(12,10,8,.72)
-        ),
         url('farm buttons/modal-bg.webp');
 
     background-size:cover;
     background-position:center;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.06);
 
     box-shadow:
         0 24px 60px rgba(0,0,0,.55);
 
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 .applications-modal-content h2{
