@@ -778,3 +778,9 @@ main{
     }
 
 }
+.hero-frame,
+.section-card,
+.cavalier-panel{
+    background:transparent;
+    backdrop-filter:none;
+}
