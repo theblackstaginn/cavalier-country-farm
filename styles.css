@@ -622,6 +622,134 @@ main{
     text-decoration:underline;
 }
 
+/* APPLICATIONS MODAL */
+
+.applications-modal{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:24px;
+
+    background:rgba(0,0,0,.82);
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.25s ease;
+}
+
+.applications-modal.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.applications-modal-content{
+    width:min(620px, 94vw);
+
+    padding:42px 30px;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(34,26,20,.96) 0%,
+            rgba(16,12,10,.96) 100%
+        );
+
+    border:1px solid rgba(210,154,99,.28);
+
+    box-shadow:
+        0 24px 70px rgba(0,0,0,.6),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+    text-align:center;
+
+    position:relative;
+}
+
+.applications-modal-content h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2.2rem, 5vw, 3.4rem);
+    font-weight:600;
+    color:#f4e4c8;
+
+    margin-bottom:30px;
+}
+
+.applications-modal-close{
+    position:absolute;
+    top:14px;
+    right:16px;
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    color:#f4e4c8;
+
+    font-size:2rem;
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+.applications-modal-close:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.applications-modal-grid{
+    display:grid;
+    gap:16px;
+}
+
+.application-choice{
+    display:block;
+
+    padding:18px 20px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #c8915c 0%,
+            #8b4f28 100%
+        );
+
+    color:#fff4e6;
+
+    text-decoration:none;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.35rem;
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.2),
+        0 8px 20px rgba(0,0,0,.24);
+
+    transition:.22s ease;
+}
+
+.application-choice:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.06);
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
