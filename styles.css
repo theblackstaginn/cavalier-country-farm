@@ -683,6 +683,15 @@ main{
     margin-bottom:30px;
 }
 
+.applications-modal-grid{
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:24px;
+}
+
 .applications-modal-close{
     position:absolute;
     top:14px;
