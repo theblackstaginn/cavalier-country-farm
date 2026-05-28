@@ -625,158 +625,110 @@ main{
 /* APPLICATIONS MODAL */
 
 .applications-modal{
-    padding:18px;
-    overflow-y:auto;
+position:fixed;
+inset:0;
+z-index:99999;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:18px;
+overflow-y:auto;
+
+background:rgba(0,0,0,.78);
+
+opacity:0;
+pointer-events:none;
+
+transition:opacity .25s ease;
 }
 
 .applications-modal.active{
-    opacity:1;
-    pointer-events:auto;
+opacity:1;
+pointer-events:auto;
 }
 
 .applications-modal-content{
-    position:relative;
+position:relative;
 
-    width:min(760px, 92vw);
+width:min(760px, 92vw);
+max-height:92vh;
+overflow-y:auto;
+overflow-x:hidden;
 
-    max-height:92vh;
-    overflow-y:auto;
+padding:42px 34px 34px;
 
-    padding:42px 34px 34px;
+border-radius:28px;
 
-    border-radius:28px;
+background:url('farm buttons/modal-bg.webp');
+background-size:cover;
+background-position:center;
 
-    background:
-        url('farm buttons/modal-bg.webp');
+border:1px solid rgba(255,255,255,.06);
 
-    background-size:cover;
-    background-position:center;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    box-shadow:
-        0 24px 60px rgba(0,0,0,.55);
-
-    overflow-x:hidden;
+box-shadow:0 24px 60px rgba(0,0,0,.55);
 }
 
 .applications-modal-content h2{
-    font-size:clamp(2.2rem, 5vw, 4rem);
-    margin-bottom:22px;
+font-family:'Cormorant Garamond', serif;
+font-size:clamp(2.2rem, 5vw, 4rem);
+font-weight:600;
+color:#f4e4c8;
+margin-bottom:22px;
+text-align:center;
+text-shadow:0 3px 10px rgba(0,0,0,.5);
 }
 
 .applications-modal-grid{
-    display:flex;
-    flex-direction:column;
-
-    gap:12px;
-
-    margin-top:24px;
-}
-
-.applications-modal-close{
-    position:absolute;
-    top:14px;
-    right:16px;
-
-    width:42px;
-    height:42px;
-
-    border:none;
-    border-radius:50%;
-
-    background:rgba(255,255,255,.06);
-
-    color:#f4e4c8;
-
-    font-size:2rem;
-    line-height:1;
-
-    cursor:pointer;
-
-    transition:.2s ease;
-}
-
-.applications-modal-close:hover{
-    background:rgba(255,255,255,.12);
-}
-
-.applications-modal-grid{
-    display:grid;
-    gap:16px;
-}
-
-.application-choice{
-    display:block;
-
-    padding:18px 20px;
-
-    border-radius:16px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #c8915c 0%,
-            #8b4f28 100%
-        );
-
-    color:#fff4e6;
-
-    text-decoration:none;
-
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.35rem;
-    font-weight:700;
-
-    letter-spacing:.5px;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.2),
-        0 8px 20px rgba(0,0,0,.24);
-
-    transition:.22s ease;
-}
-
-.application-choice:hover{
-    transform:translateY(-2px);
-    filter:brightness(1.06);
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:24px;
 }
 
 .application-image-link{
-    display:block;
-    line-height:0;
-    transition:.22s ease;
+display:block;
+line-height:0;
+transition:.22s ease;
 }
 
 .application-image-link:hover{
-    transform:translateY(-2px);
+transform:translateY(-2px);
 }
 
 .application-image-btn{
-    width:100%;
-    display:block;
+width:100%;
+display:block;
 }
 
 .applications-modal-close{
-    position:absolute;
-    top:18px;
-    right:18px;
-    background:none;
-    border:none;
-    padding:0;
-    width:46px;
-    height:46px;
-    cursor:pointer;
-    z-index:5;
+position:absolute;
+top:14px;
+right:14px;
+
+background:none;
+border:none;
+padding:0;
+
+width:36px;
+height:36px;
+
+cursor:pointer;
+z-index:5;
 }
 
 .farm-x-btn{
-    width:46px;
-    height:46px;
-    display:block;
-    object-fit:contain;
+width:36px;
+height:36px;
+display:block;
+object-fit:contain;
+transition:.2s ease;
 }
 
+.farm-x-btn:hover{
+transform:rotate(6deg) scale(1.06);
+}
 /* MOBILE */
 
 @media(max-width:900px){
