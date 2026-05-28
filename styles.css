@@ -747,8 +747,22 @@ transform:rotate(6deg) scale(1.06);
 
 @media(max-width:768px){
 
-.applications-modal{
-padding:10px;
+    .applications-modal{
+        padding:10px;
+        overflow:auto;
+    }
+
+    .applications-modal-content{
+        width:94vw;
+        max-height:88vh;
+        transform:scale(.86);
+        transform-origin:center;
+    }
+
+    .applications-modal-inner{
+        padding:54px 34px 38px;
+    }
+
 }
 
 .applications-modal-content{
