@@ -733,9 +733,8 @@ main{
 }
 
 .application-image-link{
-    display:block;
-    line-height:0;
-    transition:.22s ease;
+    display:flex;
+    justify-content:center;
 }
 
 .application-image-link:hover{
