@@ -891,8 +891,8 @@ main{
 /* NAMEPLATES */
 
 .puppy-name-1{
-    --x:18%;
-    --y:70%;
+    --x:18.5%;
+    --y:67%;
     --z:-1deg;
 
     left:var(--x);
