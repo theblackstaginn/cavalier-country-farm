@@ -626,13 +626,18 @@ main{
 /* APPLICATIONS MODAL */
 
 .applications-modal{
-
-    align-items:center;
-
-    justify-content:center;
-
-    overflow:auto;
-
+position:fixed;
+inset:0;
+z-index:99999;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:14px;
+background:rgba(0,0,0,.78);
+opacity:0;
+pointer-events:none;
+transition:opacity .25s ease;
+overflow:hidden;
 }
 
 .applications-modal.active{
@@ -641,14 +646,14 @@ pointer-events:auto;
 }
 
 .applications-modal-content{
-
-    width:min(620px, 92vw);
-
-    max-height:88vh;
-
-    transform:scale(.92);
-
-    transform-origin:center;
+position:relative;
+width:min(700px, 94vw);
+padding:0;
+background:none;
+border:none;
+border-radius:0;
+box-shadow:none;
+overflow:visible;
 }
 
 .applications-modal-bg{
@@ -747,22 +752,8 @@ transform:rotate(6deg) scale(1.06);
 
 @media(max-width:768px){
 
-    .applications-modal{
-        padding:10px;
-        overflow:auto;
-    }
-
-    .applications-modal-content{
-        width:94vw;
-        max-height:88vh;
-        transform:scale(.86);
-        transform-origin:center;
-    }
-
-    .applications-modal-inner{
-        padding:54px 34px 38px;
-    }
-
+.applications-modal{
+padding:10px;
 }
 
 .applications-modal-content{
