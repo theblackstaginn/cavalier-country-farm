@@ -538,6 +538,42 @@ main{
     pointer-events:none;
 }
 
+/* REMOVE GLASS PANELS SITEWIDE */
+
+.hero-frame,
+.section-card,
+.cavalier-panel,
+.feature-card,
+.animal-card,
+.cta-box,
+.faq-item,
+.feature-card-body{
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    backdrop-filter:none;
+}
+
+.hero-frame,
+.section-card,
+.cavalier-panel{
+    padding-left:0;
+    padding-right:0;
+}
+
+.image-card{
+    border:none;
+    box-shadow:none;
+    background:transparent;
+}
+
+.image-card img,
+.crest-image,
+.main-crest,
+.bio-poster{
+    border:none;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
