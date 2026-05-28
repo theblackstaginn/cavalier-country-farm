@@ -649,28 +649,30 @@ main{
 }
 
 .applications-modal-content{
-    width:min(620px, 94vw);
+    position:relative;
 
-    padding:42px 30px;
+    width:min(760px, 92%);
 
-    border-radius:26px;
+    padding:58px 42px 42px;
+
+    border-radius:28px;
 
     background:
         linear-gradient(
-            180deg,
-            rgba(34,26,20,.96) 0%,
-            rgba(16,12,10,.96) 100%
-        );
+            rgba(12,10,8,.72),
+            rgba(12,10,8,.72)
+        ),
+        url('farm buttons/modal-bg.webp');
 
-    border:1px solid rgba(210,154,99,.28);
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(255,255,255,.08);
 
     box-shadow:
-        0 24px 70px rgba(0,0,0,.6),
-        inset 0 1px 0 rgba(255,255,255,.04);
+        0 24px 60px rgba(0,0,0,.55);
 
-    text-align:center;
-
-    position:relative;
+    overflow:hidden;
 }
 
 .applications-modal-content h2{
