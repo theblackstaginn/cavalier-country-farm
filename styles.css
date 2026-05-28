@@ -1135,4 +1135,22 @@ main{
         height:30px;
     }
 
-}
+    .puppy-display-section{
+        padding:45px 8px 65px;
+    }
+
+    .puppy-intro{
+        padding:28px 18px 12px;
+    }
+
+    .puppy-display-wrap{
+        width:1120px;
+        max-width:none;
+        margin-left:50%;
+        transform:translateX(-50%);
+    }
+
+    .puppy-name{
+        font-size:.8rem;
+    }
+
