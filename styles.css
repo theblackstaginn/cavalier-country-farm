@@ -504,6 +504,16 @@ main{
     margin-bottom:0;
 }
 
+.photography-section{
+    position:relative;
+    background:
+        linear-gradient(rgba(8,7,6,.42), rgba(8,7,6,.58)),
+        url('assets/animals-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
