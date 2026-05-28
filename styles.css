@@ -335,6 +335,29 @@ main{
     align-items:center;
 }
 
+/* READABILITY CARD */
+
+.good-fit-card{
+    background:rgba(18,16,18,.26);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:24px;
+    padding:34px 36px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.good-fit-card h3{
+    text-shadow:0 2px 10px rgba(0,0,0,.55);
+}
+
+.good-fit-card p,
+.good-fit-card li{
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
 .crest-image{
     width:100%;
     max-height:560px;
@@ -483,378 +506,15 @@ main{
     filter:drop-shadow(0 20px 40px rgba(0,0,0,.55));
 }
 
-.animal-card.image-card{
-    display:flex;
-    flex-direction:column;
-    min-height:100%;
-}
-
-.animal-card.image-card img{
-    height:300px;
-}
-
-.animal-card.image-card .feature-card-body{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-
-.animal-card.image-card .feature-card-body p{
-    margin-bottom:0;
-}
-
-.photography-section{
-    position:relative;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(8,7,6,.82) 0%,
-            rgba(8,7,6,.18) 18%,
-            rgba(8,7,6,.18) 82%,
-            rgba(8,7,6,.82) 100%
-        ),
-        url('assets/animals-bg.jpg');
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-.photography-section::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-
-    background:
-
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.72) 0%,
-            rgba(0,0,0,0) 22%
-        ),
-
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,.72) 0%,
-            rgba(0,0,0,0) 22%
-        ),
-
-        linear-gradient(
-            to left,
-            rgba(0,0,0,.55) 0%,
-            rgba(0,0,0,0) 18%
-        ),
-
-        linear-gradient(
-            to right,
-            rgba(0,0,0,.55) 0%,
-            rgba(0,0,0,0) 18%
-        ),
-
-        radial-gradient(
-            ellipse at center,
-            rgba(0,0,0,0) 42%,
-            rgba(0,0,0,.28) 100%
-        );
-}
-
-/* REMOVE GLASS PANELS SITEWIDE */
-
-.hero-frame,
-.section-card,
-.cavalier-panel,
-.feature-card,
-.animal-card,
-.cta-box,
-.faq-item,
-.feature-card-body{
-    background:transparent;
-    border:none;
-    box-shadow:none;
-    backdrop-filter:none;
-}
-
-.hero-frame,
-.section-card,
-.cavalier-panel{
-    padding-left:0;
-    padding-right:0;
-}
-
-.image-card{
-    border:none;
-    box-shadow:none;
-    background:transparent;
-}
-
-.image-card img,
-.crest-image,
-.main-crest,
-.bio-poster{
-    border:none;
-}
-
-/* SECTION EDGE FADES */
-
-.cavalier-section,
-.petting-section{
-    position:relative;
-    overflow:hidden;
-}
-
-.cavalier-section::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:190px;
-    pointer-events:none;
-    z-index:2;
-
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.82) 0%,
-        rgba(0,0,0,.48) 38%,
-        rgba(0,0,0,0) 100%
-    );
-}
-
-.petting-section::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    height:190px;
-    pointer-events:none;
-    z-index:2;
-
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,.82) 0%,
-        rgba(0,0,0,.48) 38%,
-        rgba(0,0,0,0) 100%
-    );
-}
-
-.cavalier-section .section-card,
-.petting-section .section-card{
-    position:relative;
-    z-index:3;
-}
-
 /* MOBILE */
-
-@media(max-width:900px){
-    .split-card{
-        grid-template-columns:1fr;
-    }
-}
 
 @media(max-width:768px){
 
-    body::before{
-        content:"";
-        position:fixed;
-        inset:0;
-        z-index:-1;
-        background:url('assets/farm-mobile-bg.png') center top / cover no-repeat;
-        transform:translateZ(0);
+    .good-fit-card{
+        padding:28px 24px;
+        border-radius:20px;
+        backdrop-filter:blur(8px);
+        -webkit-backdrop-filter:blur(8px);
     }
 
-    body{
-        background:transparent;
-    }
-
-    body.bio-modal-open{
-        overflow:hidden;
-    }
-
-    .hero,
-    main,
-    .facebook-banner-section,
-    .animals-page main{
-        background:transparent;
-        background-image:none;
-        background-attachment:scroll;
-    }
-
-    .animals-hero{
-        background:url('assets/animals-bg.jpg') center top / cover no-repeat;
-    }
-
-    .top-nav{
-        flex-direction:column;
-        gap:14px;
-        padding:20px;
-    }
-
-    .nav-logo{
-        font-size:1.55rem;
-    }
-
-    .nav-links{
-        gap:14px;
-        justify-content:center;
-    }
-
-    .nav-links a{
-        font-size:.84rem;
-    }
-
-    .hero{
-        padding:145px 20px 70px;
-    }
-
-    .hero-frame{
-        padding:38px 22px 42px;
-        border-radius:22px;
-        background:rgba(8,7,6,.10);
-        backdrop-filter:none;
-    }
-
-    .hero h1{
-        font-size:clamp(2.6rem, 13vw, 4.2rem);
-    }
-
-    .hero p{
-        font-size:1rem;
-        line-height:1.75;
-    }
-
-    .image-btn{
-        width:min(230px, 74vw);
-    }
-
-    .facebook-banner{
-        width:min(210px, 42vw);
-    }
-
-    .section-card,
-    .cavalier-panel{
-        padding:38px 24px;
-        background:rgba(8,7,6,.16);
-        backdrop-filter:none;
-    }
-
-    .welcome-section,
-    .cavalier-wrapper{
-        padding:70px 0;
-        background:transparent;
-        backdrop-filter:none;
-    }
-
-    .split-card{
-        display:flex;
-        flex-direction:column;
-    }
-
-    .split-card img{
-        order:-1;
-        margin-bottom:24px;
-    }
-
-    .crest-image{
-        max-height:380px;
-    }
-
-    .image-card img,
-    .animal-card.image-card img{
-        height:230px;
-    }
-
-    .animals-header{
-        min-height:125px;
-    }
-
-    .crest-hero-section{
-        padding:30px 20px 10px;
-    }
-
-    .main-crest{
-        width:min(460px, 100%);
-        padding:16px;
-        border-radius:22px;
-    }
-    
-    .photography-section{
-    background:
-        linear-gradient(rgba(8,7,6,.5), rgba(8,7,6,.62)),
-        url('assets/animals-bg.jpg');
-    background-size:cover;
-    background-position:center;
-    background-attachment:scroll;
-}
-
-    .bio-poster-wrap{
-        cursor:pointer;
-    }
-
-    .bio-mobile-hint{
-        display:block;
-        margin-top:12px;
-        color:#d7a269;
-        font-size:.78rem;
-        letter-spacing:2px;
-        text-transform:uppercase;
-        opacity:.9;
-        text-align:center;
-    }
-
-    .bio-modal{
-        position:fixed;
-        inset:0;
-        z-index:99999;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        padding:20px;
-        background:rgba(0,0,0,.88);
-        opacity:0;
-        pointer-events:none;
-        transition:opacity .25s ease;
-    }
-
-    .bio-modal.active{
-        opacity:1;
-        pointer-events:auto;
-    }
-
-    .bio-modal-image{
-        width:auto;
-        max-width:94vw;
-        max-height:92vh;
-        display:block;
-        object-fit:contain;
-        border-radius:12px;
-        box-shadow:0 20px 55px rgba(0,0,0,.65);
-    }
-
-    .bio-modal-close{
-        position:absolute;
-        top:14px;
-        right:18px;
-        z-index:2;
-        width:44px;
-        height:44px;
-        border:none;
-        border-radius:50%;
-        background:rgba(10,8,6,.72);
-        color:#fff;
-        font-size:2.4rem;
-        line-height:1;
-        cursor:pointer;
-    }
-
-}
-.hero-frame,
-.section-card,
-.cavalier-panel{
-    background:transparent;
-    backdrop-filter:none;
 }
