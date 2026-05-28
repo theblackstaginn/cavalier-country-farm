@@ -675,12 +675,8 @@ main{
 }
 
 .applications-modal-content h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:clamp(2.2rem, 5vw, 3.4rem);
-    font-weight:600;
-    color:#f4e4c8;
-
-    margin-bottom:30px;
+    font-size:clamp(2.2rem, 5vw, 4rem);
+    margin-bottom:22px;
 }
 
 .applications-modal-grid{
