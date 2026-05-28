@@ -626,18 +626,13 @@ main{
 /* APPLICATIONS MODAL */
 
 .applications-modal{
-position:fixed;
-inset:0;
-z-index:99999;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:14px;
-background:rgba(0,0,0,.78);
-opacity:0;
-pointer-events:none;
-transition:opacity .25s ease;
-overflow:hidden;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:auto;
+
 }
 
 .applications-modal.active{
