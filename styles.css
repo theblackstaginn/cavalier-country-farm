@@ -894,6 +894,7 @@ main{
     --x:19%;
     --y:68.5%;
     --z:-1deg;
+    --size:1.4rem;
 
     left:var(--x);
     top:var(--y);
@@ -907,6 +908,7 @@ main{
     --x:39%;
     --y:68.5%;
     --z:0deg;
+    --size:1.4rem;
 
     left:var(--x);
     top:var(--y);
@@ -920,6 +922,7 @@ main{
     --x:60%;
     --y:69%;
     --z:0deg;
+    --size:1.4rem;
 
     left:var(--x);
     top:var(--y);
@@ -933,6 +936,7 @@ main{
     --x:83%;
     --y:69%;
     --z:1deg;
+    --size:1.4rem;
 
     left:var(--x);
     top:var(--y);
