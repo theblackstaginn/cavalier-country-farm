@@ -600,6 +600,22 @@ main{
     z-index:3;
 }
 
+.site-credit{
+    margin-top:14px;
+    font-size:.82rem;
+    letter-spacing:1px;
+    color:#bda98f;
+}
+
+.site-credit a{
+    color:#d7a269;
+    text-decoration:none;
+}
+
+.site-credit a:hover{
+    text-decoration:underline;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
