@@ -763,6 +763,13 @@ main{
 }
 
 .puppy-display-wrap{
+    --photo-w:18.9%;
+    --photo-h:40.2%;
+
+    --photo-zoom:1.08;
+
+    --name-size:clamp(.7rem, 1.25vw, 1.1rem);
+
     position:relative;
     width:min(1280px, 96%);
     margin:10px auto 0;
@@ -797,76 +804,142 @@ main{
     display:block;
     object-fit:cover;
     object-position:center;
+    transform:scale(var(--photo-zoom));
 }
+
+/* ANGUS */
 
 .puppy-photo-1{
-    left:4.15%;
-    top:34.2%;
-    width:19.2%;
-    height:36.9%;
-    transform:rotate(-7.4deg);
+    --x:4.25%;
+    --y:31.9%;
+    --z:-7.4deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    width:var(--photo-w);
+    height:var(--photo-h);
+
+    transform:rotate(var(--z));
 }
+
+/* BAM BAM */
 
 .puppy-photo-2{
-    left:30.05%;
-    top:30.15%;
-    width:19.4%;
-    height:38.4%;
-    transform:rotate(.3deg);
+    --x:30.45%;
+    --y:28.3%;
+    --z:.3deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    width:var(--photo-w);
+    height:var(--photo-h);
+
+    transform:rotate(var(--z));
 }
+
+/* ELSA */
 
 .puppy-photo-3{
-    left:54.35%;
-    top:33.2%;
-    width:19.2%;
-    height:37.7%;
-    transform:rotate(-1.2deg);
+    --x:54.35%;
+    --y:31%;
+    --z:-1.2deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    width:var(--photo-w);
+    height:var(--photo-h);
+
+    transform:rotate(var(--z));
 }
 
+/* PEBBLES */
+
 .puppy-photo-4{
-    left:77.15%;
-    top:31.1%;
-    width:18.75%;
-    height:38.4%;
-    transform:rotate(2.4deg);
+    --x:77.15%;
+    --y:29.3%;
+    --z:2.4deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    width:var(--photo-w);
+    height:var(--photo-h);
+
+    transform:rotate(var(--z));
 }
 
 .puppy-name{
     position:absolute;
     z-index:6;
     font-family:'Cormorant Garamond', serif;
-    font-size:clamp(.52rem, 1.25vw, 1.05rem);
+    font-size:var(--name-size);
     font-weight:700;
     letter-spacing:.08em;
     text-transform:uppercase;
-    color:#211104;
+    color:#201005;
     text-shadow:
-        0 1px 0 rgba(255,223,154,.42),
-        0 2px 4px rgba(0,0,0,.22);
+        0 1px 0 rgba(255,223,154,.45),
+        0 2px 4px rgba(0,0,0,.32);
     pointer-events:none;
     white-space:nowrap;
     text-align:center;
 }
 
+/* NAMEPLATES */
+
 .puppy-name-1{
-    left:12.2%;
-    top:78.1%;
-    transform:rotate(-1deg);
+    --x:13.55%;
+    --y:77.2%;
+    --z:-1deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    transform:
+        translateX(-50%)
+        rotate(var(--z));
 }
 
 .puppy-name-2{
-    left:35.35%;
-    top:77.7%;
+    --x:39.8%;
+    --y:77.2%;
+    --z:0deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    transform:
+        translateX(-50%)
+        rotate(var(--z));
 }
 
 .puppy-name-3{
-    left:60.3%;
-    top:77.9%;
+    --x:63.65%;
+    --y:77.2%;
+    --z:0deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    transform:
+        translateX(-50%)
+        rotate(var(--z));
 }
 
 .puppy-name-4{
-    left:83.55%;
-    top:77.8%;
+    --x:86.6%;
+    --y:77.2%;
+    --z:1deg;
+
+    left:var(--x);
+    top:var(--y);
+
+    transform:
+        translateX(-50%)
+        rotate(var(--z));
 }
 
 /* MOBILE */
