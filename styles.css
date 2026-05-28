@@ -496,31 +496,26 @@ main{
     pointer-events:none;
 
     background:
-
         linear-gradient(
             to top,
             rgba(0,0,0,.72) 0%,
             rgba(0,0,0,0) 22%
         ),
-
         linear-gradient(
             to bottom,
             rgba(0,0,0,.72) 0%,
             rgba(0,0,0,0) 22%
         ),
-
         linear-gradient(
             to left,
             rgba(0,0,0,.55) 0%,
             rgba(0,0,0,0) 18%
         ),
-
         linear-gradient(
             to right,
             rgba(0,0,0,.55) 0%,
             rgba(0,0,0,0) 18%
         ),
-
         radial-gradient(
             ellipse at center,
             rgba(0,0,0,0) 42%,
@@ -626,173 +621,133 @@ main{
 /* APPLICATIONS MODAL */
 
 .applications-modal{
-position:fixed;
-inset:0;
-z-index:99999;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:14px;
-background:rgba(0,0,0,.78);
-opacity:0;
-pointer-events:none;
-transition:opacity .25s ease;
-overflow:hidden;
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px;
+    background:rgba(0,0,0,.78);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease;
+    overflow:hidden;
 }
 
 .applications-modal.active{
-opacity:1;
-pointer-events:auto;
+    opacity:1;
+    pointer-events:auto;
 }
 
 .applications-modal-content{
-position:relative;
-width:min(700px, 94vw);
-padding:0;
-background:none;
-border:none;
-border-radius:0;
-box-shadow:none;
-overflow:visible;
+    position:relative;
+    width:auto;
+    max-width:92vw;
+    height:auto;
+    max-height:86vh;
+    padding:0;
+    background:none;
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    overflow:visible;
 }
 
 .applications-modal-bg{
-width:100%;
-max-width:100%;
-height:auto;
-display:block;
-filter:drop-shadow(0 24px 60px rgba(0,0,0,.55));
+    width:auto;
+    height:auto;
+    max-width:92vw;
+    max-height:86vh;
+    display:block;
+    filter:drop-shadow(0 24px 60px rgba(0,0,0,.55));
 }
 
 .applications-modal-inner{
-position:absolute;
-inset:0;
-z-index:2;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:flex-start;
-padding:62px 52px 50px;
+    position:absolute;
+    inset:0;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding:9% 8% 7%;
 }
 
 .applications-modal-content .eyebrow{
-color:#111;
-font-size:1rem;
-font-weight:700;
-letter-spacing:4px;
-margin-bottom:8px;
-text-shadow:
-0 2px 3px rgba(255,255,255,.28),
-0 5px 12px rgba(0,0,0,.35);
+    color:#111;
+    font-size:clamp(.68rem, 1.45vw, .95rem);
+    font-weight:700;
+    letter-spacing:.28em;
+    margin-bottom:.8%;
+    text-shadow:
+        0 2px 3px rgba(255,255,255,.28),
+        0 5px 12px rgba(0,0,0,.35);
 }
 
 .applications-modal-content h2{
-font-family:'Cormorant Garamond', serif;
-font-size:clamp(2.4rem, 5vw, 3.7rem);
-font-weight:700;
-color:#f4e4c8;
-margin-bottom:12px;
-text-align:center;
-text-shadow:
-0 4px 4px rgba(0,0,0,.95),
-0 10px 18px rgba(0,0,0,.9),
-0 0 28px rgba(0,0,0,.8);
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2rem, 5.3vw, 3.65rem);
+    font-weight:700;
+    color:#f4e4c8;
+    margin-bottom:2%;
+    text-align:center;
+    line-height:.95;
+    text-shadow:
+        0 4px 4px rgba(0,0,0,.95),
+        0 10px 18px rgba(0,0,0,.9),
+        0 0 28px rgba(0,0,0,.8);
 }
 
 .applications-modal-grid{
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:8px;
-margin-top:8px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1.15vh;
+    margin-top:1%;
 }
 
 .application-image-link{
-width:100%;
-display:flex;
-justify-content:center;
-line-height:0;
-transition:.22s ease;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    line-height:0;
+    transition:.22s ease;
 }
 
 .application-image-link:hover{
-transform:translateY(-2px);
+    transform:translateY(-2px);
 }
 
 .application-image-btn{
-width:85%;
-display:block;
+    width:78%;
+    display:block;
 }
 
 .applications-modal-close{
-position:absolute;
-top:18px;
-right:18px;
-width:34px;
-height:34px;
-background:none;
-border:none;
-padding:0;
-cursor:pointer;
-z-index:10;
+    position:absolute;
+    top:4.5%;
+    right:4.5%;
+    width:clamp(28px, 4vw, 36px);
+    height:clamp(28px, 4vw, 36px);
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    z-index:10;
 }
 
 .farm-x-btn{
-width:100%;
-height:100%;
-display:block;
-object-fit:contain;
-transition:.2s ease;
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+    transition:.2s ease;
 }
 
 .farm-x-btn:hover{
-transform:rotate(6deg) scale(1.06);
-}
-
-@media(max-width:768px){
-
-.applications-modal{
-padding:10px;
-}
-
-.applications-modal-content{
-width:96vw;
-transform:scale(.96);
-transform-origin:center;
-}
-
-.applications-modal-inner{
-padding:54px 34px 38px;
-}
-
-.applications-modal-content .eyebrow{
-font-size:.72rem;
-letter-spacing:3px;
-margin-bottom:5px;
-}
-
-.applications-modal-content h2{
-font-size:clamp(1.9rem, 9vw, 2.7rem);
-margin-bottom:8px;
-}
-
-.applications-modal-grid{
-gap:6px;
-margin-top:6px;
-}
-
-.application-image-btn{
-width:84%;
-}
-
-.applications-modal-close{
-width:30px;
-height:30px;
-top:14px;
-right:14px;
-}
-
+    transform:rotate(6deg) scale(1.06);
 }
 
 /* MOBILE */
@@ -986,14 +941,11 @@ right:14px;
         position:absolute;
         top:12px;
         right:12px;
-
         width:42px;
         height:42px;
-
         border:none;
         background:none;
         padding:0;
-
         cursor:pointer;
         z-index:100;
         display:block;
@@ -1018,6 +970,50 @@ right:14px;
 
     .bio-modal .modal-close:active{
         transform:scale(.95);
+    }
+
+    .applications-modal{
+        padding:10px;
+    }
+
+    .applications-modal-content{
+        max-width:94vw;
+        max-height:82vh;
+    }
+
+    .applications-modal-bg{
+        max-width:94vw;
+        max-height:82vh;
+    }
+
+    .applications-modal-inner{
+        padding:9% 7.5% 7%;
+    }
+
+    .applications-modal-content .eyebrow{
+        font-size:clamp(.58rem, 2.1vw, .76rem);
+        margin-bottom:.7%;
+    }
+
+    .applications-modal-content h2{
+        font-size:clamp(1.75rem, 7.8vw, 2.75rem);
+        margin-bottom:1.7%;
+    }
+
+    .applications-modal-grid{
+        gap:.78vh;
+        margin-top:.7%;
+    }
+
+    .application-image-btn{
+        width:79%;
+    }
+
+    .applications-modal-close{
+        top:4.4%;
+        right:4.4%;
+        width:30px;
+        height:30px;
     }
 
 }
