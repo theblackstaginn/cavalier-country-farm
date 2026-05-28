@@ -765,6 +765,26 @@ main{
     display:block;
 }
 
+.applications-modal-close{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:none;
+    border:none;
+    padding:0;
+    width:46px;
+    height:46px;
+    cursor:pointer;
+    z-index:5;
+}
+
+.farm-x-btn{
+    width:46px;
+    height:46px;
+    display:block;
+    object-fit:contain;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
