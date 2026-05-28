@@ -743,12 +743,13 @@ main{
 }
 
 .application-image-btn{
+    position:center;
     width:85%;
     display:block;
 }
 
 .applications-modal-close{
-    position:center;
+    position:absolute;
     top:12px;
     right:12px;
 
