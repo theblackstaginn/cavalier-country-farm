@@ -748,7 +748,7 @@ main{
 }
 
 .applications-modal-close{
-    position:absolute;
+    position:center;
     top:12px;
     right:12px;
 
