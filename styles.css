@@ -171,9 +171,10 @@ body{
 
 .facebook-banner-section .eyebrow{
     margin-bottom:4px;
-    opacity:.65;
+    opacity:.9;
     letter-spacing:2px;
-    font-size:.62rem;
+    font-size:.95rem;
+    font-weight:700;
 }
 
 .facebook-banner-link{
