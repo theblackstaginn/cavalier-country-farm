@@ -641,14 +641,14 @@ pointer-events:auto;
 }
 
 .applications-modal-content{
-position:relative;
-width:min(700px, 94vw);
-padding:0;
-background:none;
-border:none;
-border-radius:0;
-box-shadow:none;
-overflow:visible;
+
+    width:min(620px, 92vw);
+
+    max-height:88vh;
+
+    transform:scale(.92);
+
+    transform-origin:center;
 }
 
 .applications-modal-bg{
