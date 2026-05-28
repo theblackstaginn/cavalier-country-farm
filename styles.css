@@ -549,6 +549,11 @@ main{
 .photography-section .cta-box li{
     text-shadow:0 2px 8px rgba(0,0,0,.55);
 }
+/* BLACK STAG COPPER */
+
+.photography-section .cta-box ul li::marker{
+    color:#d29a63;
+}
 
 /* SECTION EDGE FADES */
 
