@@ -892,7 +892,7 @@ main{
 
 .puppy-name-1{
     --x:18.5%;
-    --y:67%;
+    --y:68.5%;
     --z:-1deg;
 
     left:var(--x);
