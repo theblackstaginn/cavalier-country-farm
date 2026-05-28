@@ -523,6 +523,21 @@ main{
     background-attachment:fixed;
 }
 
+.photography-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,0) 48%,
+            rgba(0,0,0,.18) 100%
+        );
+
+    pointer-events:none;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
