@@ -647,6 +647,15 @@ main{
         padding:16px;
         border-radius:22px;
     }
+    
+    .photography-section{
+    background:
+        linear-gradient(rgba(8,7,6,.5), rgba(8,7,6,.62)),
+        url('assets/animals-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll;
+}
 
     .bio-poster-wrap{
         cursor:pointer;
