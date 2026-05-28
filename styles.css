@@ -905,7 +905,7 @@ main{
 
 .puppy-name-2{
     --x:39.8%;
-    --y:68.5%;
+    --y:69%;
     --z:0deg;
 
     left:var(--x);
@@ -918,7 +918,7 @@ main{
 
 .puppy-name-3{
     --x:63.65%;
-    --y:68.5%;
+    --y:68%;
     --z:0deg;
 
     left:var(--x);
@@ -931,7 +931,7 @@ main{
 
 .puppy-name-4{
     --x:86.6%;
-    --y:68.5%;
+    --y:68%;
     --z:1deg;
 
     left:var(--x);
