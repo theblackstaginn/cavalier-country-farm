@@ -750,6 +750,21 @@ main{
     filter:brightness(1.06);
 }
 
+.application-image-link{
+    display:block;
+    line-height:0;
+    transition:.22s ease;
+}
+
+.application-image-link:hover{
+    transform:translateY(-2px);
+}
+
+.application-image-btn{
+    width:100%;
+    display:block;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
