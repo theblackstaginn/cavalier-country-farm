@@ -700,7 +700,7 @@ main{
 
     box-shadow:0 24px 60px rgba(0,0,0,.55);
 
-    overflow:hidden;
+    overflow:visible;
 }
 
 .applications-modal-content .eyebrow{
