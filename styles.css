@@ -836,8 +836,8 @@ main{
 /* SLOT 2 */
 
 .puppy-photo-2{
-    left:35%;
-    top:22%;
+    left:37%;
+    top:23%;
     width:var(--photo-w);
     height:var(--photo-h);
     transform:rotate(2.1deg);
