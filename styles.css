@@ -751,8 +751,8 @@ main{
 }
 
 .puppy-display-wrap{
-    --photo-w:14.1%;
-    --photo-h:22.6%;
+    --photo-w:12.2%;
+    --photo-h:20.2%;
     --photo-zoom:1.06;
     --name-size:clamp(.72rem, 1.1vw, 1.08rem);
 
