@@ -473,7 +473,6 @@ main{
 .photography-section{
     position:relative;
     overflow:hidden;
-
     background:
         linear-gradient(
             to bottom,
@@ -483,7 +482,6 @@ main{
             rgba(8,7,6,.82) 100%
         ),
         url('assets/animals-bg.jpg');
-
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -494,7 +492,6 @@ main{
     position:absolute;
     inset:0;
     pointer-events:none;
-
     background:
         linear-gradient(
             to top,
@@ -523,21 +520,16 @@ main{
         );
 }
 
-/* ONLY VISIBLE CARD ON ENTIRE SITE */
-
 .photography-section .cta-box{
     padding:34px 36px;
     background:rgba(20,18,22,.24);
     border:1px solid rgba(255,255,255,.08);
     border-radius:24px;
-
     backdrop-filter:blur(7px);
     -webkit-backdrop-filter:blur(7px);
-
     box-shadow:
         0 12px 32px rgba(0,0,0,.22),
         inset 0 1px 0 rgba(255,255,255,.04);
-
     text-align:center;
 }
 
@@ -545,8 +537,6 @@ main{
 .photography-section .cta-box li{
     text-shadow:0 2px 8px rgba(0,0,0,.55);
 }
-
-/* BLACK STAG COPPER */
 
 .photography-section .cta-box ul li::marker{
     color:#d29a63;
@@ -569,7 +559,6 @@ main{
     height:190px;
     pointer-events:none;
     z-index:2;
-
     background:linear-gradient(
         to top,
         rgba(0,0,0,.82) 0%,
@@ -587,7 +576,6 @@ main{
     height:190px;
     pointer-events:none;
     z-index:2;
-
     background:linear-gradient(
         to bottom,
         rgba(0,0,0,.82) 0%,
@@ -763,25 +751,25 @@ main{
 }
 
 .puppy-display-wrap{
-    --photo-w:18.9%;
-    --photo-h:40.2%;
-
-    --photo-zoom:1.08;
-
-    --name-size:clamp(.7rem, 1.25vw, 1.1rem);
+    --photo-w:14.1%;
+    --photo-h:22.6%;
+    --photo-zoom:1.06;
+    --name-size:clamp(.72rem, 1.1vw, 1.08rem);
 
     position:relative;
     width:min(1280px, 96%);
     margin:10px auto 0;
+    aspect-ratio:16 / 10;
+    filter:drop-shadow(0 20px 42px rgba(0,0,0,.42));
 }
 
-.puppy-display-frame{
-    width:100%;
-    display:block;
-    position:relative;
-    z-index:4;
+.puppy-display-wrap::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:5;
+    background:url('assets/puppy-display.webp') center center / contain no-repeat;
     pointer-events:none;
-    filter:drop-shadow(0 20px 42px rgba(0,0,0,.42));
 }
 
 .puppy-photo{
@@ -789,9 +777,10 @@ main{
     z-index:2;
     display:block;
     overflow:hidden;
-    background:#000;
+    background:transparent;
     cursor:pointer;
     transition:.25s ease;
+    transform-origin:center center;
 }
 
 .puppy-photo:hover{
@@ -807,68 +796,8 @@ main{
     transform:scale(var(--photo-zoom));
 }
 
-/* ANGUS */
-
-.puppy-photo-1{
-    --x:4.25%;
-    --y:31.9%;
-    --z:-7.4deg;
-
-    left:var(--x);
-    top:var(--y);
-
-    width:var(--photo-w);
-    height:var(--photo-h);
-
-    transform:rotate(var(--z));
-}
-
-/* BAM BAM */
-
-.puppy-photo-2{
-    --x:30.45%;
-    --y:28.3%;
-    --z:.3deg;
-
-    left:var(--x);
-    top:var(--y);
-
-    width:var(--photo-w);
-    height:var(--photo-h);
-
-    transform:rotate(var(--z));
-}
-
-/* ELSA */
-
-.puppy-photo-3{
-    --x:54.35%;
-    --y:31%;
-    --z:-1.2deg;
-
-    left:var(--x);
-    top:var(--y);
-
-    width:var(--photo-w);
-    height:var(--photo-h);
-
-    transform:rotate(var(--z));
-}
-
-/* PEBBLES */
-
-.puppy-photo-4{
-    --x:77.15%;
-    --y:29.3%;
-    --z:2.4deg;
-
-    left:var(--x);
-    top:var(--y);
-
-    width:var(--photo-w);
-    height:var(--photo-h);
-
-    transform:rotate(var(--z));
+.puppy-photo.is-empty{
+    pointer-events:none;
 }
 
 .puppy-name{
@@ -888,62 +817,132 @@ main{
     text-align:center;
 }
 
-/* NAMEPLATES */
+/* SLOT 1 */
+
+.puppy-photo-1{
+    left:11.6%;
+    top:28.4%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(-6.2deg);
+}
 
 .puppy-name-1{
-    --x:19%;
-    --y:68.5%;
-    --z:-1deg;
-    --size:1.4rem;
+    left:18.6%;
+    top:51.5%;
+    transform:translateX(-50%) rotate(-6.2deg);
+}
 
-    left:var(--x);
-    top:var(--y);
+/* SLOT 2 */
 
-    transform:
-        translateX(-50%)
-        rotate(var(--z));
+.puppy-photo-2{
+    left:31.3%;
+    top:25.9%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(2.1deg);
 }
 
 .puppy-name-2{
-    --x:39%;
-    --y:68.5%;
-    --z:0deg;
-    --size:1.4rem;
+    left:38.35%;
+    top:49.2%;
+    transform:translateX(-50%) rotate(2.1deg);
+}
 
-    left:var(--x);
-    top:var(--y);
+/* SLOT 3 */
 
-    transform:
-        translateX(-50%)
-        rotate(var(--z));
+.puppy-photo-3{
+    left:51.2%;
+    top:27.6%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(-2.4deg);
 }
 
 .puppy-name-3{
-    --x:60%;
-    --y:69%;
-    --z:0deg;
-    --size:1.4rem;
+    left:58.2%;
+    top:50.9%;
+    transform:translateX(-50%) rotate(-2.4deg);
+}
 
-    left:var(--x);
-    top:var(--y);
+/* SLOT 4 */
 
-    transform:
-        translateX(-50%)
-        rotate(var(--z));
+.puppy-photo-4{
+    left:70.7%;
+    top:25.8%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(4.1deg);
 }
 
 .puppy-name-4{
-    --x:83%;
-    --y:69%;
-    --z:1deg;
-    --size:1.4rem;
+    left:77.75%;
+    top:49.1%;
+    transform:translateX(-50%) rotate(4.1deg);
+}
 
-    left:var(--x);
-    top:var(--y);
+/* SLOT 5 */
 
-    transform:
-        translateX(-50%)
-        rotate(var(--z));
+.puppy-photo-5{
+    left:11.1%;
+    top:59.5%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(3.2deg);
+}
+
+.puppy-name-5{
+    left:18.1%;
+    top:82.6%;
+    transform:translateX(-50%) rotate(3.2deg);
+}
+
+/* SLOT 6 */
+
+.puppy-photo-6{
+    left:31.4%;
+    top:61.3%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(-3.8deg);
+}
+
+.puppy-name-6{
+    left:38.4%;
+    top:84.4%;
+    transform:translateX(-50%) rotate(-3.8deg);
+}
+
+/* SLOT 7 */
+
+.puppy-photo-7{
+    left:51.6%;
+    top:59.6%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(2.7deg);
+}
+
+.puppy-name-7{
+    left:58.6%;
+    top:82.7%;
+    transform:translateX(-50%) rotate(2.7deg);
+}
+
+/* SLOT 8 */
+
+.puppy-photo-8{
+    left:71.2%;
+    top:61%;
+    width:var(--photo-w);
+    height:var(--photo-h);
+    transform:rotate(-2.2deg);
+}
+
+.puppy-name-8{
+    left:78.2%;
+    top:84.1%;
+    transform:translateX(-50%) rotate(-2.2deg);
 }
 
 /* MOBILE */
@@ -1078,7 +1077,6 @@ main{
         background:
             linear-gradient(rgba(8,7,6,.5), rgba(8,7,6,.62)),
             url('assets/animals-bg.jpg');
-
         background-size:cover;
         background-position:center;
         background-attachment:scroll;
@@ -1230,4 +1228,4 @@ main{
     .puppy-name{
         font-size:.8rem;
     }
-
+}
