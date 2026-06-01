@@ -828,7 +828,7 @@ main{
 }
 
 .puppy-name-1{
-    left:30%;
+    left:29.5%;
     top:43.5%;
     transform:translateX(-50%) rotate(-6.2deg);
 }
@@ -844,8 +844,8 @@ main{
 }
 
 .puppy-name-2{
-    left:43.5%;
-    top:45%;
+    left:43%;
+    top:44.5%;
     transform:translateX(-50%) rotate(2.1deg);
 }
 
@@ -861,7 +861,7 @@ main{
 
 .puppy-name-3{
     left:58.2%;
-    top:44.9%;
+    top:45.4%;
     transform:translateX(-50%) rotate(-2.4deg);
 }
 
