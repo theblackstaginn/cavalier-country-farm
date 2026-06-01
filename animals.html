@@ -4,162 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Animals | Cavalier Country Farm</title>
-
     <link rel="stylesheet" href="styles.css?v=22">
     <script src="script.js?v=22" defer></script>
 </head>
 
-<body>
+<body class="animals-page">
 
-<header class="top-nav">
-    <a href="index.html" class="nav-brand">Cavalier Country Farm</a>
+<header class="animals-header">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="animals.html">Our Animals</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="top-nav">
+
+        <div class="nav-logo">
+            Cavalier Country Farm
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="animals.html">Our Animals</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
     </nav>
+
 </header>
 
 <main>
 
-<section class="hero animals-hero">
-    <div class="hero-content">
-        <div class="hero-image-wrap crest-wrap">
-            <img src="assets/cavalier-crest.jpg" alt="Cavalier Country Farm crest">
+    <section class="crest-hero-section">
+
+        <div class="crest-hero-inner">
+
+            <img
+                src="assets/cavalier-crest.jpg"
+                alt="Cavalier Country Farm Crest"
+                class="main-crest"
+            >
+
         </div>
 
-        <h1>Our Animals</h1>
-        <p>
-            Meet the Cavaliers, farm animals, and future petting zoo friends of Cavalier Country Farm.
-        </p>
-    </div>
-</section>
+    </section>
 
-<section id="cavalier-corner" class="section cavalier-corner">
-    <div class="section-inner">
+    <section class="cavalier-wrapper">
 
-        <p class="eyebrow">Cavalier Corner</p>
-        <h2>Available Puppies</h2>
-        <p class="section-lead">
-            Raised in the home, loved by the family, and socialized around farm life.
-            Click a puppy to view details, status, and extra photos.
-        </p>
+        <div class="cavalier-panel split-card">
 
-        <div class="puppy-board desktop-puppy-board" aria-label="Available puppies display">
+            <img
+                src="assets/cc-hero.jpg"
+                alt="Cavalier King Charles Spaniel Puppy"
+                class="crest-image"
+            >
 
-            <img class="puppy-board-bg" src="assets/puppy-display.webp" alt="Western puppy display board">
+            <div>
 
-            <button class="puppy-hotspot puppy-slot-1" data-puppy="angus" aria-label="View Angus">
-                <img src="assets/pups/angus-1.webp" alt="Angus">
+                <p class="eyebrow">Cavalier Corner</p>
+
+                <h2>Cavalier King Charles Spaniels</h2>
+
+                <p>
+                    Our Cavaliers are raised as part of the family with daily attention,
+                    calm handling, and a strong focus on temperament and socialization.
+                </p>
+
+                <p>
+                    This page will eventually hold litter information, applications,
+                    availability, pickup details, and future farm visit experiences.
+                </p>
+
+                <a href="index.html#apply" class="image-btn-link">
+                    <img src="assets/app-info.webp" alt="Application Info" class="image-btn">
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="puppy-display-section">
+
+        <div class="section-card puppy-intro">
+
+            <p class="eyebrow">Available Puppies</p>
+
+            <h2>Meet the current Cavalier litter.</h2>
+
+            <p>
+                Click a puppy below to view more photos and details.
+            </p>
+
+        </div>
+
+        <div class="puppy-display-wrap desktop-puppy-board">
+
+            <button class="puppy-photo puppy-photo-1" type="button" data-puppy="angus" aria-label="View Angus">
+                <img src="assets/pups/angus/angus-1.webp" alt="Angus">
             </button>
 
-            <button class="puppy-hotspot puppy-slot-2" data-puppy="bam-bam" aria-label="View Bam Bam">
-                <img src="assets/pups/bam-bam-1.webp" alt="Bam Bam">
+            <button class="puppy-photo puppy-photo-2" type="button" data-puppy="bambam" aria-label="View Bam Bam">
+                <img src="assets/pups/bambam/bambam-1.webp" alt="Bam Bam">
             </button>
 
-            <button class="puppy-hotspot puppy-slot-3" data-puppy="elsa" aria-label="View Elsa">
-                <img src="assets/pups/elsa-1.webp" alt="Elsa">
+            <button class="puppy-photo puppy-photo-3" type="button" data-puppy="elsa" aria-label="View Elsa">
+                <img src="assets/pups/elsa/elsa-1.webp" alt="Elsa">
             </button>
 
-            <button class="puppy-hotspot puppy-slot-4" data-puppy="pebbles" aria-label="View Pebbles">
-                <img src="assets/pups/pebbles-1.webp" alt="Pebbles">
+            <button class="puppy-photo puppy-photo-4" type="button" data-puppy="pebbles" aria-label="View Pebbles">
+                <img src="assets/pups/pebbles/pebbles-1.webp" alt="Pebbles">
             </button>
+
+            <span class="puppy-photo puppy-photo-5 is-empty" aria-hidden="true"></span>
+            <span class="puppy-photo puppy-photo-6 is-empty" aria-hidden="true"></span>
+            <span class="puppy-photo puppy-photo-7 is-empty" aria-hidden="true"></span>
+            <span class="puppy-photo puppy-photo-8 is-empty" aria-hidden="true"></span>
 
             <span class="puppy-name puppy-name-1">Angus</span>
             <span class="puppy-name puppy-name-2">Bam Bam</span>
             <span class="puppy-name puppy-name-3">Elsa</span>
             <span class="puppy-name puppy-name-4">Pebbles</span>
+            <span class="puppy-name puppy-name-5"></span>
+            <span class="puppy-name puppy-name-6"></span>
+            <span class="puppy-name puppy-name-7"></span>
+            <span class="puppy-name puppy-name-8"></span>
 
         </div>
 
         <div class="mobile-puppy-carousel" aria-label="Available puppies mobile carousel">
 
-            <article class="puppy-card" data-puppy="angus">
-                <button class="puppy-card-btn">
-                    <img src="assets/pups/angus-1.webp" alt="Angus">
+            <article class="puppy-card">
+                <button class="puppy-card-btn" type="button" data-puppy="angus">
+                    <img src="assets/pups/angus/angus-1.webp" alt="Angus">
                     <span>Angus</span>
                 </button>
             </article>
 
-            <article class="puppy-card" data-puppy="bam-bam">
-                <button class="puppy-card-btn">
-                    <img src="assets/pups/bam-bam-1.webp" alt="Bam Bam">
+            <article class="puppy-card">
+                <button class="puppy-card-btn" type="button" data-puppy="bambam">
+                    <img src="assets/pups/bambam/bambam-1.webp" alt="Bam Bam">
                     <span>Bam Bam</span>
                 </button>
             </article>
 
-            <article class="puppy-card" data-puppy="elsa">
-                <button class="puppy-card-btn">
-                    <img src="assets/pups/elsa-1.webp" alt="Elsa">
+            <article class="puppy-card">
+                <button class="puppy-card-btn" type="button" data-puppy="elsa">
+                    <img src="assets/pups/elsa/elsa-1.webp" alt="Elsa">
                     <span>Elsa</span>
                 </button>
             </article>
 
-            <article class="puppy-card" data-puppy="pebbles">
-                <button class="puppy-card-btn">
-                    <img src="assets/pups/pebbles-1.webp" alt="Pebbles">
+            <article class="puppy-card">
+                <button class="puppy-card-btn" type="button" data-puppy="pebbles">
+                    <img src="assets/pups/pebbles/pebbles-1.webp" alt="Pebbles">
                     <span>Pebbles</span>
                 </button>
             </article>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section class="section animals-section">
-    <div class="section-inner">
+    <section class="welcome-section">
 
-        <p class="eyebrow">Farm Friends</p>
-        <h2>Life Around The Farm</h2>
-        <p class="section-lead">
-            Cavaliers are the heart of the farm, but they share the land with horses,
-            chickens, goats, a barn cat, and Highland cattle.
-        </p>
+        <div class="section-card">
 
-        <div class="animal-grid">
+            <p class="eyebrow">Farm Companions</p>
 
-            <article class="animal-card">
-                <img src="assets/cards/cavaliers.webp" alt="Cavaliers">
-                <h3>Cavaliers</h3>
-                <p>Gentle, affectionate, family-raised companions.</p>
-            </article>
+            <h2>Gentle animals, peaceful land, and family connection.</h2>
 
-            <article class="animal-card">
-                <img src="assets/cards/mini-horses.webp" alt="Mini horses">
-                <h3>Mini Horses</h3>
-                <p>Small, sweet, and full of personality.</p>
-            </article>
+            <div class="animal-grid">
 
-            <article class="animal-card">
-                <img src="assets/cards/goat.webp" alt="Goat">
-                <h3>Goats</h3>
-                <p>Curious farm characters with plenty of charm.</p>
-            </article>
+                <article class="animal-card image-card">
 
-            <article class="animal-card">
-                <img src="assets/cards/highland.webp" alt="Highland cow">
-                <h3>Highland Cow</h3>
-                <p>A beautiful mountain farm favorite.</p>
-            </article>
+                    <img
+                        src="assets/cards/mini-horse-card.webp"
+                        alt="Miniature horses at Cavalier Country Farm"
+                    >
 
-            <article class="animal-card">
-                <img src="assets/cards/chickens.webp" alt="Chickens">
-                <h3>Chickens</h3>
-                <p>Classic farm life, fresh air, and daily rhythm.</p>
-            </article>
+                    <div class="feature-card-body">
+                        <h3>Miniature Horses</h3>
 
-            <article class="animal-card">
-                <img src="assets/cards/barn-cat.webp" alt="Barn cat">
-                <h3>Barn Cat</h3>
-                <p>The quiet guardian of the barn.</p>
-            </article>
+                        <p>
+                            Calm personalities, quiet pasture moments, and gentle interaction
+                            are all part of the rhythm of the farm.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="animal-card image-card">
+
+                    <img
+                        src="assets/cards/goat-card.webp"
+                        alt="Goats at Cavalier Country Farm"
+                    >
+
+                    <div class="feature-card-body">
+                        <h3>The Goat</h3>
+
+                        <p>
+                            Playful and curious, our goat brings movement, humor,
+                            and personality to the property.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="animal-card image-card">
+
+                    <img
+                        src="assets/cards/highland-card.webp"
+                        alt="Highland cow at Cavalier Country Farm"
+                    >
+
+                    <div class="feature-card-body">
+                        <h3>The Highland Cow</h3>
+
+                        <p>
+                            Gentle, sturdy, and full of charm, our Highland cow brings
+                            a peaceful old-country presence to the farm.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
 </main>
 
@@ -182,7 +253,7 @@
 
             <div class="puppy-modal-thumbs" id="puppyModalThumbs"></div>
 
-            <a class="puppy-apply-btn" href="index.html#applications">
+            <a class="puppy-apply-btn" href="index.html#apply">
                 Apply or Ask About This Puppy
             </a>
         </div>
@@ -191,9 +262,12 @@
 </div>
 
 <footer class="site-footer">
-    <p>Cavalier Country Farm | Cleveland, Georgia</p>
+    <p>© Cavalier Country Farm</p>
     <p class="site-credit">
-        Website by <a href="https://blackstagweb.com" target="_blank" rel="noopener">Black Stag Web Design</a>
+        Website by
+        <a href="https://blackstagweb.com" target="_blank" rel="noopener" title="North Georgia web design by Black Stag Web Design">
+            Black Stag Web Design
+        </a>
     </p>
 </footer>
 
