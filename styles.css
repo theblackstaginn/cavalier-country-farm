@@ -820,8 +820,8 @@ main{
 /* SLOT 1 */
 
 .puppy-photo-1{
-    left:23.6%;
-    top:21.5%;
+    left:23%;
+    top:21%;
     width:var(--photo-w);
     height:var(--photo-h);
     transform:rotate(-6.2deg);
@@ -837,14 +837,14 @@ main{
 
 .puppy-photo-2{
     left:37.5%;
-    top:23.5%;
+    top:22.5%;
     width:var(--photo-w);
     height:var(--photo-h);
     transform:rotate(2.1deg);
 }
 
 .puppy-name-2{
-    left:46%;
+    left:44%;
     top:44%;
     transform:translateX(-50%) rotate(2.1deg);
 }
@@ -853,7 +853,7 @@ main{
 
 .puppy-photo-3{
     left:51.2%;
-    top:23.5%;
+    top:23%;
     width:var(--photo-w);
     height:var(--photo-h);
     transform:rotate(-2.4deg);
@@ -877,7 +877,7 @@ main{
 
 .puppy-name-4{
     left:70.7%;
-    top:44.1%;
+    top:46%;
     transform:translateX(-50%) rotate(4.1deg);
 }
 
