@@ -751,8 +751,8 @@ main{
 }
 
 .puppy-display-wrap{
-    --photo-w:13.5%;
-    --photo-h:21.5%;
+    --photo-w:14%;
+    --photo-h:22%;
     --photo-zoom:1.06;
     --name-size:clamp(.72rem, 1.1vw, 1.08rem);
 
@@ -845,7 +845,7 @@ main{
 
 .puppy-name-2{
     left:43.5%;
-    top:41%;
+    top:45%;
     transform:translateX(-50%) rotate(2.1deg);
 }
 
