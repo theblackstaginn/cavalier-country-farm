@@ -845,14 +845,14 @@ main{
 
 .puppy-name-2{
     left:44%;
-    top:44%;
+    top:43%;
     transform:translateX(-50%) rotate(2.1deg);
 }
 
 /* SLOT 3 */
 
 .puppy-photo-3{
-    left:51.2%;
+    left:50.2%;
     top:23%;
     width:var(--photo-w);
     height:var(--photo-h);
@@ -877,7 +877,7 @@ main{
 
 .puppy-name-4{
     left:70.7%;
-    top:46%;
+    top:45.5%;
     transform:translateX(-50%) rotate(4.1deg);
 }
 
