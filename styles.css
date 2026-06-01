@@ -945,6 +945,11 @@ main{
     transform:translateX(-50%) rotate(-2.2deg);
 }
 
+img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-x-btn){
+    border-radius:22px;
+    overflow:hidden;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
