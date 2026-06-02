@@ -1074,18 +1074,21 @@ transform:rotate(7deg);
 
 .puppy-modal-panel{
     position:relative;
-    width:min(920px, 94vw);
-    aspect-ratio:16 / 10;
-    max-height:88vh;
+
+    width:min(1100px, 96vw);
+    aspect-ratio:16 / 9;
+
+    background:
+        url('assets/pups/pup-modal-web-bg.webp')
+        center center / contain no-repeat;
+
+    border:none;
+    box-shadow:none;
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:26px;
-    overflow:auto;
-    border-radius:22px;
-    padding:44px 54px 44px 44px;
-    background:url('farm buttons/modal-bg.webp') center center / contain no-repeat;
-    color:#2a160d;
-    box-shadow:0 24px 70px rgba(0,0,0,.58);
+    grid-template-columns:46% 54%;
+
+    overflow:hidden;
 }
 
 .puppy-modal-media{
@@ -1380,14 +1383,19 @@ transform:rotate(7deg);
         transform:rotate(-8deg);
     }
 
+    @media(max-width:768px){
+
     .puppy-modal-panel{
-    width:min(520px, 96vw);
-    aspect-ratio:10 / 16;
-    max-height:none;
-    display:block;
-    overflow:visible;
-    padding:72px 42px 50px;
-    background:url('farm buttons/modal-bg.webp') center top / contain no-repeat;
+        width:min(560px, 96vw);
+        aspect-ratio:3 / 5;
+
+        background:
+            url('assets/pups/pup-modal-mobile-bg.webp')
+            center center / contain no-repeat;
+
+        grid-template-columns:1fr;
+    }
+
 }
 
     .puppy-modal-media{
