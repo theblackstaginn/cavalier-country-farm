@@ -1019,7 +1019,7 @@ main{
 .puppy-photo-5,
 .puppy-slot-5{
     left:21.1%;
-    top:54.5%;
+    top:53.5%;
     width:14%;
     height:22%;
     transform:rotate(3.2deg);
@@ -1028,7 +1028,7 @@ main{
 .puppy-name-5{
     left:30.1%;
     top:75.6%;
-    transform:translateX(-50%) rotate(-2deg);
+    transform:translateX(-50%) rotate(-4.0deg);
 }
 
 /* SLOT 6 */
