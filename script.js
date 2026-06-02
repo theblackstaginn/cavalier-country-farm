@@ -70,18 +70,18 @@ const puppyData = {
         status: "Available",
         description: "A sweet Cavalier puppy raised in the home and socialized around family life. Add his exact personality notes here when the litter details are finalized.",
         images: [
-            "assets/pups/angus-1.webp",
-            "assets/pups/angus-2.webp"
+            "assets/pups/angus/angus-1.webp",
+            "assets/pups/angus/angus-2.webp"
         ]
     },
 
-    "bam-bam": {
+    "bambam": {
         name: "Bam Bam",
         status: "Available",
         description: "A playful Cavalier puppy with farm-raised charm. Replace this placeholder with his real temperament, color, and deposit status.",
         images: [
-            "assets/pups/bam-bam-1.webp",
-            "assets/pups/bam-bam-2.webp"
+            "assets/pups/bambam/bambam-1.webp",
+            "assets/pups/bambam/bambam-2.webp"
         ]
     },
 
@@ -90,8 +90,8 @@ const puppyData = {
         status: "Available",
         description: "A gentle Cavalier puppy raised with care, attention, and daily family handling. Update this text with her real notes when ready.",
         images: [
-            "assets/pups/elsa-1.webp",
-            "assets/pups/elsa-2.webp"
+            "assets/pups/elsa/elsa-1.webp",
+            "assets/pups/elsa/elsa-2.webp"
         ]
     },
 
@@ -100,8 +100,38 @@ const puppyData = {
         status: "Available",
         description: "A loving Cavalier puppy from the current litter. Add her exact personality, coat notes, and application status here.",
         images: [
-            "assets/pups/pebbles-1.webp",
-            "assets/pups/pebbles-2.webp"
+            "assets/pups/pebbles/pebbles-1.webp",
+            "assets/pups/pebbles/pebbles-2.webp"
+        ]
+    },
+
+    "rosie": {
+        name: "Rosie",
+        status: "Available",
+        description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
+        images: [
+            "assets/pups/rosie/rosie-1.webp",
+            "assets/pups/rosie/rosie-2.webp"
+        ]
+    },
+
+    "cosmo": {
+        name: "Cosmo",
+        status: "Available",
+        description: "Playful and affectionate Cavalier puppy with a sweet personality.",
+        images: [
+            "assets/pups/cosmo/cosmo-1.webp",
+            "assets/pups/cosmo/cosmo-2.webp"
+        ]
+    },
+
+    "duke": {
+        name: "Duke",
+        status: "Sold",
+        description: "Duke has found his forever family.",
+        images: [
+            "assets/pups/duke/duke-1.webp",
+            "assets/pups/duke/duke-2.webp"
         ]
     }
 };
