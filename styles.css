@@ -1386,7 +1386,7 @@ width:min(1100px, 96vw);
 aspect-ratio:16 / 9;
 
 background:
-url('assets/pups/pup-modal-web-bg.webp')
+url('assets/pups/pup-modal-mobile-bg.webp')
 center center / contain no-repeat;
 
 border:none;
