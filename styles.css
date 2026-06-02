@@ -1535,6 +1535,37 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
     border-radius:22px;
     overflow:hidden;
 }
+.puppy-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:0 0 22px;
+}
+
+.puppy-detail{
+    padding:12px 14px;
+    border-radius:14px;
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(80,45,22,.18);
+}
+
+.detail-label{
+    display:block;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#8d522c;
+    margin-bottom:4px;
+}
+
+.detail-value{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.25rem;
+    font-weight:700;
+    color:#2b160c;
+}
 
 /* MOBILE */
 
