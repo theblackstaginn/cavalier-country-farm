@@ -1266,6 +1266,14 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
     overflow:hidden;
 }
 
+.adopted-badge{
+    position:absolute;
+    z-index:20;
+    width:90px;
+    display:none;
+    pointer-events:none;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
