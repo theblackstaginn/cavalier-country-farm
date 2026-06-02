@@ -136,6 +136,18 @@ const puppyData = {
     }
 };
 
+"lily": {
+    name: "Lily",
+    status: "Available",
+    birthday: "March 27",
+    weight: "2.2 lbs",
+    description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
+    images: [
+        "assets/pups/lily/lily-1.webp",
+        "assets/pups/lily/lily-2.webp"
+    ]
+},
+
 const puppyModal = document.getElementById('puppyModal');
 const puppyModalName = document.getElementById('puppyModalName');
 const puppyModalStatus = document.getElementById('puppyModalStatus');
