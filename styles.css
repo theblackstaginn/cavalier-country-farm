@@ -1381,12 +1381,14 @@ transform:rotate(7deg);
     }
 
     .puppy-modal-panel{
-        grid-template-columns:1fr;
-        width:min(520px, 96vw);
-        height:auto;
-        max-height:92vh;
-        overflow:hidden;
-    }
+    width:min(520px, 96vw);
+    aspect-ratio:10 / 16;
+    max-height:none;
+    display:block;
+    overflow:visible;
+    padding:72px 42px 50px;
+    background:url('farm buttons/modal-bg.webp') center top / contain no-repeat;
+}
 
     .puppy-modal-media{
         min-height:0;
