@@ -1082,7 +1082,7 @@ transform:rotate(7deg);
     overflow:auto;
     border-radius:22px;
     padding:44px 54px 44px 44px;
-    background:url('farm buttons/modal-bg.webp') center center / 100% 100% no-repeat;
+    background:url('farm buttons/modal-bg.webp') center center / contain no-repeat;
     color:#2a160d;
     box-shadow:0 24px 70px rgba(0,0,0,.58);
 }
