@@ -1383,21 +1383,6 @@ transform:rotate(7deg);
         transform:rotate(-8deg);
     }
 
-    @media(max-width:768px){
-
-    .puppy-modal-panel{
-        width:min(560px, 96vw);
-        aspect-ratio:3 / 5;
-
-        background:
-            url('assets/pups/pup-modal-mobile-bg.webp')
-            center center / contain no-repeat;
-
-        grid-template-columns:1fr;
-    }
-
-}
-
     .puppy-modal-media{
         min-height:0;
         height:38vh;
