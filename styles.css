@@ -1075,6 +1075,7 @@ transform:rotate(7deg);
 .puppy-modal-panel{
     position:relative;
     width:min(920px, 94vw);
+    aspect-ratio:16 / 10;
     max-height:88vh;
     display:grid;
     grid-template-columns:1fr 1fr;
