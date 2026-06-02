@@ -44,11 +44,15 @@ function closeApplicationsMenu(){
     document.body.style.overflow = '';
 }
 
-if(openApplicationsModal && applicationsModal && applicationsModalClose){
+if(openApplicationsModal){
     openApplicationsModal.addEventListener('click', openApplicationsMenu);
+}
 
+if(applicationsModalClose){
     applicationsModalClose.addEventListener('click', closeApplicationsMenu);
+}
 
+if(applicationsModal){
     applicationsModal.addEventListener('click', function(e){
         if(e.target === applicationsModal){
             closeApplicationsMenu();
@@ -68,6 +72,8 @@ const puppyData = {
     "angus": {
         name: "Angus",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "A sweet Cavalier puppy raised in the home and socialized around family life. Add his exact personality notes here when the litter details are finalized.",
         images: [
             "assets/pups/angus/angus-1.webp",
@@ -78,6 +84,8 @@ const puppyData = {
     "bambam": {
         name: "Bam Bam",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "A playful Cavalier puppy with farm-raised charm. Replace this placeholder with his real temperament, color, and deposit status.",
         images: [
             "assets/pups/bambam/bambam-1.webp",
@@ -88,6 +96,8 @@ const puppyData = {
     "elsa": {
         name: "Elsa",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "A gentle Cavalier puppy raised with care, attention, and daily family handling. Update this text with her real notes when ready.",
         images: [
             "assets/pups/elsa/elsa-1.webp",
@@ -98,6 +108,8 @@ const puppyData = {
     "pebbles": {
         name: "Pebbles",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "A loving Cavalier puppy from the current litter. Add her exact personality, coat notes, and application status here.",
         images: [
             "assets/pups/pebbles/pebbles-1.webp",
@@ -108,6 +120,8 @@ const puppyData = {
     "rosie": {
         name: "Rosie",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
         images: [
             "assets/pups/rosie/rosie-1.webp",
@@ -118,6 +132,8 @@ const puppyData = {
     "cosmo": {
         name: "Cosmo",
         status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
         description: "Playful and affectionate Cavalier puppy with a sweet personality.",
         images: [
             "assets/pups/cosmo/cosmo-1.webp",
@@ -125,9 +141,23 @@ const puppyData = {
         ]
     },
 
+    "lily": {
+        name: "Lily",
+        status: "Available",
+        birthday: "March 27",
+        weight: "2.2 lbs",
+        description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
+        images: [
+            "assets/pups/lily/lily-1.webp",
+            "assets/pups/lily/lily-2.webp"
+        ]
+    },
+
     "duke": {
         name: "Duke",
         status: "Sold",
+        birthday: "March 27",
+        weight: "2.6 lbs",
         description: "Duke has found his forever family.",
         images: [
             "assets/pups/duke/duke-1.webp",
@@ -136,21 +166,11 @@ const puppyData = {
     }
 };
 
-"lily": {
-    name: "Lily",
-    status: "Available",
-    birthday: "March 27",
-    weight: "2.2 lbs",
-    description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
-    images: [
-        "assets/pups/lily/lily-1.webp",
-        "assets/pups/lily/lily-2.webp"
-    ]
-},
-
 const puppyModal = document.getElementById('puppyModal');
 const puppyModalName = document.getElementById('puppyModalName');
 const puppyModalStatus = document.getElementById('puppyModalStatus');
+const puppyModalBirthday = document.getElementById('puppyModalBirthday');
+const puppyModalWeight = document.getElementById('puppyModalWeight');
 const puppyModalDescription = document.getElementById('puppyModalDescription');
 const puppyModalMainImage = document.getElementById('puppyModalMainImage');
 const puppyModalThumbs = document.getElementById('puppyModalThumbs');
@@ -162,43 +182,65 @@ function openPuppyModal(puppyKey){
 
     if(!puppy || !puppyModal) return;
 
-    puppyModalName.textContent = puppy.name;
-    puppyModalStatus.textContent = puppy.status;
-    puppyModalDescription.textContent = puppy.description;
+    if(puppyModalName){
+        puppyModalName.textContent = puppy.name;
+    }
 
-    puppyModalMainImage.src = puppy.images[0];
-    puppyModalMainImage.alt = puppy.name;
+    if(puppyModalStatus){
+        puppyModalStatus.textContent = puppy.status;
+    }
 
-    puppyModalThumbs.innerHTML = '';
+    if(puppyModalBirthday){
+        puppyModalBirthday.textContent = puppy.birthday;
+    }
 
-    puppy.images.forEach(function(imageSrc, index){
-        const thumb = document.createElement('button');
-        thumb.className = 'puppy-thumb';
-        thumb.type = 'button';
+    if(puppyModalWeight){
+        puppyModalWeight.textContent = puppy.weight;
+    }
 
-        if(index === 0){
-            thumb.classList.add('is-active');
-        }
+    if(puppyModalDescription){
+        puppyModalDescription.textContent = puppy.description;
+    }
 
-        const img = document.createElement('img');
-        img.src = imageSrc;
-        img.alt = `${puppy.name} photo ${index + 1}`;
+    if(puppyModalMainImage){
+        puppyModalMainImage.src = puppy.images[0];
+        puppyModalMainImage.alt = puppy.name;
+    }
 
-        thumb.appendChild(img);
+    if(puppyModalThumbs){
+        puppyModalThumbs.innerHTML = '';
 
-        thumb.addEventListener('click', function(){
-            puppyModalMainImage.src = imageSrc;
-            puppyModalMainImage.alt = `${puppy.name} photo ${index + 1}`;
+        puppy.images.forEach(function(imageSrc, photoIndex){
+            const thumb = document.createElement('button');
+            thumb.className = 'puppy-thumb';
+            thumb.type = 'button';
 
-            document.querySelectorAll('.puppy-thumb').forEach(function(button){
-                button.classList.remove('is-active');
+            if(photoIndex === 0){
+                thumb.classList.add('is-active');
+            }
+
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${puppy.name} photo ${photoIndex + 1}`;
+
+            thumb.appendChild(img);
+
+            thumb.addEventListener('click', function(){
+                if(puppyModalMainImage){
+                    puppyModalMainImage.src = imageSrc;
+                    puppyModalMainImage.alt = `${puppy.name} photo ${photoIndex + 1}`;
+                }
+
+                puppyModalThumbs.querySelectorAll('.puppy-thumb').forEach(function(button){
+                    button.classList.remove('is-active');
+                });
+
+                thumb.classList.add('is-active');
             });
 
-            thumb.classList.add('is-active');
+            puppyModalThumbs.appendChild(thumb);
         });
-
-        puppyModalThumbs.appendChild(thumb);
-    });
+    }
 
     puppyModal.classList.add('is-open');
     puppyModal.setAttribute('aria-hidden', 'false');
