@@ -1073,37 +1073,64 @@ main{
 
 /* MOBILE PUPPY CAROUSEL */
 
-.mobile-puppy-carousel{
-    display:none;
-}
+    .mobile-puppy-carousel{
+        display:flex;
+        gap:22px;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        padding:8px 8px 34px;
+        margin-top:18px;
+        -webkit-overflow-scrolling:touch;
+    }
 
-.puppy-card-btn{
-    width:100%;
-    border:0;
-    background:rgba(255,244,231,.08);
-    border:1px solid rgba(210,154,99,.38);
-    border-radius:24px;
-    overflow:hidden;
-    color:#fff4e7;
-    box-shadow:0 18px 34px rgba(0,0,0,.42);
-    cursor:pointer;
-}
+    .puppy-card{
+        flex:0 0 76%;
+        max-width:320px;
+        scroll-snap-align:center;
+    }
 
-.puppy-card-btn img{
-    width:100%;
-    aspect-ratio:4 / 5;
-    object-fit:cover;
-}
+    .puppy-card:nth-child(odd){
+        transform:rotate(-2deg);
+    }
 
-.puppy-card-btn span{
-    display:block;
-    padding:16px;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.65rem;
-    font-weight:700;
-    background:linear-gradient(to bottom, rgba(31,21,15,.86), rgba(15,12,10,.95));
-}
+    .puppy-card:nth-child(even){
+        transform:rotate(2deg);
+    }
 
+    .puppy-card-btn{
+        position:relative;
+        width:100%;
+        padding:14px 14px 58px;
+        border:0;
+        border-radius:4px;
+        overflow:hidden;
+        background:#f4efe6;
+        color:#2a160d;
+        box-shadow:
+            0 14px 28px rgba(0,0,0,.35),
+            0 4px 8px rgba(0,0,0,.25);
+    }
+
+    .puppy-card-btn img{
+        width:100%;
+        aspect-ratio:1 / 1;
+        object-fit:cover;
+        border-radius:2px;
+    }
+
+    .puppy-card-btn span{
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:14px;
+        padding:0;
+        background:transparent;
+        text-align:center;
+        font-family:'Cormorant Garamond', serif;
+        font-size:1.8rem;
+        font-weight:700;
+        color:#2a160d;
+    }
 /* PUPPY MODAL */
 
 .puppy-modal{
