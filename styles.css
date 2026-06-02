@@ -1082,6 +1082,27 @@ main{
     transform:translateX(-50%) rotate(-2.2deg);
 }
 
+/* ADOPTED BADGE */
+
+.adopted-badge{
+    position:absolute;
+    display:block;
+    height:auto;
+    max-width:none;
+    pointer-events:none;
+    border-radius:0 !important;
+    overflow:visible !important;
+}
+
+.adopted-badge-board{
+    z-index:8;
+    width:11%;
+    left:59.5%;
+    top:55.5%;
+    transform:rotate(10deg);
+    filter:drop-shadow(0 8px 16px rgba(0,0,0,.45));
+}
+
 /* MOBILE PUPPY CAROUSEL */
 
 .mobile-puppy-carousel{
@@ -1140,6 +1161,23 @@ main{
     font-size:1.8rem;
     font-weight:700;
     color:#2a160d;
+}
+
+.adopted-puppy-card{
+    position:relative;
+}
+
+.adopted-badge-mobile{
+    position:absolute;
+    top:-12px;
+    right:-10px;
+    z-index:10;
+    width:96px;
+    height:auto;
+    display:block;
+    pointer-events:none;
+    border-radius:0 !important;
+    filter:drop-shadow(0 8px 16px rgba(0,0,0,.42));
 }
 
 /* PUPPY MODAL */
@@ -1312,17 +1350,9 @@ main{
         0 12px 22px rgba(0,0,0,.28);
 }
 
-img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-x-btn):not(.puppy-board-bg){
+img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-x-btn):not(.puppy-board-bg):not(.adopted-badge):not(.adopted-badge-mobile){
     border-radius:22px;
     overflow:hidden;
-}
-
-.adopted-badge{
-    position:absolute;
-    z-index:20;
-    width:90px;
-    display:none;
-    pointer-events:none;
 }
 
 /* MOBILE */
@@ -1352,6 +1382,12 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
         flex:0 0 76%;
         max-width:320px;
         scroll-snap-align:center;
+    }
+
+    .adopted-badge-mobile{
+        width:88px;
+        top:-10px;
+        right:-8px;
     }
 
     .puppy-modal-panel{
@@ -1660,6 +1696,12 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
 @media(max-width:520px){
     .puppy-card{
         flex-basis:84%;
+    }
+
+    .adopted-badge-mobile{
+        width:78px;
+        top:-8px;
+        right:-6px;
     }
 
     .puppy-modal{
