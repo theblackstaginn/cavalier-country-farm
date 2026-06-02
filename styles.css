@@ -1218,6 +1218,22 @@ transform:rotate(7deg);
     }
 }
 
+.puppy-modal{
+    position:fixed;
+    inset:0;
+    z-index:999999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:22px;
+    background:rgba(8,5,3,.78);
+    overflow:auto;
+}
+
+.puppy-modal.is-open{
+    display:flex;
+}
+
 @media(max-width:768px){
     body::before{
         content:"";
