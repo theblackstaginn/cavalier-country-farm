@@ -820,6 +820,17 @@ main{
     padding-bottom:24px;
 }
 
+/* Desktop/mobile visibility control */
+.desktop-puppy-board,
+.puppy-display-wrap,
+.puppy-board{
+    display:block;
+}
+
+.mobile-puppy-carousel{
+    display:none;
+}
+
 /* Old display wrapper support */
 .puppy-display-wrap{
     --photo-w:14%;
@@ -1073,64 +1084,64 @@ main{
 
 /* MOBILE PUPPY CAROUSEL */
 
-    .mobile-puppy-carousel{
-        display:flex;
-        gap:22px;
-        overflow-x:auto;
-        scroll-snap-type:x mandatory;
-        padding:8px 8px 34px;
-        margin-top:18px;
-        -webkit-overflow-scrolling:touch;
-    }
+.mobile-puppy-carousel{
+    gap:22px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:8px 8px 34px;
+    margin-top:18px;
+    -webkit-overflow-scrolling:touch;
+}
 
-    .puppy-card{
-        flex:0 0 76%;
-        max-width:320px;
-        scroll-snap-align:center;
-    }
+.puppy-card{
+    flex:0 0 76%;
+    max-width:320px;
+    scroll-snap-align:center;
+}
 
-    .puppy-card:nth-child(odd){
-        transform:rotate(-2deg);
-    }
+.puppy-card:nth-child(odd){
+    transform:rotate(-2deg);
+}
 
-    .puppy-card:nth-child(even){
-        transform:rotate(2deg);
-    }
+.puppy-card:nth-child(even){
+    transform:rotate(2deg);
+}
 
-    .puppy-card-btn{
-        position:relative;
-        width:100%;
-        padding:14px 14px 58px;
-        border:0;
-        border-radius:4px;
-        overflow:hidden;
-        background:#f4efe6;
-        color:#2a160d;
-        box-shadow:
-            0 14px 28px rgba(0,0,0,.35),
-            0 4px 8px rgba(0,0,0,.25);
-    }
+.puppy-card-btn{
+    position:relative;
+    width:100%;
+    padding:14px 14px 58px;
+    border:0;
+    border-radius:4px;
+    overflow:hidden;
+    background:#f4efe6;
+    color:#2a160d;
+    box-shadow:
+        0 14px 28px rgba(0,0,0,.35),
+        0 4px 8px rgba(0,0,0,.25);
+}
 
-    .puppy-card-btn img{
-        width:100%;
-        aspect-ratio:1 / 1;
-        object-fit:cover;
-        border-radius:2px;
-    }
+.puppy-card-btn img{
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    border-radius:2px;
+}
 
-    .puppy-card-btn span{
-        position:absolute;
-        left:0;
-        right:0;
-        bottom:14px;
-        padding:0;
-        background:transparent;
-        text-align:center;
-        font-family:'Cormorant Garamond', serif;
-        font-size:1.8rem;
-        font-weight:700;
-        color:#2a160d;
-    }
+.puppy-card-btn span{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:14px;
+    padding:0;
+    background:transparent;
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.8rem;
+    font-weight:700;
+    color:#2a160d;
+}
+
 /* PUPPY MODAL */
 
 .puppy-modal{
@@ -1144,6 +1155,7 @@ main{
     background:rgba(8,5,3,.78);
     backdrop-filter:blur(4px);
     -webkit-backdrop-filter:blur(4px);
+    overflow:hidden;
 }
 
 .puppy-modal.is-open{
@@ -1158,13 +1170,20 @@ main{
     display:grid;
     grid-template-columns:1fr 1fr;
     overflow:hidden;
-    border-radius:0;
-
+    border-radius:22px;
     background:
-        url('farm buttons/modal-bg.webp') center center / contain no-repeat;
-
+        url('farm buttons/modal-bg.webp') center center / cover no-repeat;
     color:#2a160d;
-    box-shadow:none;
+    box-shadow:0 24px 70px rgba(0,0,0,.58);
+}
+
+.puppy-modal-panel::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:rgba(250,236,211,.16);
+    pointer-events:none;
 }
 
 .puppy-modal-close{
@@ -1189,17 +1208,24 @@ main{
 }
 
 .puppy-modal-media{
+    position:relative;
+    z-index:1;
     min-height:520px;
-    background:#1b120d;
+    padding:34px 20px 34px 34px;
+    background:transparent;
 }
 
 .puppy-modal-media img{
     width:100%;
     height:100%;
     object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 14px 30px rgba(0,0,0,.35);
 }
 
 .puppy-modal-content{
+    position:relative;
+    z-index:1;
     padding:56px 42px 40px;
     text-align:left;
     overflow:auto;
@@ -1306,7 +1332,9 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
         grid-template-columns:1fr;
     }
 
-    .desktop-puppy-board{
+    .desktop-puppy-board,
+    .puppy-display-wrap,
+    .puppy-board{
         display:none;
     }
 
@@ -1329,16 +1357,20 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
     .puppy-modal-panel{
         grid-template-columns:1fr;
         width:min(520px, 96vw);
+        height:auto;
         max-height:92vh;
+        overflow:hidden;
     }
 
     .puppy-modal-media{
         min-height:0;
         height:38vh;
+        padding:26px 24px 0;
     }
 
     .puppy-modal-content{
-        padding:34px 24px 28px;
+        padding:28px 24px 28px;
+        overflow:auto;
     }
 
     .puppy-modal-close{
@@ -1620,13 +1652,6 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
         padding:28px 18px 12px;
     }
 
-    .puppy-display-wrap{
-        width:1120px;
-        max-width:none;
-        margin-left:50%;
-        transform:translateX(-50%);
-    }
-
     .puppy-name{
         font-size:.8rem;
     }
@@ -1647,9 +1672,10 @@ img:not(.image-btn):not(.facebook-banner):not(.applications-modal-bg):not(.farm-
 
     .puppy-modal-media{
         height:34vh;
+        padding:22px 20px 0;
     }
 
     .puppy-modal-content{
-        padding:30px 20px 24px;
+        padding:26px 20px 24px;
     }
 }
