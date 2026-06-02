@@ -1235,14 +1235,14 @@ main{
 /* SLOT 8 */
 
 .puppy-slot-control-8{
-    --photo-x:71.2%;
-    --photo-y:61%;
+    --photo-x:64.2.2%;
+    --photo-y:65%;
     --photo-w:14%;
     --photo-h:22%;
     --photo-r:-2.2deg;
 
-    --name-x:78.2%;
-    --name-y:80.1%;
+    --name-x:71.2%;
+    --name-y:76.1%;
     --name-r:-2.2deg;
 
     --badge-x:78.3%;
