@@ -1052,6 +1052,194 @@ width:8.5%;
 transform:rotate(7deg);
 }
 
+/* PUPPY MODAL */
+
+.puppy-modal{
+    position:fixed;
+    inset:0;
+    z-index:999999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:22px;
+    background:rgba(8,5,3,.78);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    overflow:auto;
+}
+
+.puppy-modal.is-open{
+    display:flex;
+}
+
+.puppy-modal-panel{
+    position:relative;
+    width:min(920px, 94vw);
+    max-height:88vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+    overflow:auto;
+    border-radius:22px;
+    padding:44px 54px 44px 44px;
+    background:url('farm buttons/modal-bg.webp') center center / 100% 100% no-repeat;
+    color:#2a160d;
+    box-shadow:0 24px 70px rgba(0,0,0,.58);
+}
+
+.puppy-modal-media{
+    position:relative;
+    z-index:1;
+}
+
+.puppy-modal-media img{
+    width:100%;
+    max-height:520px;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 14px 30px rgba(0,0,0,.35);
+}
+
+.puppy-modal-content{
+    position:relative;
+    z-index:1;
+    padding:22px 18px 18px 10px;
+    text-align:left;
+    overflow:visible;
+}
+
+.puppy-modal-content .eyebrow{
+    color:#8d522c;
+    text-align:left;
+}
+
+.puppy-modal-content h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2.9rem, 6vw, 5rem);
+    line-height:.9;
+    color:#2b160c;
+    margin-bottom:12px;
+    text-align:left;
+    text-shadow:none;
+}
+
+.puppy-status{
+    display:inline-flex;
+    margin-bottom:18px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#2a160d;
+    color:#fff4e7;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:.78rem;
+}
+
+.puppy-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:0 0 22px;
+}
+
+.puppy-detail{
+    padding:12px 14px;
+    border-radius:14px;
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(80,45,22,.18);
+}
+
+.detail-label{
+    display:block;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#8d522c;
+    margin-bottom:4px;
+}
+
+.detail-value{
+    display:block;
+    font-size:1rem;
+    font-weight:700;
+    color:#2b160c;
+}
+
+.puppy-modal-content p:not(.eyebrow):not(.puppy-status){
+    font-size:1rem;
+    line-height:1.75;
+    color:#3b2418;
+    text-align:left;
+    text-shadow:none;
+}
+
+.puppy-modal-thumbs{
+    display:flex;
+    gap:12px;
+    margin:24px 0;
+    flex-wrap:wrap;
+}
+
+.puppy-thumb{
+    width:78px;
+    height:78px;
+    border:2px solid rgba(42,22,13,.25);
+    border-radius:16px;
+    overflow:hidden;
+    padding:0;
+    background:transparent;
+    cursor:pointer;
+}
+
+.puppy-thumb.is-active{
+    border-color:#8d522c;
+}
+
+.puppy-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.puppy-apply-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:13px 22px;
+    border-radius:999px;
+    background:linear-gradient(145deg, #8c512b, #d99d5d 48%, #6d3a1f);
+    color:#251309;
+    font-weight:800;
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.38),
+        inset 0 -2px 5px rgba(0,0,0,.28),
+        0 12px 22px rgba(0,0,0,.28);
+}
+
+.puppy-modal-close{
+    position:absolute;
+    z-index:5;
+    top:18px;
+    right:18px;
+    width:46px;
+    height:46px;
+    border:0;
+    padding:0;
+    background:transparent;
+    cursor:pointer;
+    filter:drop-shadow(0 8px 12px rgba(0,0,0,.45));
+}
+
+.puppy-modal-close img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -1218,21 +1406,7 @@ transform:rotate(7deg);
     }
 }
 
-.puppy-modal{
-    position:fixed;
-    inset:0;
-    z-index:999999;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:22px;
-    background:rgba(8,5,3,.78);
-    overflow:auto;
-}
 
-.puppy-modal.is-open{
-    display:flex;
-}
 
 @media(max-width:768px){
     body::before{
