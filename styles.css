@@ -2036,3 +2036,27 @@ height:56px;
         display:none;
     }
 }
+
+.feature-grid .image-card:nth-child(2)::before,
+.feature-grid .image-card:nth-child(3)::before{
+    content:"COMING SOON";
+
+    position:absolute;
+    top:22px;
+    right:-30px;
+    z-index:20;
+
+    padding:8px 50px;
+
+    background:#a76637;
+    color:#fff7eb;
+
+    font-size:.9rem;
+    font-weight:700;
+    letter-spacing:.15em;
+
+    transform:rotate(18deg);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.35);
+}
