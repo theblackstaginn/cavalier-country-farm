@@ -1737,3 +1737,105 @@ width:56px;
 height:56px;
 }
 }
+
+/* =========================================
+   PUPPY MODAL EMERGENCY LAYOUT OVERRIDE
+   ========================================= */
+
+.puppy-modal-panel{
+    position:relative !important;
+}
+
+.puppy-modal-media{
+    position:absolute !important;
+    left:7% !important;
+    top:13% !important;
+    width:38% !important;
+    height:70% !important;
+    padding:0 !important;
+}
+
+.puppy-modal-media img{
+    width:100% !important;
+    height:100% !important;
+    max-height:none !important;
+    object-fit:cover !important;
+}
+
+.puppy-modal-content{
+    position:absolute !important;
+    left:50% !important;
+    top:12% !important;
+    width:38% !important;
+    height:72% !important;
+    padding:0 !important;
+    overflow:hidden !important;
+}
+
+.puppy-modal-content h2{
+    font-size:clamp(2.4rem,4vw,4rem) !important;
+    margin-bottom:8px !important;
+}
+
+.puppy-details{
+    margin-bottom:12px !important;
+}
+
+.puppy-modal-content p:not(.eyebrow):not(.puppy-status){
+    font-size:.82rem !important;
+    line-height:1.4 !important;
+}
+
+.puppy-thumb{
+    width:56px !important;
+    height:56px !important;
+}
+
+.puppy-apply-btn{
+    padding:9px 16px !important;
+    font-size:.82rem !important;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .puppy-modal-panel{
+        background:url('assets/pups/pup-modal-mobile-bg.webp')
+        center top / contain no-repeat !important;
+    }
+
+    .puppy-modal-media{
+        left:12.5% !important;
+        top:7.5% !important;
+        width:75% !important;
+        height:35% !important;
+    }
+
+    .puppy-modal-content{
+        left:13% !important;
+        top:45% !important;
+        width:74% !important;
+        height:46% !important;
+        overflow:hidden !important;
+    }
+
+    .puppy-modal-content h2{
+        font-size:clamp(2.2rem,10vw,3.4rem) !important;
+    }
+
+    .puppy-modal-content p:not(.eyebrow):not(.puppy-status){
+        font-size:.88rem !important;
+        line-height:1.35 !important;
+    }
+
+    .puppy-thumb{
+        width:52px !important;
+        height:52px !important;
+    }
+
+    .puppy-modal-close{
+        top:3.5% !important;
+        right:6% !important;
+    }
+}
