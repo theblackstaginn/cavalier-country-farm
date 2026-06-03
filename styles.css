@@ -1773,7 +1773,7 @@ height:56px;
 }
 
 .puppy-modal-content h2{
-    font-size:clamp(2.4rem,4vw,4rem) !important;
+    font-size:clamp(2.8rem,4vw,4.4rem) !important;
     margin-bottom:8px !important;
 }
 
@@ -1782,8 +1782,9 @@ height:56px;
 }
 
 .puppy-modal-content p:not(.eyebrow):not(.puppy-status){
-    font-size:.82rem !important;
-    line-height:1.4 !important;
+    font-size:1rem !important;
+    line-height:1.55 !important;
+    font-weight:500 !important;
 }
 
 .puppy-thumb{
@@ -1825,8 +1826,9 @@ height:56px;
     }
 
     .puppy-modal-content p:not(.eyebrow):not(.puppy-status){
-        font-size:.88rem !important;
-        line-height:1.35 !important;
+        font-size:1rem !important;
+        line-height:1.55 !important;
+        font-weight:500 !important;
     }
 
     .puppy-thumb{
