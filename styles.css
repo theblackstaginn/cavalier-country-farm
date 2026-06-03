@@ -1241,6 +1241,26 @@ height:100%;
 object-fit:contain;
 }
 
+.good-dog-link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:24px;
+}
+
+.good-dog-sticker{
+    width:130px;
+    height:auto;
+    display:block;
+    opacity:.92;
+    transition:.25s ease;
+}
+
+.good-dog-link:hover .good-dog-sticker{
+    opacity:1;
+    transform:translateY(-2px);
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
