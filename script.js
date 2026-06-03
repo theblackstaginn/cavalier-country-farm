@@ -284,3 +284,44 @@ document.addEventListener('keydown', function(e){
         closePuppyModal();
     }
 });
+/* FARM CAROUSEL */
+
+const farmTrack = document.querySelector('.farm-gallery-track');
+const prevBtn = document.querySelector('.gallery-prev');
+const nextBtn = document.querySelector('.gallery-next');
+
+if(farmTrack){
+
+    nextBtn?.addEventListener('click', () => {
+        farmTrack.scrollBy({
+            left:420,
+            behavior:'smooth'
+        });
+    });
+
+    prevBtn?.addEventListener('click', () => {
+        farmTrack.scrollBy({
+            left:-420,
+            behavior:'smooth'
+        });
+    });
+
+    setInterval(() => {
+
+        if(
+            farmTrack.scrollLeft + farmTrack.clientWidth >=
+            farmTrack.scrollWidth - 20
+        ){
+            farmTrack.scrollTo({
+                left:0,
+                behavior:'smooth'
+            });
+        }else{
+            farmTrack.scrollBy({
+                left:398,
+                behavior:'smooth'
+            });
+        }
+
+    }, 5000);
+}
