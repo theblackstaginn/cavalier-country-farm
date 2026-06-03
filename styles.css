@@ -1841,3 +1841,41 @@ height:56px;
         right:6% !important;
     }
 }
+
+/* PUPPY MODAL DESCRIPTION CARD + SCROLLBAR */
+
+.puppy-modal-content{
+    padding:14px 16px !important;
+    overflow-y:auto !important;
+    background:rgba(255, 238, 207, .32);
+    border:1px solid rgba(139, 82, 44, .32);
+    border-radius:18px;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.22),
+        0 10px 22px rgba(0,0,0,.12);
+}
+
+/* Firefox */
+.puppy-modal-content{
+    scrollbar-width:thin;
+    scrollbar-color:#8c512b rgba(20,10,5,.45);
+}
+
+/* Chrome / Edge / Safari */
+.puppy-modal-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.puppy-modal-content::-webkit-scrollbar-track{
+    background:rgba(20,10,5,.45);
+    border-radius:999px;
+}
+
+.puppy-modal-content::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg, #d99d5d, #8c512b, #5a2f19);
+    border-radius:999px;
+}
+
+.puppy-modal-content::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(180deg, #efb777, #9b5b31, #5a2f19);
+}
