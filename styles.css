@@ -1933,3 +1933,11 @@ height:56px;
     background:rgba(255, 248, 232, .72) !important;
     border:1px solid rgba(80,45,22,.28) !important;
 }
+.animal-grid .image-card{
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.animal-grid .image-card img{
+    border-radius:30px;
+}
