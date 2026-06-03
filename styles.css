@@ -1922,3 +1922,14 @@ height:56px;
 .puppy-modal-content::-webkit-scrollbar-thumb:hover{
     background:linear-gradient(180deg, #efb777, #9b5b31, #5a2f19);
 }
+/* STRONGER PUPPY MODAL CARDS */
+
+.puppy-modal-content{
+    background:rgba(255, 238, 207, .72) !important;
+    border:1px solid rgba(139, 82, 44, .42) !important;
+}
+
+.puppy-detail{
+    background:rgba(255, 248, 232, .72) !important;
+    border:1px solid rgba(80,45,22,.28) !important;
+}
