@@ -1941,3 +1941,98 @@ height:56px;
 .animal-grid .image-card img{
     border-radius:30px;
 }
+
+/* ==========================
+   FARM PHOTO CAROUSEL
+   ========================== */
+
+.farm-gallery-section{
+    padding:80px 0;
+    overflow:hidden;
+}
+
+.farm-gallery-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.farm-gallery-carousel{
+    position:relative;
+    width:min(1400px,95%);
+    margin:auto;
+}
+
+.farm-gallery-track{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    padding:10px;
+}
+
+.farm-gallery-track::-webkit-scrollbar{
+    display:none;
+}
+
+.farm-gallery-track img{
+    flex:0 0 auto;
+    width:380px;
+    height:280px;
+    object-fit:cover;
+    border-radius:22px;
+    cursor:pointer;
+    transition:.3s ease;
+    box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+.farm-gallery-track img:hover{
+    transform:translateY(-4px);
+}
+
+.gallery-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:5;
+
+    width:54px;
+    height:54px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(18,14,11,.85);
+    color:#d7a269;
+
+    font-size:28px;
+    cursor:pointer;
+
+    transition:.25s ease;
+}
+
+.gallery-arrow:hover{
+    background:#d7a269;
+    color:#111;
+}
+
+.gallery-prev{
+    left:-10px;
+}
+
+.gallery-next{
+    right:-10px;
+}
+
+@media(max-width:768px){
+
+    .farm-gallery-track img{
+        width:82vw;
+        height:260px;
+    }
+
+    .gallery-arrow{
+        display:none;
+    }
+}
