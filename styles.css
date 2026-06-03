@@ -2037,7 +2037,7 @@ height:56px;
     }
 }
 
-/* COMING SOON PLAQUE */
+/* COMING SOON CORNER RIBBON */
 
 .future-feature{
     position:relative;
@@ -2045,24 +2045,26 @@ height:56px;
 }
 
 .future-feature::before{
-    content:"Coming Soon";
+    content:"COMING SOON";
+
     position:absolute;
-    top:14px;
-    right:14px;
+    top:18px;
+    right:-42px;
     z-index:20;
 
-    padding:8px 15px;
-    border-radius:999px;
+    width:170px;
+    padding:8px 0;
 
-    background:linear-gradient(145deg, #d9a067, #b7774b);
-    color:#241208;
+    background:#a76637;
+    color:#fff7eb;
 
-    font-family:'Cormorant Garamond', serif;
-    font-size:.95rem;
-    font-weight:700;
-    letter-spacing:.04em;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.16em;
+    text-align:center;
+    text-transform:uppercase;
 
-    box-shadow:
-        0 8px 18px rgba(0,0,0,.35),
-        inset 0 1px 1px rgba(255,255,255,.35);
+    transform:rotate(32deg);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.35);
 }
