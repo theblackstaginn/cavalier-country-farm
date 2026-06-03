@@ -74,7 +74,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "A sweet Cavalier puppy raised in the home and socialized around family life. Add his exact personality notes here when the litter details are finalized.",
+        description: "Angus is a handsome Tricolor Cavalier King Charles Spaniel with beautifully balanced markings and an exceptionally sweet expression. His bright eyes, gentle nature, and classic Cavalier features make him an easy puppy to fall in love with. Raised in our home and surrounded by daily family life, Angus is growing into a loving companion who enjoys attention and cuddles.",
         images: [
             "assets/pups/angus/angus-1.webp",
             "assets/pups/angus/angus-2.webp"
@@ -86,7 +86,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "A playful Cavalier puppy with farm-raised charm. Replace this placeholder with his real temperament, color, and deposit status.",
+        description: "Bam Bam is a striking Tricolor Cavalier with rich black markings, warm tan points, and crisp white accents. His expressive eyes and curious personality give him a wonderful presence, while his affectionate temperament reflects everything people love about the Cavalier breed. He is being raised with daily family interaction and is already showing a gentle, loving disposition.",
         images: [
             "assets/pups/bambam/bambam-1.webp",
             "assets/pups/bambam/bambam-2.webp"
@@ -98,7 +98,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "A gentle Cavalier puppy raised with care, attention, and daily family handling. Update this text with her real notes when ready.",
+        description: "Elsa is a beautiful Tricolor Cavalier King Charles Spaniel with elegant markings and a soft, sweet expression. She has a calm, affectionate personality and enjoys being close to people. Raised in our home and socialized from an early age, Elsa is developing into a loving companion with the gentle temperament Cavaliers are known for.",
         images: [
             "assets/pups/elsa/elsa-1.webp",
             "assets/pups/elsa/elsa-2.webp"
@@ -110,7 +110,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "A loving Cavalier puppy from the current litter. Add her exact personality, coat notes, and application status here.",
+        description: "Pebbles is an adorable Tricolor Cavalier with bright eyes, beautiful markings, and a playful spirit. She is curious, affectionate, and loves attention from her family. Raised in a home environment with daily interaction, Pebbles is growing into a well-socialized puppy with the loving personality that makes Cavaliers such wonderful companions.",
         images: [
             "assets/pups/pebbles/pebbles-1.webp",
             "assets/pups/pebbles/pebbles-2.webp"
@@ -122,7 +122,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
+        description: "Rosie is a gorgeous Black & Tan Cavalier King Charles Spaniel with rich tan points, a silky dark coat, and an unforgettable expression. She has a confident, outgoing personality while still maintaining the gentle, affectionate nature Cavaliers are famous for. Raised as part of our family, Rosie receives daily love and interaction and is developing into a wonderful lifelong companion.",
         images: [
             "assets/pups/rosie/rosie-1.webp",
             "assets/pups/rosie/rosie-2.webp"
@@ -134,7 +134,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Playful and affectionate Cavalier puppy with a sweet personality.",
+        description: "Cosmo is a handsome Tricolor Cavalier King Charles Spaniel with expressive eyes, beautiful markings, and a gentle, affectionate nature. He enjoys attention and is growing up surrounded by daily family interaction, helping him develop into a confident and well-socialized companion. Cosmo embodies the sweet temperament, loyalty, and charm that have made Cavaliers such beloved family dogs.",
         images: [
             "assets/pups/cosmo/cosmo-1.webp",
             "assets/pups/cosmo/cosmo-2.webp"
@@ -146,7 +146,7 @@ const puppyData = {
         status: "Available",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Beautiful Cavalier puppy raised in the home with daily family interaction.",
+        description: "Lily is a lovely Tricolor Cavalier King Charles Spaniel with a beautifully marked face, bright eyes, and a sweet, attentive expression. She has a gentle, affectionate nature and enjoys being close to her people. Raised in our home with daily family interaction, Lily is growing into a well-socialized companion who embodies the loving temperament and charm that make Cavaliers so special.",
         images: [
             "assets/pups/lily/lily-1.webp",
             "assets/pups/lily/lily-2.webp"
