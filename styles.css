@@ -1261,6 +1261,17 @@ object-fit:contain;
     transform:translateY(-2px);
 }
 
+.good-dog-caption{
+    margin-top:12px;
+    max-width:420px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size:.95rem;
+    line-height:1.6;
+    color:#e8dcc9;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
