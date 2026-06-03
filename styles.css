@@ -2037,26 +2037,32 @@ height:56px;
     }
 }
 
-.feature-grid .image-card:nth-child(2)::before,
-.feature-grid .image-card:nth-child(3)::before{
-    content:"COMING SOON";
+/* COMING SOON PLAQUE */
 
+.future-feature{
+    position:relative;
+    overflow:hidden;
+}
+
+.future-feature::before{
+    content:"Coming Soon";
     position:absolute;
-    top:22px;
-    right:-30px;
+    top:14px;
+    right:14px;
     z-index:20;
 
-    padding:8px 50px;
+    padding:8px 15px;
+    border-radius:999px;
 
-    background:#a76637;
-    color:#fff7eb;
+    background:linear-gradient(145deg, #d9a067, #b7774b);
+    color:#241208;
 
-    font-size:.9rem;
+    font-family:'Cormorant Garamond', serif;
+    font-size:.95rem;
     font-weight:700;
-    letter-spacing:.15em;
-
-    transform:rotate(18deg);
+    letter-spacing:.04em;
 
     box-shadow:
-        0 8px 18px rgba(0,0,0,.35);
+        0 8px 18px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.35);
 }
