@@ -325,3 +325,46 @@ if(farmTrack){
 
     }, 5000);
 }
+
+/* FARM GALLERY MODAL */
+
+const galleryModal =
+document.getElementById('galleryModal');
+
+const galleryModalImage =
+document.getElementById('galleryModalImage');
+
+const galleryModalClose =
+document.getElementById('galleryModalClose');
+
+document
+.querySelectorAll('.farm-gallery-track img')
+.forEach(image => {
+
+    image.addEventListener('click', () => {
+
+        galleryModalImage.src =
+        image.src;
+
+        galleryModal.classList.add('active');
+    });
+
+});
+
+galleryModalClose?.addEventListener(
+'click',
+() => {
+    galleryModal.classList.remove('active');
+});
+
+galleryModal?.addEventListener(
+'click',
+(e) => {
+
+    if(e.target === galleryModal){
+
+        galleryModal.classList.remove('active');
+
+    }
+
+});
