@@ -302,6 +302,16 @@ main{
 }
 
 .feature-card,
+/* Round only the homepage "What We Offer" images */
+
+.feature-grid .image-card{
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.feature-grid .image-card img{
+    border-radius:18px;
+}
 .animal-card,
 .faq-item,
 .feature-card-body{
