@@ -1978,9 +1978,11 @@ height:56px;
 
 .farm-gallery-track img{
     flex:0 0 auto;
-    width:380px;
-    height:280px;
+    width:340px;
+    aspect-ratio:1 / 1;
+    height:auto;
     object-fit:cover;
+    object-position:center;
     border-radius:22px;
     cursor:pointer;
     transition:.3s ease;
