@@ -2350,18 +2350,31 @@ height:56px;
     }
 }
 
-.application-image-link{
-    background:transparent !important;
-    border:0 !important;
-    outline:0 !important;
-    box-shadow:none !important;
-    appearance:none !important;
-    -webkit-appearance:none !important;
-    padding:0 !important;
-    margin:0 !important;
+/* FIX APPLICATION MODAL WHITE BUTTON BOXES */
+
+.applications-modal-grid button.application-image-link,
+.applications-modal-grid a.application-image-link{
+    all: unset;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    line-height:0;
     cursor:pointer;
+    box-sizing:border-box;
 }
 
-.application-image-link img{
-    background:transparent !important;
+.applications-modal-grid button.application-image-link:hover,
+.applications-modal-grid a.application-image-link:hover{
+    transform:translateY(-2px);
+}
+
+.applications-modal-grid .application-image-btn{
+    display:block;
+    width:78%;
+    height:auto;
+    max-width:none;
+    background:transparent;
+    border:0;
+    box-shadow:none;
 }
