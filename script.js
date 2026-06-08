@@ -24,12 +24,181 @@ const applicationsModal = document.getElementById('applicationsModal');
 const applicationsModalClose = document.getElementById('applicationsModalClose');
 const openApplicationsLinks = document.querySelectorAll('.open-applications-link');
 
+const applicationsOptionsPanel = document.getElementById('applicationsOptionsPanel');
+const applicationFormPanel = document.getElementById('applicationFormPanel');
+const applicationFormBack = document.getElementById('applicationFormBack');
+const applicationFormTitle = document.getElementById('applicationFormTitle');
+const dynamicFormFields = document.getElementById('dynamicFormFields');
+const formSubject = document.getElementById('formSubject');
+const applicationFormTriggers = document.querySelectorAll('.application-form-trigger');
+const applicationsModalHeading = document.getElementById('applicationsModalHeading');
+
+const farmForms = {
+    puppy: {
+        title: 'Cavalier Puppy Application',
+        heading: 'Puppy Application',
+        subject: 'Cavalier Puppy Application',
+        fields: `
+            <label>Full Name
+                <input type="text" name="Full Name" required>
+            </label>
+
+            <label>Phone Number
+                <input type="tel" name="Phone Number" required>
+            </label>
+
+            <label>Email
+                <input type="email" name="Email">
+            </label>
+
+            <label>City and State
+                <input type="text" name="City and State">
+            </label>
+
+            <label>Which puppy are you interested in?
+                <input type="text" name="Puppy Interest">
+            </label>
+
+            <label>Do you rent or own?
+                <select name="Rent or Own">
+                    <option value="">Select one</option>
+                    <option>Own</option>
+                    <option>Rent</option>
+                </select>
+            </label>
+
+            <label>Have you owned dogs before?
+                <textarea name="Dog Experience"></textarea>
+            </label>
+
+            <label>Tell us about your home and family
+                <textarea name="Home and Family"></textarea>
+            </label>
+
+            <label>Anything else you would like us to know?
+                <textarea name="Additional Notes"></textarea>
+            </label>
+        `
+    },
+
+    zoo: {
+        title: 'Petting Zoo Visit Request',
+        heading: 'Visit Request',
+        subject: 'Petting Zoo Visit Request',
+        fields: `
+            <label>Full Name
+                <input type="text" name="Full Name" required>
+            </label>
+
+            <label>Phone Number
+                <input type="tel" name="Phone Number" required>
+            </label>
+
+            <label>Email
+                <input type="email" name="Email">
+            </label>
+
+            <label>Preferred Visit Date
+                <input type="date" name="Preferred Visit Date">
+            </label>
+
+            <label>Number of Guests
+                <input type="number" name="Number of Guests" min="1">
+            </label>
+
+            <label>Ages of Children
+                <input type="text" name="Ages of Children">
+            </label>
+
+            <label>Anything we should know?
+                <textarea name="Additional Notes"></textarea>
+            </label>
+        `
+    },
+
+    photo: {
+        title: 'Photography Booking Request',
+        heading: 'Photo Request',
+        subject: 'Photography Booking Request',
+        fields: `
+            <label>Full Name
+                <input type="text" name="Full Name" required>
+            </label>
+
+            <label>Phone Number
+                <input type="tel" name="Phone Number" required>
+            </label>
+
+            <label>Email
+                <input type="email" name="Email">
+            </label>
+
+            <label>Preferred Session Date
+                <input type="date" name="Preferred Session Date">
+            </label>
+
+            <label>Session Type
+                <input type="text" name="Session Type" placeholder="Family, senior, engagement, seasonal, etc.">
+            </label>
+
+            <label>Number of People
+                <input type="number" name="Number of People" min="1">
+            </label>
+
+            <label>Anything else you would like us to know?
+                <textarea name="Additional Notes"></textarea>
+            </label>
+        `
+    }
+};
+
+function returnToApplicationOptions(){
+    if(!applicationsOptionsPanel || !applicationFormPanel) return;
+
+    applicationFormPanel.classList.remove('active');
+    applicationsOptionsPanel.classList.add('active');
+
+    if(applicationsModalHeading){
+        applicationsModalHeading.textContent = 'Select An Option';
+    }
+
+    if(dynamicFormFields){
+        dynamicFormFields.innerHTML = '';
+    }
+}
+
+function openApplicationForm(formType){
+    const selectedForm = farmForms[formType];
+
+    if(
+        !selectedForm ||
+        !applicationsOptionsPanel ||
+        !applicationFormPanel ||
+        !applicationFormTitle ||
+        !dynamicFormFields ||
+        !formSubject
+    ) return;
+
+    applicationFormTitle.textContent = selectedForm.title;
+    formSubject.value = selectedForm.subject;
+    dynamicFormFields.innerHTML = selectedForm.fields;
+
+    if(applicationsModalHeading){
+        applicationsModalHeading.textContent = selectedForm.heading;
+    }
+
+    applicationsOptionsPanel.classList.remove('active');
+    applicationFormPanel.classList.add('active');
+}
+
 function openApplicationsMenu(e){
     if(e){
         e.preventDefault();
     }
 
     if(!applicationsModal) return;
+
+    returnToApplicationOptions();
 
     applicationsModal.classList.add('active');
     applicationsModal.setAttribute('aria-hidden', 'false');
@@ -42,6 +211,8 @@ function closeApplicationsMenu(){
     applicationsModal.classList.remove('active');
     applicationsModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+
+    returnToApplicationOptions();
 }
 
 if(openApplicationsModal){
@@ -64,6 +235,18 @@ if(openApplicationsLinks.length){
     openApplicationsLinks.forEach(function(link){
         link.addEventListener('click', openApplicationsMenu);
     });
+}
+
+if(applicationFormTriggers.length){
+    applicationFormTriggers.forEach(function(button){
+        button.addEventListener('click', function(){
+            openApplicationForm(button.dataset.form);
+        });
+    });
+}
+
+if(applicationFormBack){
+    applicationFormBack.addEventListener('click', returnToApplicationOptions);
 }
 
 /* PUPPY MODAL */
@@ -282,8 +465,13 @@ document.addEventListener('keydown', function(e){
     if(e.key === 'Escape'){
         closeApplicationsMenu();
         closePuppyModal();
+
+        if(galleryModal){
+            galleryModal.classList.remove('active');
+        }
     }
 });
+
 /* FARM CAROUSEL */
 
 const farmTrack = document.querySelector('.farm-gallery-track');
@@ -328,14 +516,9 @@ if(farmTrack){
 
 /* FARM GALLERY MODAL */
 
-const galleryModal =
-document.getElementById('galleryModal');
-
-const galleryModalImage =
-document.getElementById('galleryModalImage');
-
-const galleryModalClose =
-document.getElementById('galleryModalClose');
+const galleryModal = document.getElementById('galleryModal');
+const galleryModalImage = document.getElementById('galleryModalImage');
+const galleryModalClose = document.getElementById('galleryModalClose');
 
 document
 .querySelectorAll('.farm-gallery-track img')
@@ -343,9 +526,9 @@ document
 
     image.addEventListener('click', () => {
 
-        galleryModalImage.src =
-        image.src;
+        if(!galleryModal || !galleryModalImage) return;
 
+        galleryModalImage.src = image.src;
         galleryModal.classList.add('active');
     });
 
@@ -362,9 +545,7 @@ galleryModal?.addEventListener(
 (e) => {
 
     if(e.target === galleryModal){
-
         galleryModal.classList.remove('active');
-
     }
 
 });
