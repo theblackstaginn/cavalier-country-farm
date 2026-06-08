@@ -2030,9 +2030,10 @@ height:56px;
 @media(max-width:768px){
 
     .farm-gallery-track img{
-        width:82vw;
-        height:260px;
-    }
+    width:78vw;
+    aspect-ratio:1 / 1;
+    height:auto;
+}
 
     .gallery-arrow{
         display:none;
