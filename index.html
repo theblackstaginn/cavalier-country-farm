@@ -42,8 +42,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cavalier Country Farm</title>
-    <link rel="stylesheet" href="styles.css?v=23">
-    <script src="script.js?v=23" defer></script>
+    <link rel="stylesheet" href="styles.css?v=24">
+    <script src="script.js?v=24" defer></script>
 </head>
 
 <body>
@@ -384,19 +384,33 @@
             <div class="feature-grid">
                 <article class="feature-card">
                     <h3>Puppy Application</h3>
-                    <p>Families interested in Cavaliers and upcoming litters can start by sending an application request.</p>
-                    <a href="#" class="small-link open-applications-link">Open application options</a>
+                    <p>Families interested in Cavaliers and upcoming litters can start through the Good Dog application.</p>
+                    <a
+                        href="https://www.gooddog.com/breeders/cavalier-country-farm-georgia/contacts/buyer_application?utm_content=breeder_ref&breeder_ref=cavalier-country-farm-georgia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="small-link"
+                    >
+                        Open puppy application
+                    </a>
                 </article>
 
                 <article class="feature-card">
                     <h3>Deposit Instructions</h3>
-                    <p>Approved applicants can receive private deposit instructions after review.</p>
-                    <a href="#" class="small-link open-applications-link">Request deposit information</a>
+                    <p>Approved applicants can submit deposits securely through Good Dog after review.</p>
+                    <a
+                        href="https://www.gooddog.com/pay/cavalier-country-farm-georgia?utm_content=breeder_ref&breeder_ref=cavalier-country-farm-georgia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="small-link"
+                    >
+                        View deposit information
+                    </a>
                 </article>
 
                 <article class="feature-card">
                     <h3>Venue Inquiry</h3>
-                    <p>Photography sessions and future farm visits can be requested by email.</p>
+                    <p>Photography sessions and future farm visits can be requested through the farm inquiry forms.</p>
                     <a href="#" class="small-link open-applications-link">Open inquiry options</a>
                 </article>
             </div>
@@ -443,9 +457,14 @@
             <div class="applications-options-panel active" id="applicationsOptionsPanel">
                 <div class="applications-modal-grid">
 
-                    <button class="application-image-link application-form-trigger" type="button" data-form="puppy">
+                    <a
+                        class="application-image-link"
+                        href="https://www.gooddog.com/breeders/cavalier-country-farm-georgia/contacts/buyer_application?utm_content=breeder_ref&breeder_ref=cavalier-country-farm-georgia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <img src="farm buttons/puppy-app-btn.webp" alt="Cavalier Puppy Application" class="application-image-btn">
-                    </button>
+                    </a>
 
                     <button class="application-image-link application-form-trigger" type="button" data-form="zoo">
                         <img src="farm buttons/zoo-req-btn.webp" alt="Petting Zoo Visit Request" class="application-image-btn">
@@ -457,7 +476,9 @@
 
                     <a
                         class="application-image-link"
-                        href="mailto:karenscavaliercountry@gmail.com?subject=Deposit%20Information%20Request&body=Full%20Name:%0D%0A%0D%0APhone%20Number:%0D%0A%0D%0AEmail:%0D%0A%0D%0AWhat%20deposit%20are%20you%20asking%20about?:%0D%0A%0D%0AHave%20you%20already%20been%20approved?:"
+                        href="https://www.gooddog.com/pay/cavalier-country-farm-georgia?utm_content=breeder_ref&breeder_ref=cavalier-country-farm-georgia"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <img src="farm buttons/deposit-info-btn.webp" alt="Deposit Information" class="application-image-btn">
                     </a>
@@ -468,15 +489,13 @@
             <div class="application-form-panel" id="applicationFormPanel">
                 <button type="button" class="form-back-btn" id="applicationFormBack">← Back To Options</button>
 
-                <h3 id="applicationFormTitle">Application</h3>
+                <h3 id="applicationFormTitle">Request Form</h3>
 
                 <form
                     id="farmApplicationForm"
-                    action="https://formsubmit.co/karenscavaliercountry@gmail.com"
+                    action="https://formspree.io/f/mwvjqvyn"
                     method="POST"
                 >
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_subject" id="formSubject" value="Cavalier Country Farm Inquiry">
 
                     <div id="dynamicFormFields"></div>
@@ -538,6 +557,183 @@
             }
         });
     }
+
+    const applicationsModal = document.getElementById('applicationsModal');
+    const applicationsModalClose = document.getElementById('applicationsModalClose');
+    const openApplicationsModal = document.getElementById('openApplicationsModal');
+    const openApplicationsLinks = document.querySelectorAll('.open-applications-link');
+    const applicationsOptionsPanel = document.getElementById('applicationsOptionsPanel');
+    const applicationFormPanel = document.getElementById('applicationFormPanel');
+    const applicationFormBack = document.getElementById('applicationFormBack');
+    const applicationFormTriggers = document.querySelectorAll('.application-form-trigger');
+    const farmApplicationForm = document.getElementById('farmApplicationForm');
+    const dynamicFormFields = document.getElementById('dynamicFormFields');
+    const applicationFormTitle = document.getElementById('applicationFormTitle');
+    const formSubject = document.getElementById('formSubject');
+
+    const farmForms = {
+        photo: {
+            title: 'Photography Booking Request',
+            endpoint: 'https://formspree.io/f/mwvjqvyn',
+            subject: 'Photography Booking Request - Cavalier Country Farm',
+            fields: `
+                <label>
+                    Full Name
+                    <input type="text" name="Full Name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="Phone Number" required>
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="Email Address">
+                </label>
+
+                <label>
+                    Preferred Date
+                    <input type="text" name="Preferred Date">
+                </label>
+
+                <label>
+                    Session Type
+                    <select name="Session Type">
+                        <option value="">Select one</option>
+                        <option value="Family Portraits">Family Portraits</option>
+                        <option value="Senior Session">Senior Session</option>
+                        <option value="Engagement Photos">Engagement Photos</option>
+                        <option value="Seasonal Mini Session">Seasonal Mini Session</option>
+                        <option value="Lifestyle Farm Photography">Lifestyle Farm Photography</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="Message" rows="5" required></textarea>
+                </label>
+            `
+        },
+
+        zoo: {
+            title: 'Petting Zoo Visit Request',
+            endpoint: 'https://formspree.io/f/mdavdabj',
+            subject: 'Petting Zoo Visit Request - Cavalier Country Farm',
+            fields: `
+                <label>
+                    Full Name
+                    <input type="text" name="Full Name" required>
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" name="Phone Number" required>
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="Email Address">
+                </label>
+
+                <label>
+                    Preferred Visit Date
+                    <input type="text" name="Preferred Visit Date">
+                </label>
+
+                <label>
+                    Number Of Guests
+                    <input type="text" name="Number Of Guests">
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="Message" rows="5" required></textarea>
+                </label>
+            `
+        }
+    };
+
+    function openFarmApplicationsModal(){
+        if(!applicationsModal) return;
+
+        applicationsModal.classList.add('active');
+        applicationsModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('applications-modal-open');
+
+        if(applicationsOptionsPanel && applicationFormPanel){
+            applicationsOptionsPanel.classList.add('active');
+            applicationFormPanel.classList.remove('active');
+        }
+    }
+
+    function closeFarmApplicationsModal(){
+        if(!applicationsModal) return;
+
+        applicationsModal.classList.remove('active');
+        applicationsModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('applications-modal-open');
+    }
+
+    function openDynamicFarmForm(formType){
+        const selectedForm = farmForms[formType];
+
+        if(!selectedForm || !farmApplicationForm || !dynamicFormFields) return;
+
+        applicationFormTitle.textContent = selectedForm.title;
+        farmApplicationForm.action = selectedForm.endpoint;
+        formSubject.value = selectedForm.subject;
+        dynamicFormFields.innerHTML = selectedForm.fields;
+
+        applicationsOptionsPanel.classList.remove('active');
+        applicationFormPanel.classList.add('active');
+    }
+
+    if(openApplicationsModal){
+        openApplicationsModal.addEventListener('click', (e) => {
+            e.preventDefault();
+            openFarmApplicationsModal();
+        });
+    }
+
+    openApplicationsLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openFarmApplicationsModal();
+        });
+    });
+
+    if(applicationsModalClose){
+        applicationsModalClose.addEventListener('click', closeFarmApplicationsModal);
+    }
+
+    if(applicationsModal){
+        applicationsModal.addEventListener('click', (e) => {
+            if(e.target === applicationsModal){
+                closeFarmApplicationsModal();
+            }
+        });
+    }
+
+    applicationFormTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+            openDynamicFarmForm(trigger.dataset.form);
+        });
+    });
+
+    if(applicationFormBack){
+        applicationFormBack.addEventListener('click', () => {
+            applicationFormPanel.classList.remove('active');
+            applicationsOptionsPanel.classList.add('active');
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape'){
+            closeFarmApplicationsModal();
+        }
+    });
 </script>
 
 </body>
