@@ -266,10 +266,10 @@ const puppyData = {
 
     "bambam": {
         name: "Bam Bam",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Bam Bam is a striking Tricolor Cavalier with rich black markings, warm tan points, and crisp white accents. His expressive eyes and curious personality give him a wonderful presence, while his affectionate temperament reflects everything people love about the Cavalier breed. He is being raised with daily family interaction and is already showing a gentle, loving disposition.",
+        description: "Bam Bam has found his forever home. This sweet boy is beginning his next adventure with a loving family, and we couldn't be happier for him.",
         images: [
             "assets/pups/bambam/bambam-1.webp",
             "assets/pups/bambam/bambam-2.webp"
@@ -278,10 +278,10 @@ const puppyData = {
 
     "elsa": {
         name: "Elsa",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Elsa is a beautiful Tricolor Cavalier King Charles Spaniel with elegant markings and a soft, sweet expression. She has a calm, affectionate personality and enjoys being close to people. Raised in our home and socialized from an early age, Elsa is developing into a loving companion with the gentle temperament Cavaliers are known for.",
+        description: "Elsa has found her forever home. We are so grateful to the wonderful family who welcomed her into their hearts. Thank you for following her journey here at Cavalier Country Farm.",
         images: [
             "assets/pups/elsa/elsa-1.webp",
             "assets/pups/elsa/elsa-2.webp"
@@ -290,10 +290,10 @@ const puppyData = {
 
     "pebbles": {
         name: "Pebbles",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Pebbles is an adorable Tricolor Cavalier with bright eyes, beautiful markings, and a playful spirit. She is curious, affectionate, and loves attention from her family. Raised in a home environment with daily interaction, Pebbles is growing into a well-socialized puppy with the loving personality that makes Cavaliers such wonderful companions.",
+        description: "Pebbles has found her forever home. Thank you to everyone who showed interest in this precious little girl. She is exactly where she was meant to be.",
         images: [
             "assets/pups/pebbles/pebbles-1.webp",
             "assets/pups/pebbles/pebbles-2.webp"
@@ -302,10 +302,10 @@ const puppyData = {
 
     "rosie": {
         name: "Rosie",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Rosie is a gorgeous Black & Tan Cavalier King Charles Spaniel with rich tan points, a silky dark coat, and an unforgettable expression. She has a confident, outgoing personality while still maintaining the gentle, affectionate nature Cavaliers are famous for. Raised as part of our family, Rosie receives daily love and interaction and is developing into a wonderful lifelong companion.",
+        description: "Rosie has found her forever home. We know she will bring years of joy, cuddles, and companionship to her new family.",
         images: [
             "assets/pups/rosie/rosie-1.webp",
             "assets/pups/rosie/rosie-2.webp"
@@ -338,10 +338,10 @@ const puppyData = {
 
     "duke": {
         name: "Duke",
-        status: "Sold",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.6 lbs",
-        description: "Duke has found his forever family.",
+        description: "Duke has found his forever home. We are so happy for this sweet boy and the loving family who welcomed him home.",
         images: [
             "assets/pups/duke/duke-1.webp",
             "assets/pups/duke/duke-2.webp"
