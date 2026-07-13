@@ -2550,3 +2550,11 @@ height:56px;
         drop-shadow(0 0 12px rgba(215,162,105,.45))
         drop-shadow(0 14px 28px rgba(0,0,0,.4));
 }
+
+.good-dog-section .section-card{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+}
