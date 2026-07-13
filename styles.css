@@ -2378,3 +2378,143 @@ height:56px;
     border:0;
     box-shadow:none;
 }
+
+/* =========================================
+   PREFERRED BREEDER HOMEPAGE UPDATE
+   ========================================= */
+
+.preferred-breeder-section{
+    padding:34px 20px 18px;
+}
+
+.preferred-breeder-banner{
+    width:min(860px, 92%);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    padding:20px 26px;
+    background:rgba(18,14,11,.34);
+    border:1px solid rgba(215,162,105,.24);
+    border-radius:18px;
+    box-shadow:0 12px 28px rgba(0,0,0,.22);
+}
+
+.preferred-breeder-badge{
+    flex:0 0 auto;
+    width:54px;
+    height:auto;
+    display:block;
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.34));
+}
+
+.preferred-breeder-copy{
+    text-align:left;
+}
+
+.preferred-breeder-copy .eyebrow{
+    margin-bottom:5px;
+    text-align:left;
+}
+
+.preferred-breeder-copy p:last-child{
+    margin:0;
+    color:#f5efe8;
+    line-height:1.65;
+    text-align:left;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+}
+
+
+/* =========================================
+   THE FARM IS GROWING UPDATE
+   ========================================= */
+
+.growing-farm-update{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:42px;
+    align-items:center;
+}
+
+.growing-farm-image{
+    width:100%;
+    max-height:560px;
+    object-fit:cover;
+    object-position:center;
+}
+
+.growing-farm-copy{
+    text-align:center;
+}
+
+
+/* =========================================
+   LARGER MOBILE ADOPTED BADGES
+   ========================================= */
+
+@media(max-width:900px){
+    .adopted-badge-mobile{
+        width:128px;
+        right:-2px;
+        bottom:42px;
+    }
+
+    .growing-farm-update{
+        grid-template-columns:1fr;
+    }
+
+    .growing-farm-image{
+        max-width:620px;
+        margin:0 auto;
+    }
+}
+
+@media(max-width:768px){
+    .preferred-breeder-banner{
+        width:min(620px, 94%);
+        gap:14px;
+        padding:18px 20px;
+    }
+
+    .preferred-breeder-badge{
+        width:50px;
+    }
+
+    .growing-farm-update{
+        gap:28px;
+    }
+}
+
+@media(max-width:520px){
+    .preferred-breeder-section{
+        padding:24px 12px 10px;
+    }
+
+    .preferred-breeder-banner{
+        align-items:flex-start;
+        gap:12px;
+        padding:16px;
+    }
+
+    .preferred-breeder-badge{
+        width:46px;
+    }
+
+    .preferred-breeder-copy .eyebrow{
+        font-size:.72rem;
+        letter-spacing:2px;
+    }
+
+    .preferred-breeder-copy p:last-child{
+        font-size:.92rem;
+        line-height:1.55;
+    }
+
+    .adopted-badge-mobile{
+        width:116px;
+        right:-2px;
+        bottom:42px;
+    }
+}
