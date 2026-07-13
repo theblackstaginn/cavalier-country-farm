@@ -2518,3 +2518,35 @@ height:56px;
         bottom:42px;
     }
 }
+
+/* PREFERRED BREEDER BANNER */
+
+.preferred-breeder-section{
+    padding:40px 20px 20px;
+}
+
+.preferred-breeder-link{
+    display:block;
+    width:min(1100px,92%);
+    margin:auto;
+    transition:.25s ease;
+}
+
+.preferred-breeder-banner{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:18px;
+    filter:drop-shadow(0 14px 28px rgba(0,0,0,.35));
+    transition:.25s ease;
+}
+
+.preferred-breeder-link:hover{
+    transform:translateY(-2px);
+}
+
+.preferred-breeder-link:hover .preferred-breeder-banner{
+    filter:
+        drop-shadow(0 0 12px rgba(215,162,105,.45))
+        drop-shadow(0 14px 28px rgba(0,0,0,.4));
+}
