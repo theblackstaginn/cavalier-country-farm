@@ -254,10 +254,10 @@ if(applicationFormBack){
 const puppyData = {
     "angus": {
         name: "Angus",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Angus is a handsome Tricolor Cavalier King Charles Spaniel with beautifully balanced markings and an exceptionally sweet expression. His bright eyes, gentle nature, and classic Cavalier features make him an easy puppy to fall in love with. Raised in our home and surrounded by daily family life, Angus is growing into a loving companion who enjoys attention and cuddles.",
+        description: "Angus has found his forever home. We are so happy for this sweet boy and the loving family who welcomed him into their lives.",
         images: [
             "assets/pups/angus/angus-1.webp",
             "assets/pups/angus/angus-2.webp"
@@ -314,10 +314,10 @@ const puppyData = {
 
     "cosmo": {
         name: "Cosmo",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Cosmo is a handsome Tricolor Cavalier King Charles Spaniel with expressive eyes, beautiful markings, and a gentle, affectionate nature. He enjoys attention and is growing up surrounded by daily family interaction, helping him develop into a confident and well-socialized companion. Cosmo embodies the sweet temperament, loyalty, and charm that have made Cavaliers such beloved family dogs.",
+        description: "Cosmo has found his forever home. We are thrilled this gentle, affectionate boy is beginning his next chapter with a loving family.",
         images: [
             "assets/pups/cosmo/cosmo-1.webp",
             "assets/pups/cosmo/cosmo-2.webp"
@@ -326,10 +326,10 @@ const puppyData = {
 
     "lily": {
         name: "Lily",
-        status: "Available",
+        status: "Adopted",
         birthday: "March 27",
         weight: "2.2 lbs",
-        description: "Lily is a lovely Tricolor Cavalier King Charles Spaniel with a beautifully marked face, bright eyes, and a sweet, attentive expression. She has a gentle, affectionate nature and enjoys being close to her people. Raised in our home with daily family interaction, Lily is growing into a well-socialized companion who embodies the loving temperament and charm that make Cavaliers so special.",
+        description: "Lily has found her forever home. We are so happy this sweet girl is now with a family who will love and cherish her.",
         images: [
             "assets/pups/lily/lily-1.webp",
             "assets/pups/lily/lily-2.webp"
