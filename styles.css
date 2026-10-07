@@ -2439,6 +2439,24 @@ height:56px;
     align-items:center;
 }
 
+.growing-farm-gallery{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+    width:100%;
+    align-self:stretch;
+}
+
+.growing-farm-gallery img{
+    width:100%;
+    aspect-ratio:4 / 3;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    border-radius:16px;
+    box-shadow:0 10px 24px rgba(0,0,0,.34);
+}
+
 .growing-farm-image{
     width:100%;
     max-height:560px;
@@ -2464,6 +2482,11 @@ height:56px;
 
     .growing-farm-update{
         grid-template-columns:1fr;
+    }
+
+    .growing-farm-gallery{
+        max-width:620px;
+        margin:0 auto;
     }
 
     .growing-farm-image{
