@@ -252,6 +252,50 @@ if(applicationFormBack){
 /* PUPPY MODAL */
 
 const puppyData = {
+    "cassie": {
+        name: "Cassie",
+        status: "Available • Female • $3,400",
+        birthday: "Ask for details",
+        weight: "Ask for details",
+        description: "Cassie is a female Cavalier puppy from our current litter. She is currently available for $3,400. Contact Cavalier Country Farm for the latest details and availability.",
+        images: [
+            "assets/pups/pups-10-7-2026/cassie.webp"
+        ]
+    },
+
+    "cooper": {
+        name: "Cooper",
+        status: "Available • Male • $3,400",
+        birthday: "Ask for details",
+        weight: "Ask for details",
+        description: "Cooper is a male Cavalier puppy from our current litter. He is currently available for $3,400. Contact Cavalier Country Farm for the latest details and availability.",
+        images: [
+            "assets/pups/pups-10-7-2026/cooper.webp"
+        ]
+    },
+
+    "cody": {
+        name: "Cody",
+        status: "Available • Male • $3,400",
+        birthday: "Ask for details",
+        weight: "Ask for details",
+        description: "Cody is a male Cavalier puppy from our current litter. He is currently available for $3,400. Contact Cavalier Country Farm for the latest details and availability.",
+        images: [
+            "assets/pups/pups-10-7-2026/cody.webp"
+        ]
+    },
+
+    "chloe": {
+        name: "Chloe",
+        status: "Available • Female • $3,400",
+        birthday: "Ask for details",
+        weight: "Ask for details",
+        description: "Chloe is a female Cavalier puppy from our current litter. She is currently available for $3,400. Contact Cavalier Country Farm for the latest details and availability.",
+        images: [
+            "assets/pups/pups-10-7-2026/chloe.webp"
+        ]
+    },
+
     "angus": {
         name: "Angus",
         status: "Adopted",
