@@ -302,6 +302,17 @@ main{
     margin-top:52px;
 }
 
+/* Farm Companions: balanced two-column layout until more animals are added */
+.farm-companions-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+@media(max-width:700px){
+    .farm-companions-grid{
+        grid-template-columns:1fr;
+    }
+}
+
 .feature-card,
 /* Round only the homepage "What We Offer" images */
 
