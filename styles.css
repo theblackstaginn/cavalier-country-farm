@@ -935,6 +935,12 @@ height:22%;
 transform:rotate(-2.4deg);
 }
 
+/* Current litter framing tweaks: Cooper + Cody */
+.puppy-photo-2 img,
+.puppy-photo-3 img{
+transform:scale(var(--photo-zoom)) translateX(-2.5%);
+}
+
 .puppy-name-3{
 left:58.2%;
 top:44.4%;
