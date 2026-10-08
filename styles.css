@@ -2459,16 +2459,16 @@ height:56px;
 .growing-farm-gallery{
     display:grid;
     grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:12px;
+    gap:7px;
     width:100%;
-    align-self:stretch;
+    align-self:start;
 }
 
 .growing-farm-gallery img{
     width:100%;
-    aspect-ratio:4 / 3;
+    height:auto;
     display:block;
-    object-fit:cover;
+    object-fit:contain;
     object-position:center;
     border-radius:16px;
     box-shadow:0 10px 24px rgba(0,0,0,.34);
