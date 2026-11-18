@@ -296,6 +296,58 @@ const puppyData = {
         ]
     },
 
+    "sherry": {
+        name: "Sherry",
+        status: "",
+        birthday: "October 29, 2026",
+        weight: "",
+        description: "",
+        images: [
+            "assets/pups/sherry/sherry-main-portrait.jpg",
+            "assets/pups/sherry/sherry-coat-side.jpg",
+            "assets/pups/sherry/sherry-coat-overhead.jpg"
+        ]
+    },
+
+    "sugar": {
+        name: "Sugar",
+        status: "",
+        birthday: "October 29, 2026",
+        weight: "",
+        description: "",
+        images: [
+            "assets/pups/sugar/sugar-main-portrait.jpg",
+            "assets/pups/sugar/sugar-coat-side.jpg",
+            "assets/pups/sugar/sugar-coat-overhead.jpg"
+        ]
+    },
+
+    "candy": {
+        name: "Candy",
+        status: "",
+        birthday: "October 29, 2026",
+        weight: "",
+        description: "",
+        images: [
+            "assets/pups/candy/candy-main-portrait.jpg",
+            "assets/pups/candy/candy-coat-side.jpg",
+            "assets/pups/candy/candy-coat-overhead.jpg"
+        ]
+    },
+
+    "cookie": {
+        name: "Cookie",
+        status: "",
+        birthday: "October 29, 2026",
+        weight: "",
+        description: "",
+        images: [
+            "assets/pups/cookie/cookie-main-portrait.jpg",
+            "assets/pups/cookie/cookie-coat-side.jpg",
+            "assets/pups/cookie/cookie-coat-overhead.jpg"
+        ]
+    },
+
     "angus": {
         name: "Angus",
         status: "Adopted",
@@ -399,6 +451,7 @@ const puppyModalStatus = document.getElementById('puppyModalStatus');
 const puppyModalBirthday = document.getElementById('puppyModalBirthday');
 const puppyModalWeight = document.getElementById('puppyModalWeight');
 const puppyModalDescription = document.getElementById('puppyModalDescription');
+const puppyModalDetails = document.querySelector('.puppy-details');
 const puppyModalMainImage = document.getElementById('puppyModalMainImage');
 const puppyModalThumbs = document.getElementById('puppyModalThumbs');
 const puppyCloseBtn = document.querySelector('.puppy-modal-close');
@@ -414,19 +467,27 @@ function openPuppyModal(puppyKey){
     }
 
     if(puppyModalStatus){
-        puppyModalStatus.textContent = puppy.status;
+        puppyModalStatus.textContent = puppy.status || '';
+        puppyModalStatus.hidden = !puppy.status;
     }
 
     if(puppyModalBirthday){
-        puppyModalBirthday.textContent = puppy.birthday;
+        puppyModalBirthday.textContent = puppy.birthday || '';
+        puppyModalBirthday.closest('.puppy-detail').hidden = !puppy.birthday;
     }
 
     if(puppyModalWeight){
-        puppyModalWeight.textContent = puppy.weight;
+        puppyModalWeight.textContent = puppy.weight || '';
+        puppyModalWeight.closest('.puppy-detail').hidden = !puppy.weight;
     }
 
     if(puppyModalDescription){
-        puppyModalDescription.textContent = puppy.description;
+        puppyModalDescription.textContent = puppy.description || '';
+        puppyModalDescription.hidden = !puppy.description;
+    }
+
+    if(puppyModalDetails){
+        puppyModalDetails.hidden = !(puppy.birthday || puppy.weight);
     }
 
     if(puppyModalMainImage){
