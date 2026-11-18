@@ -1082,6 +1082,10 @@ transform:rotate(7deg);
 
 /* PUPPY MODAL */
 
+.puppy-modal [hidden]{
+    display:none !important;
+}
+
 .puppy-modal{
 position:fixed;
 inset:0;
