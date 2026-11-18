@@ -299,7 +299,7 @@ const puppyData = {
     "sherry": {
         name: "Sherry",
         status: "",
-        birthday: "October 29, 2026",
+        birthday: "October 27, 2026",
         weight: "",
         description: "",
         images: [
@@ -312,7 +312,7 @@ const puppyData = {
     "sugar": {
         name: "Sugar",
         status: "",
-        birthday: "October 29, 2026",
+        birthday: "October 27, 2026",
         weight: "",
         description: "",
         images: [
@@ -325,7 +325,7 @@ const puppyData = {
     "candy": {
         name: "Candy",
         status: "",
-        birthday: "October 29, 2026",
+        birthday: "October 27, 2026",
         weight: "",
         description: "",
         images: [
@@ -338,7 +338,7 @@ const puppyData = {
     "cookie": {
         name: "Cookie",
         status: "Reserved",
-        birthday: "October 29, 2026",
+        birthday: "October 27, 2026",
         weight: "",
         description: "",
         images: [
