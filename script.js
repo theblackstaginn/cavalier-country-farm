@@ -254,7 +254,7 @@ if(applicationFormBack){
 const puppyData = {
     "cassie": {
         name: "Cassie",
-        status: "Available • Female • Black & Tan • $3,400",
+        status: "Reserved • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.56 lbs • Oct. 4",
         description: "Cassie is a black and tan female with white on her nose, under her mouth, and on her chest. Weight history: 1.42 lbs on Oct. 2, 1.48 lbs on Oct. 3, and 1.56 lbs on Oct. 4.",
@@ -265,7 +265,7 @@ const puppyData = {
 
     "cooper": {
         name: "Cooper",
-        status: "Available • Male • Black & Tan • $3,400",
+        status: "Reserved • Male • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.67 lbs • Oct. 4",
         description: "Cooper is a black and tan male with a white dot on his chest and neck. Weight history: 1.50 lbs on Oct. 2, 1.69 lbs on Oct. 3, and 1.67 lbs on Oct. 4.",
@@ -276,7 +276,7 @@ const puppyData = {
 
     "cody": {
         name: "Cody",
-        status: "Available • Male • Black & Tan • $3,400",
+        status: "Reserved • Male • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.69 lbs • Oct. 4",
         description: "Cody is a black and tan male with a white spot on his belly and a white spot on his chest. Weight history: 1.67 lbs on Oct. 2, 1.71 lbs on Oct. 3, and 1.69 lbs on Oct. 4.",
@@ -287,7 +287,7 @@ const puppyData = {
 
     "chloe": {
         name: "Cloe",
-        status: "Available • Female • Black & Tan • $3,400",
+        status: "Adopted • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.20 lbs • Oct. 4",
         description: "Cloe is a black and tan female with one white dot on her chest and neck. Weight history: 1.11 lbs on Oct. 2, 1.15 lbs on Oct. 3, and 1.20 lbs on Oct. 4.",
@@ -337,7 +337,7 @@ const puppyData = {
 
     "cookie": {
         name: "Cookie",
-        status: "",
+        status: "Reserved",
         birthday: "October 29, 2026",
         weight: "",
         description: "",
