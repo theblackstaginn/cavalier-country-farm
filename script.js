@@ -299,9 +299,9 @@ const puppyData = {
     "sherry": {
         name: "Sherry",
         status: "",
-        birthday: "October 27, 2026",
-        weight: "",
-        description: "",
+        birthday: "October 29, 2026",
+        weight: "1.10 lbs • Nov. 19, 2026",
+        description: "Sherry is the green-collar female with two white spots on her back. Weight history: 0.268 lbs (Oct. 30), 0.282 lbs (Oct. 31), 0.359 lbs (Nov. 2), 0.41 lbs (Nov. 5), 0.57 lbs (Nov. 7), 0.60 lbs (Nov. 8), 0.69 lbs (Nov. 9), 0.71 lbs (Nov. 11), 0.82 lbs (Nov. 13), and 1.10 lbs (Nov. 19).",
         images: [
             "assets/pups/sherry/sherry-main-portrait.jpg",
             "assets/pups/sherry/sherry-coat-side.jpg",
@@ -312,9 +312,9 @@ const puppyData = {
     "sugar": {
         name: "Sugar",
         status: "",
-        birthday: "October 27, 2026",
-        weight: "",
-        description: "",
+        birthday: "October 29, 2026",
+        weight: "1.29 lbs • Nov. 19, 2026",
+        description: "Sugar is the yellow-collar female with white markings from her shoulders and a white stripe reaching toward her nose. Weight history: 0.407 lbs (Oct. 31), 0.515 lbs (Nov. 1), 0.544 lbs (Nov. 2), 0.70 lbs (Nov. 5), 0.77 lbs (Nov. 7), 0.82 lbs (Nov. 8), 0.96 lbs (Nov. 11), 1.02 lbs (Nov. 13), and 1.29 lbs (Nov. 19).",
         images: [
             "assets/pups/sugar/sugar-main-portrait.jpg",
             "assets/pups/sugar/sugar-coat-side.jpg",
@@ -325,9 +325,9 @@ const puppyData = {
     "candy": {
         name: "Candy",
         status: "",
-        birthday: "October 27, 2026",
-        weight: "",
-        description: "",
+        birthday: "October 29, 2026",
+        weight: "1.29 lbs • Nov. 19, 2026",
+        description: "Candy is a purple-collar female. Weight history: 0.375 lbs and 0.358 lbs (both recorded Nov. 1), 0.477 lbs (Nov. 2), 0.60 lbs (Nov. 5), 0.70 lbs (Nov. 7), 0.79 lbs (Nov. 8), 0.89 lbs (Nov. 9), 0.97 lbs (Nov. 11), 1.05 lbs (Nov. 13), and 1.29 lbs (Nov. 19).",
         images: [
             "assets/pups/candy/candy-main-portrait.jpg",
             "assets/pups/candy/candy-coat-side.jpg",
@@ -338,9 +338,9 @@ const puppyData = {
     "cookie": {
         name: "Cookie",
         status: "Reserved",
-        birthday: "October 27, 2026",
-        weight: "",
-        description: "",
+        birthday: "October 29, 2026",
+        weight: "0.99 lbs • Nov. 19, 2026",
+        description: "Cookie is the grey-collar female. Weight history: 0.515 lbs (Oct. 30), 0.414 lbs (Oct. 31), 0.546 lbs (Nov. 2), 0.65 lbs (Nov. 5), 0.71 lbs (Nov. 7), 0.71 lbs (Nov. 8), 0.79 lbs (Nov. 9), 0.81 lbs (Nov. 11), 0.85 lbs (Nov. 13), and 0.99 lbs (Nov. 19).",
         images: [
             "assets/pups/cookie/cookie-main-portrait.jpg",
             "assets/pups/cookie/cookie-coat-side.jpg",
