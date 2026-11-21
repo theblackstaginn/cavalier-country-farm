@@ -257,7 +257,7 @@ const puppyData = {
         status: "Reserved • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.56 lbs • Oct. 4",
-        description: "Cassie is a black and tan female with white on her nose, under her mouth, and on her chest. Weight history: 1.42 lbs on Oct. 2, 1.48 lbs on Oct. 3, and 1.56 lbs on Oct. 4.",
+        description: "Cassie is black and tan with white markings on her nose, chin, and chest.",
         images: [
             "assets/pups/pups-10-7-2026/cassie.webp"
         ]
@@ -268,7 +268,7 @@ const puppyData = {
         status: "Reserved • Male • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.67 lbs • Oct. 4",
-        description: "Cooper is a black and tan male with a white dot on his chest and neck. Weight history: 1.50 lbs on Oct. 2, 1.69 lbs on Oct. 3, and 1.67 lbs on Oct. 4.",
+        description: "Cooper is black and tan with a white spot on his chest and neck.",
         images: [
             "assets/pups/pups-10-7-2026/cooper.webp"
         ]
@@ -279,7 +279,7 @@ const puppyData = {
         status: "Reserved • Male • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.69 lbs • Oct. 4",
-        description: "Cody is a black and tan male with a white spot on his belly and a white spot on his chest. Weight history: 1.67 lbs on Oct. 2, 1.71 lbs on Oct. 3, and 1.69 lbs on Oct. 4.",
+        description: "Cody is black and tan with white spots on his belly and chest.",
         images: [
             "assets/pups/pups-10-7-2026/cody.webp"
         ]
@@ -290,7 +290,7 @@ const puppyData = {
         status: "Adopted • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
         weight: "1.20 lbs • Oct. 4",
-        description: "Cloe is a black and tan female with one white dot on her chest and neck. Weight history: 1.11 lbs on Oct. 2, 1.15 lbs on Oct. 3, and 1.20 lbs on Oct. 4.",
+        description: "Cloe is black and tan with a white spot on her chest and neck.",
         images: [
             "assets/pups/pups-10-7-2026/chloe.webp"
         ]
@@ -301,7 +301,7 @@ const puppyData = {
         status: "",
         birthday: "October 29, 2026",
         weight: "1.10 lbs • Nov. 19, 2026",
-        description: "Sherry is the green-collar female with two white spots on her back. Weight history: 0.268 lbs (Oct. 30), 0.282 lbs (Oct. 31), 0.359 lbs (Nov. 2), 0.41 lbs (Nov. 5), 0.57 lbs (Nov. 7), 0.60 lbs (Nov. 8), 0.69 lbs (Nov. 9), 0.71 lbs (Nov. 11), 0.82 lbs (Nov. 13), and 1.10 lbs (Nov. 19).",
+        description: "Sherry is a female with two white spots on her back.",
         images: [
             "assets/pups/sherry/sherry-main-portrait.jpg",
             "assets/pups/sherry/sherry-coat-side.jpg",
@@ -314,7 +314,7 @@ const puppyData = {
         status: "",
         birthday: "October 29, 2026",
         weight: "1.29 lbs • Nov. 19, 2026",
-        description: "Sugar is the yellow-collar female with white markings from her shoulders and a white stripe reaching toward her nose. Weight history: 0.407 lbs (Oct. 31), 0.515 lbs (Nov. 1), 0.544 lbs (Nov. 2), 0.70 lbs (Nov. 5), 0.77 lbs (Nov. 7), 0.82 lbs (Nov. 8), 0.96 lbs (Nov. 11), 1.02 lbs (Nov. 13), and 1.29 lbs (Nov. 19).",
+        description: "Sugar is a female with white shoulder markings and a stripe toward her nose.",
         images: [
             "assets/pups/sugar/sugar-main-portrait.jpg",
             "assets/pups/sugar/sugar-coat-side.jpg",
@@ -327,7 +327,7 @@ const puppyData = {
         status: "",
         birthday: "October 29, 2026",
         weight: "1.29 lbs • Nov. 19, 2026",
-        description: "Candy is a purple-collar female. Weight history: 0.375 lbs and 0.358 lbs (both recorded Nov. 1), 0.477 lbs (Nov. 2), 0.60 lbs (Nov. 5), 0.70 lbs (Nov. 7), 0.79 lbs (Nov. 8), 0.89 lbs (Nov. 9), 0.97 lbs (Nov. 11), 1.05 lbs (Nov. 13), and 1.29 lbs (Nov. 19).",
+        description: "Candy is a female Cavalier puppy.",
         images: [
             "assets/pups/candy/candy-main-portrait.jpg",
             "assets/pups/candy/candy-coat-side.jpg",
@@ -340,7 +340,7 @@ const puppyData = {
         status: "Reserved",
         birthday: "October 29, 2026",
         weight: "0.99 lbs • Nov. 19, 2026",
-        description: "Cookie is the grey-collar female. Weight history: 0.515 lbs (Oct. 30), 0.414 lbs (Oct. 31), 0.546 lbs (Nov. 2), 0.65 lbs (Nov. 5), 0.71 lbs (Nov. 7), 0.71 lbs (Nov. 8), 0.79 lbs (Nov. 9), 0.81 lbs (Nov. 11), 0.85 lbs (Nov. 13), and 0.99 lbs (Nov. 19).",
+        description: "Cookie is a female Cavalier puppy.",
         images: [
             "assets/pups/cookie/cookie-main-portrait.jpg",
             "assets/pups/cookie/cookie-coat-side.jpg",
