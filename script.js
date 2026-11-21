@@ -256,7 +256,7 @@ const puppyData = {
         name: "Cassie",
         status: "Reserved • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
-        weight: "1.56 lbs • Oct. 4",
+        weight: "1.95 lbs • Oct. 15",
         description: "Cassie is black and tan with white markings on her nose, chin, and chest.",
         images: [
             "assets/pups/pups-10-7-2026/cassie.webp"
@@ -265,9 +265,9 @@ const puppyData = {
 
     "cooper": {
         name: "Cooper",
-        status: "Reserved • Male • Black & Tan • $3,400",
+        status: "Adopted",
         birthday: "September 20, 2026",
-        weight: "1.67 lbs • Oct. 4",
+        weight: "1.76 lbs • Oct. 8",
         description: "Cooper is black and tan with a white spot on his chest and neck.",
         images: [
             "assets/pups/pups-10-7-2026/cooper.webp"
@@ -278,7 +278,7 @@ const puppyData = {
         name: "Cody",
         status: "Reserved • Male • Black & Tan • $3,400",
         birthday: "September 20, 2026",
-        weight: "1.69 lbs • Oct. 4",
+        weight: "2.05 lbs • Oct. 14",
         description: "Cody is black and tan with white spots on his belly and chest.",
         images: [
             "assets/pups/pups-10-7-2026/cody.webp"
@@ -286,11 +286,11 @@ const puppyData = {
     },
 
     "chloe": {
-        name: "Cloe",
+        name: "Chloe",
         status: "Adopted • Female • Black & Tan • $3,400",
         birthday: "September 20, 2026",
-        weight: "1.20 lbs • Oct. 4",
-        description: "Cloe is black and tan with a white spot on her chest and neck.",
+        weight: "1.50 lbs • Oct. 14",
+        description: "Chloe is black and tan with a white spot on her chest and neck.",
         images: [
             "assets/pups/pups-10-7-2026/chloe.webp"
         ]
@@ -345,6 +345,16 @@ const puppyData = {
             "assets/pups/cookie/cookie-main-portrait.jpg",
             "assets/pups/cookie/cookie-coat-side.jpg",
             "assets/pups/cookie/cookie-coat-overhead.jpg"
+        ]
+    },
+
+    "franny": {
+        name: "Franny",
+        status: "Reserved",
+        images: [
+            "assets/pups/franny/franny-main-portrait.jpg",
+            "assets/pups/franny/franny-coat-side.jpg",
+            "assets/pups/franny/franny-coat-overhead.jpg"
         ]
     },
 
@@ -469,6 +479,7 @@ function openPuppyModal(puppyKey){
     if(puppyModalStatus){
         puppyModalStatus.textContent = puppy.status || '';
         puppyModalStatus.hidden = !puppy.status;
+        puppyModalStatus.classList.toggle('is-reserved', /reserved/i.test(puppy.status || ''));
     }
 
     if(puppyModalBirthday){
